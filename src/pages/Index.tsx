@@ -130,25 +130,54 @@ const Index = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
-                  <div className="flex justify-between">
+                  <div className="flex justify-between items-center">
                     <span>Libft</span>
-                    <Badge variant="outline">C</Badge>
+                    <div className="flex gap-2">
+                      <Badge variant="outline">C</Badge>
+                      <Badge className="bg-primary/20 text-primary">125</Badge>
+                    </div>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex justify-between items-center">
                     <span>ft_printf</span>
-                    <Badge variant="outline">C</Badge>
+                    <div className="flex gap-2">
+                      <Badge variant="outline">C</Badge>
+                      <Badge className="bg-primary/20 text-primary">100</Badge>
+                    </div>
                   </div>
-                  <div className="flex justify-between">
-                    <span>Minitalk</span>
-                    <Badge variant="outline">C</Badge>
+                  <div className="flex justify-between items-center">
+                    <span>push_swap</span>
+                    <div className="flex gap-2">
+                      <Badge variant="outline">Algorithms</Badge>
+                      <Badge className="bg-primary/20 text-primary">108</Badge>
+                    </div>
                   </div>
-                  <div className="flex justify-between">
-                    <span>Push_swap</span>
-                    <Badge variant="outline">Algorithms</Badge>
+                  <div className="flex justify-between items-center">
+                    <span>Philosophers</span>
+                    <div className="flex gap-2">
+                      <Badge variant="outline">Threading</Badge>
+                      <Badge className="bg-primary/20 text-primary">100</Badge>
+                    </div>
                   </div>
-                  <div className="flex justify-between">
-                    <span>Minishell</span>
-                    <Badge variant="outline">Systems</Badge>
+                  <div className="flex justify-between items-center">
+                    <span>cub3d</span>
+                    <div className="flex gap-2">
+                      <Badge variant="outline">3D Graphics</Badge>
+                      <Badge className="bg-primary/20 text-primary">101</Badge>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span>CPP Modules</span>
+                    <div className="flex gap-2">
+                      <Badge variant="outline">C++</Badge>
+                      <Badge className="bg-accent/20 text-accent">80-90</Badge>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span>Exam Ranks</span>
+                    <div className="flex gap-2">
+                      <Badge variant="outline">Assessment</Badge>
+                      <Badge className="bg-primary/20 text-primary">100</Badge>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
