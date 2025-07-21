@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Shield, Code, Globe, Github, Linkedin, Mail, ExternalLink, Download, Terminal, Lock, Server, Database } from "lucide-react";
+import { Shield, Code, Globe, Github, Linkedin, Mail, ExternalLink, Download, Terminal, Lock, Server, Database, User } from "lucide-react";
 
 const Index = () => {
   const skills = [
@@ -69,10 +69,22 @@ const Index = () => {
       <section className="pt-32 pb-20 px-6">
         <div className="container mx-auto text-center">
           <div className="animate-slide-up">
-            <div className="mb-6 flex justify-center">
+            {/* Profile Photo Space */}
+            <div className="mb-8 flex justify-center">
               <div className="relative">
-                <Shield className="w-20 h-20 text-primary animate-glow" />
-                <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl animate-float"></div>
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 p-1 shadow-lg shadow-primary/20">
+                  <div className="w-full h-full rounded-full bg-card border-2 border-primary/30 flex items-center justify-center overflow-hidden hover:border-primary/50 transition-colors">
+                    <div className="w-full h-full bg-muted/20 rounded-full flex items-center justify-center text-muted-foreground group-hover:text-primary transition-colors">
+                      <User className="w-12 h-12 md:w-16 md:h-16" />
+                      <div className="absolute inset-0 rounded-full bg-primary/5 opacity-0 hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span className="text-xs text-primary font-medium">Add Photo</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center shadow-lg">
+                  <Shield className="w-4 h-4 text-primary-foreground" />
+                </div>
               </div>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
