@@ -105,7 +105,7 @@ Best regards,`);
                   <div className="w-full h-full rounded-full bg-card border-2 border-primary/30 flex items-center justify-center overflow-hidden hover:border-primary/50 transition-colors">
                     <img 
                       src="src/asset/IMG-20250626-WA0003(1).jpg" 
-                      alt="Profile" 
+                      alt="Photo" 
                       className="w-full h-full rounded-full object-cover"
                     />
                   </div>
