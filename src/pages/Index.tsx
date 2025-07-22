@@ -104,7 +104,7 @@ Best regards,`);
                 <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 p-1 shadow-lg shadow-primary/20">
                   <div className="w-full h-full rounded-full bg-card border-2 border-primary/30 flex items-center justify-center overflow-hidden hover:border-primary/50 transition-colors">
                     <img 
-                      src="src/asset/IMG-20250626-WA0003(1).jpg" 
+                      src="/src/asset/IMG-20250626-WA0003(1).jpg" 
                       alt="Photo"
                       className="w-full h-full rounded-full object-cover"
                     />
