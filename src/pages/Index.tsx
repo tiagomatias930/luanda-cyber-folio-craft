@@ -54,13 +54,7 @@ Best regards,`);
       link: "#",
       highlight: false
     },
-    {
-      title: "Reverse Engineering Tool",
-      description: "This script allows an attacker to gain an interactive shell on a target web server or on a target running PHP. It works by establishing a connection back to the attacker's machine. PHP Reverse Shell.",
-      tech: ["Python", "Sherlock", "Reverse Shell"],
-      link: "https://github.com/tiagomatias930/reverse_shell.git",
-      highlight: true
-    },
+
     {
       title: "Web Application Firewall",
       description: "Custom WAF implementation with real-time threat detection and blocking.",
@@ -68,13 +62,39 @@ Best regards,`);
       link: "#",
       highlight: true
     },
+
+    {
+      title: "Reverse Engineering Tool",
+      description: "This script allows an attacker to gain an interactive shell on a target web server or on a target running PHP. It works by establishing a connection back to the attacker's machine. PHP Reverse Shell.",
+      tech: ["Python", "Sherlock", "Reverse Shell"],
+      link: "https://github.com/tiagomatias930/reverse_shell.git",
+      highlight: true
+    },
+
+    {
+      title: "Heetch Easy",
+      description: "A prototype of heetch's taxi service with a new mode of transportation.",
+      tech: ["Canva", "Figma"],
+      link: "https://www.behance.net/gallery/210297691/Heetch-Easy",
+      highlight: true
+    },
+
     {
       title: "Toolkit for CTF",
       description: "Static and dynamic malware analysis platform with sandbox environment.",
       tech: ["learn", "toolkit", "Security"],
       link: "https://github.com/tiagomatias930/ctf-tools.git",
       highlight: false
+    },
+
+      {
+      title: "ModExpress.apk",
+      description: "A mobile application that simulates bank withdrawals without a card.",
+      tech: ["React-Native", "TypeScript", "Css3"],
+      link: "#",
+      highlight: true
     }
+
   ];
 
   return (
