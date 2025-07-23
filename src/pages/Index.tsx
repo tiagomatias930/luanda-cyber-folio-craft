@@ -48,7 +48,7 @@ Best regards,`);
 
   const projects = [
     {
-      title: "42Shell",
+      title: "Genioshell",
       description: "A complete shell implementation in C with advanced features like piping, redirections, and built-in commands.",
       tech: ["C", "Linux", "System Programming"],
       link: "#",
