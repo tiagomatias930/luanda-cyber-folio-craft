@@ -7,7 +7,7 @@ const Index = () => {
   // Função para fazer download do currículo
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = '/asset/Moderno.pdf'; // Caminho correto na pasta public
+    link.href = '/asset/Moderno-1.pdf'; // Caminho correto na pasta public
     link.download = 'Curriculum Vitae.pdf'; // Nome que aparecerá no download
     document.body.appendChild(link);
     link.click();
