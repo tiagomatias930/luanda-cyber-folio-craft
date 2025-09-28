@@ -68,7 +68,7 @@ Best regards,`);
       description: "This script allows an attacker to gain an interactive shell on a target web server or on a target running PHP. It works by establishing a connection back to the attacker's machine. PHP Reverse Shell.",
       tech: ["Python", "Sherlock", "Reverse Shell"],
       link: "https://github.com/tiagomatias930/reverse_shell.git",
-      highlight: true
+      highlight: false
     },
 
     {
@@ -76,7 +76,7 @@ Best regards,`);
       description: "A prototype of heetch's taxi service with a new mode of transportation.",
       tech: ["Canva", "Figma"],
       link: "https://www.behance.net/gallery/210297691/Heetch-Easy",
-      highlight: true
+      highlight: false
     },
 
     {
@@ -93,8 +93,15 @@ Best regards,`);
       tech: ["React-Native", "TypeScript", "Css3"],
       link: "#",
       highlight: true
+    },
+    
+    {
+      title: "42skillar",
+      description: "A web application of It aims to solve technological problems and provide practical learning in prompt engineering, challenging users to solve real-world challenges suggested and evaluated by AI. This application is ideal for those who want to work with AI in their workspace.",
+      tech: ["React-Native", "TypeScript", "Css3"],
+      link: "https://42skillar.geniomatias.me",
+      highlight: true
     }
-
   ];
 
   return (
@@ -331,7 +338,18 @@ Best regards,`);
                 <CardHeader>
                   <div className="flex justify-between items-start">
                     <CardTitle className="text-xl">{project.title}</CardTitle>
-                    <Button variant="ghost" size="sm" className="cyber-border p-2 hover:cyber-glow">
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      className="cyber-border p-2 hover:cyber-glow"
+                      onClick={() => {
+                        if (project.link && project.link !== "#") {
+                          window.open(project.link, '_blank');
+                        }
+                      }}
+                      disabled={!project.link || project.link === "#"}
+                      aria-label={project.link && project.link !== "#" ? `Abrir ${project.title}` : undefined}
+                    >
                       <ExternalLink className="h-4 w-4" />
                     </Button>
                   </div>
@@ -367,7 +385,7 @@ Best regards,`);
               <Github className="mr-2 h-5 w-5"  />
               GitHub
             </Button>
-            <Button variant="outline" size="lg" className="cyber-border hover:cyber-glow cyber-button" onClick={() => window.open("www.linkedin.com/in/tiago-matias-062b88217", "_blank")} >
+            <Button variant="outline" size="lg" className="cyber-border hover:cyber-glow cyber-button" onClick={() => window.open("https://www.linkedin.com/in/tiago-matias-062b88217", "_blank")} >
               <Linkedin className="mr-2 h-5 w-5" />
               LinkedIn
             </Button>
@@ -375,6 +393,7 @@ Best regards,`);
               <Figma className="mr-2 h-5 w-5" />
               Behance Prototype
             </Button>
+            
           </div>
         </div>
       </section>
