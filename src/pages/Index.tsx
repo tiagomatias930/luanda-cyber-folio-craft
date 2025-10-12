@@ -101,6 +101,13 @@ Best regards,`);
       tech: ["React-Native", "TypeScript", "Css3"],
       link: "https://42skillar.geniomatias.me",
       highlight: true
+    },
+    {
+      title: "FéDigital",
+      description: "I developed a mobile app focused on simplifying the submission of tithes and offerings. The solution not only facilitates the submission of receipts by the faithful, but also automates communication and treasury confirmation via WhatsApp. This project combines a user-friendly UX with powerful back-office automation to ensure transparency and efficiency in churches.",
+      tech: ["Figma", "Canva", "Adobe XD"],
+      link: "https://www.behance.net/gallery/236411581/FDigital",
+      highlight: true
     }
   ];
 
