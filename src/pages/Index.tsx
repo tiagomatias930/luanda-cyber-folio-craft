@@ -104,16 +104,16 @@ Best regards,`);
     },
     {
       title: "FéDigital",
-      description: "Banking/mobile-first app to manage balance, payments, transfers, cards, and access to an AI assistant. Target audience: mobile users who need basic financial operations and assistive support (chat).",
-      tech: ["React-native", "Vite.js", "Twilio CSS", "Heroicons"],
+      description: "I developed a mobile app focused on simplifying the submission of tithes and offerings. The solution not only facilitates the submission of receipts by the faithful, but also automates communication and treasury confirmation via WhatsApp. This project combines a user-friendly UX with powerful back-office automation to ensure transparency and efficiency in churches",
+      tech: ["Figma", "Adobe UX", "Sketch", "Canva"],
       link: "https://www.behance.net/gallery/236411581/FDigital",
       highlight: true
     },
       
     {
       title: "Mixa App",
-      description: "I developed a mobile app focused on simplifying the submission of tithes and offerings. The solution not only facilitates the submission of receipts by the faithful, but also automates communication and treasury confirmation via WhatsApp. This project combines a user-friendly UX with powerful back-office automation to ensure transparency and efficiency in churches.",
-      tech: ["Figma", "Canva", "Adobe XD"],
+      description: "Banking/mobile-first app to manage balance, payments, transfers, cards, and access to an AI assistant. Target audience: mobile users who need basic financial operations and assistive support (chat).",
+      tech: ["React-native", "Vite.js", "Twilio CSS", "Heroicons"],
       link: "https://github.com/tiagomatias930/mixa_base_aplication.git",
       highlight: true
     }
