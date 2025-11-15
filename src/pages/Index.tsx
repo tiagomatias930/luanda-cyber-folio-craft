@@ -116,6 +116,14 @@ Best regards,`);
       tech: ["React-native", "Vite.js", "Twilio CSS", "Heroicons"],
       link: "https://github.com/tiagomatias930/mixa_base_aplication.git",
       highlight: true
+    },
+
+      {
+      title: "Site Oficial do grupo Pembé Na Mwindo",
+      description: "Banking/mobile-first app to manage balance, payments, transfers, cards, and access to an AI assistant. Target audience: mobile users who need basic financial operations and assistive support (chat).",
+      tech: ["Vite.js", "Twilio CSS", "Canva" , "Figma", "Picsart"],
+      link: "https://pembenamwindo.vercel.app/",
+      highlight: true
     }
   ];
 
