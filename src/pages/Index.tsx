@@ -120,7 +120,7 @@ Best regards,`);
 
       {
       title: "Site Oficial do grupo Pembé Na Mwindo",
-      description: "Banking/mobile-first app to manage balance, payments, transfers, cards, and access to an AI assistant. Target audience: mobile users who need basic financial operations and assistive support (chat).",
+      description: "The Pembe na Mwindo theatre group decided to migrate to the digital world and increase their audience, and I voluntarily created the website for them.",
       tech: ["Vite.js", "Twilio CSS", "Canva" , "Figma", "Picsart"],
       link: "https://pembenamwindo.vercel.app/",
       highlight: true
@@ -202,7 +202,7 @@ Best regards,`);
             <div>
               <h2 className="text-3xl font-bold mb-6 text-gradient">About Me</h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                I am a passionate software engineer who graduated from 42Luanda, where I developed a 
+                I am a passionate software engineer who studant from 42Luanda, where I developed a 
                 solid foundation in systems programming, algorithms and collaborative coding, web design, networking, automation.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -210,7 +210,7 @@ Best regards,`);
               Flag (CTF) competitions participating in challenges on hack the box, 42ctf, tryhackme, and other cybersecurity tra.
               </p>
               <div className="flex flex-wrap gap-2">
-                <Badge className="bg-primary/20 text-primary border-primary/30">42Luanda Graduate</Badge>
+                <Badge className="bg-primary/20 text-primary border-primary/30">42Luanda Studant</Badge>
                 <Badge className="bg-accent/20 text-accent border-accent/30">Cybersecurity Enthusiast</Badge>
                 <Badge className="bg-primary/20 text-primary border-primary/30">System Programming</Badge>
               </div>
