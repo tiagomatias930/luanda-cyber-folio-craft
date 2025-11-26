@@ -121,7 +121,7 @@ Best regards,`);
       {
       title: "Site Oficial do grupo Pembé Na Mwindo",
       description: "The Pembe na Mwindo theatre group decided to migrate to the digital world and increase their audience, and I voluntarily created the website for them.",
-      tech: ["Vite.js", "Twilio CSS", "Canva" , "Figma", "Picsart"],
+      tech: ["Vite.js", "Twilio CSS", "Canva" , "Figma", "Picsart"],Sou um engenheiro de software apaixonado, estudante da 42Luanda.
       link: "https://pembenamwindo.vercel.app/",
       highlight: true
     },
@@ -131,6 +131,14 @@ Best regards,`);
       description: "NutriScan: Your Personal Nutritionist in Your Pocket NutriScan is an innovative mobile application designed to optimize your health and wellness journey. With an intuitive interface and smart features, NutriScan makes managing your daily nutrition simple and effective.",
       tech: ["Vite.js", "Expo", "Canva"],
       link: "https://github.com/tiagomatias930/NUTRISCAN-build.git",
+      highlight: true
+    },
+
+      {
+      title: "Tchissola's Dream",
+      description: "Title and Authorship The work is entitled "Tchissola's Dream" and is a story based on real events, written by Engineer Albina Assis. The same work was the focus of attention at the Angolan pavilion at Expo Japan 2025.",
+      tech: ["ChatGpt/Sora", "Hailuoai", "Canva", "Capcut"],
+      link: "https://drive.google.com/file/d/1ixnzPZSUT-ElCwkdAm5f_nU8EnbxJy4i/view?usp=sharing",
       highlight: true
     }
   ];
