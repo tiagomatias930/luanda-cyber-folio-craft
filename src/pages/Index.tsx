@@ -187,7 +187,7 @@ Best regards,`);
               <span className="text-foreground">Software Engineer</span>
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              I'm studant at 42Luanda passionate about cybersecurity, system programming, and building secure applications.ining platforms..
+              I'm student at 42Luanda passionate about cybersecurity, system programming, and building secure applications.ining platforms..
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="cyber-glow cyber-button" onClick={handleDownloadResume}>
