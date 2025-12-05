@@ -210,7 +210,7 @@ Best regards,`);
             <div>
               <h2 className="text-3xl font-bold mb-6 text-gradient">About Me</h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                I am a passionate software engineer who student at 42Luanda, where I developed a 
+                I am a passionate software engineer and student at 42Luanda, where I developed a 
                 solid foundation in systems programming, algorithms and collaborative coding, web design, networking, automation.
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
