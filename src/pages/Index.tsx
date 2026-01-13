@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Shield, Code, Globe, Github, Linkedin, Mail, ExternalLink, Download, Terminal, Lock, Server, Database, User, Figma } from "lucide-react";
+import { Shield, Code, Globe, Github, Linkedin, Mail, ExternalLink, Download, Terminal, Lock, Server, Database, User, Figma, Smartphone } from "lucide-react";
 
 const Index = () => {
   // Função para fazer download do currículo
@@ -140,6 +140,13 @@ Best regards,`);
       tech: ["ChatGpt/Sora", "Hailuoai", "Canva", "Capcut"],
       link: "https://drive.google.com/file/d/1ixnzPZSUT-ElCwkdAm5f_nU8EnbxJy4i/view?usp=sharing",
       highlight: true
+    }, 
+          {
+      title: "Chronicles of the Unspoke",
+      description: "\"Chronicles of the Unspoken\" is not just a game, it's an immersive tactical RPG experience that utilizes the cutting-edge technology of the Gemini 2.5 Live API to transform your voice and movements into direct commands within a Cyber-Noir universe.",
+      tech: ["Studio AI", "Gemini 2.5 Live API", "Canva", "Figma"],
+      link: "https://ai.studio/apps/drive/17Ndmpn-a8lNcYpo76eUGGL1Z9_flb80f?fullscreenApplet=true",
+      highlight: true
     }
   ];
 
@@ -215,12 +222,14 @@ Best regards,`);
               </p>
               <p className="text-muted-foreground mb-6 leading-relaxed">
               My curiosity also led me to explore reverse engineering, Lua bytecode analysis, and flag decoding in Capture The
-              Flag (CTF) competitions participating in challenges on hack the box, 42ctf, tryhackme, and other cybersecurity tra.
+              Flag (CTF) competitions participating in challenges on hack the box, 42ctf, tryhackme, and other cybersecurity platforms.
               </p>
               <div className="flex flex-wrap gap-2">
                 <Badge className="bg-primary/20 text-primary border-primary/30">42Luanda Student</Badge>
                 <Badge className="bg-accent/20 text-accent border-accent/30">Cybersecurity Enthusiast</Badge>
                 <Badge className="bg-primary/20 text-primary border-primary/30">System Programming</Badge>
+                <Badge className="bg-primary/20 text-primary border-primary/30">Prompt Engineering</Badge>
+                <Badge className="bg-accent/20 text-accent border-accent/30">Mobile Development</Badge>
               </div>
             </div>
             <div className="relative">
@@ -309,6 +318,20 @@ Best regards,`);
                       <Badge className="bg-accent/20 text-accent">80-90</Badge>
                     </div>
                   </div>
+                  <div className="flex justify-between items-center">
+                    <span>CPP Modules 05-09</span>
+                    <div className="flex gap-2">
+                      <Badge variant="outline">C++</Badge>
+                      <Badge className="bg-accent/20 text-accent">90-100</Badge>
+                    </div>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span>Inception</span>
+                    <div className="flex gap-2">
+                      <Badge variant="outline">Docker</Badge>
+                      <Badge className="bg-accent/20 text-accent">100</Badge>
+                    </div>
+                  </div>
                 <div className="flex justify-between items-center">
                     <span>NetPractice</span>
                     <div className="flex gap-2">
@@ -328,7 +351,7 @@ Best regards,`);
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-gradient">Technical Skills</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {["Programming", "Security", "Systems", "Tools", "Frontend", "DevOps"].map((category) => (
+            {["Programming", "Security", "Systems", "Tools", "Frontend", "DevOps", "Mobile Development"].map((category) => (
               <Card key={category} className="cyber-card cyber-border bg-card/50 backdrop-blur-sm hover:cyber-glow transition-all duration-300">
                 <CardHeader>
                   <CardTitle className="flex items-center">
@@ -338,6 +361,7 @@ Best regards,`);
                     {category === "Tools" && <Terminal className="mr-2 h-5 w-5 text-accent" />}
                     {category === "Frontend" && <Globe className="mr-2 h-5 w-5 text-primary" />}
                     {category === "DevOps" && <Database className="mr-2 h-5 w-5 text-accent" />}
+                    {category === "Mobile Development" && <Smartphone className="mr-2 h-5 w-5 text-primary" />}
                     {category}
                   </CardTitle>
                 </CardHeader>
