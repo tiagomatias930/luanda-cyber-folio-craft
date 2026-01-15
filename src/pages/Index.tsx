@@ -229,6 +229,8 @@ Best regards,`);
                 <Badge className="bg-accent/20 text-accent border-accent/30">Cybersecurity Enthusiast</Badge>
                 <Badge className="bg-primary/20 text-primary border-primary/30">System Programming</Badge>
                 <Badge className="bg-primary/20 text-primary border-primary/30">Prompt Engineering</Badge>
+                <Badge className="bg-primary/20 text-primary border-primary/30">Mobile Development</Badge>
+
               </div>
             </div>
             <div className="relative">
@@ -360,7 +362,6 @@ Best regards,`);
                     {category === "Tools" && <Terminal className="mr-2 h-5 w-5 text-accent" />}
                     {category === "Frontend" && <Globe className="mr-2 h-5 w-5 text-primary" />}
                     {category === "DevOps" && <Database className="mr-2 h-5 w-5 text-accent" />}
-                    {category === "Mobile Development" && <Smartphone className="mr-2 h-5 w-5 text-primary" />}
                     {category}
                   </CardTitle>
                 </CardHeader>
