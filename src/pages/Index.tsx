@@ -159,8 +159,8 @@ Best regards,`);
     {
       title: "Chronicles of the Unspoken",
       description: "An immersive tactical RPG experience utilizing Gemini 2.5 Live API to transform voice and movements into commands.",
-      tech: ["Studio AI", "Gemini 2.5 Live API", "Canva", "Figma"],
-      link: "https://ai.studio/apps/drive/17Ndmpn-a8lNcYpo76eUGGL1Z9_flb80f?fullscreenApplet=true",
+      tech: ["Studio AI", "Gemini 2.5 Live API", "Canva", "ReactJs"],
+      link: "https://chronicles-of-the-unspoken.vercel.app/",
       highlight: true
     }
   ];
