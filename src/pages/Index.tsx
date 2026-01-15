@@ -165,12 +165,6 @@ Best regards,`);
     }
   ];
 
-  const stats = [
-    { number: "12+", label: "Projects Completed" },
-    { number: "5+", label: "Years Experience" },
-    { number: "50+", label: "Skills Mastered" },
-    { number: "24/7", label: "Available" }
-  ];
 
   return (
     <div className="min-h-screen">
@@ -182,7 +176,7 @@ Best regards,`);
       }`}>
         <div className="container mx-auto px-6 py-4 max-w-6xl">
           <div className="flex justify-between items-center">
-            <a href="#home" className="text-2xl font-bold text-gradient">Tiago Matias</a>
+            <a href="#home" className="text-2xl font-bold">Tiago Matias</a>
             <div className="flex items-center gap-8">
               <nav className="hidden md:flex space-x-8">
                 <a href="#home" className={`transition-colors duration-300 font-medium ${
@@ -408,21 +402,6 @@ Best regards,`);
                   </div>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-[#7c5cff] to-[#8a72ff] dark:from-slate-800 dark:to-slate-700">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold text-center mb-16 text-white animate-fade-in">Statistics</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center text-white animate-bounce-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="text-4xl md:text-5xl font-bold mb-2 hover:scale-110 transition-transform duration-300">{stat.number}</div>
-                <div className="text-white/80 text-sm md:text-base">{stat.label}</div>
-              </div>
             ))}
           </div>
         </div>
