@@ -352,7 +352,7 @@ Best regards,`);
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-gradient">Technical Skills</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {["Programming", "Security", "Systems", "Tools", "Frontend", "DevOps", "Mobile Development"].map((category) => (
+            {["Programming", "Security", "Systems", "Tools", "Frontend", "DevOps"].map((category) => (
               <Card key={category} className="cyber-card cyber-border bg-card/50 backdrop-blur-sm hover:cyber-glow transition-all duration-300">
                 <CardHeader>
                   <CardTitle className="flex items-center">
