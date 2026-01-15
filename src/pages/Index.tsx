@@ -439,8 +439,7 @@ Best regards,`);
       {/* Footer */}
       <footer className="py-8 px-6 bg-foreground dark:bg-slate-950 text-white text-center border-t border-border dark:border-slate-800">
         <div className="container mx-auto max-w-6xl">
-          <p>&copy; 2025 Tiago Matias Portfolio. Desenvolvido com React, TypeScript e ❤️</p>
-          <p className="text-white/60 text-sm mt-2">Implementação completa de servidor HTTP seguindo os padrões da 42.</p>
+          <p>&copy; 2026 Tiago Matias Portfolio. Desenvolvido com React, TypeScript e ❤️</p>
         </div>
       </footer>
     </div>
