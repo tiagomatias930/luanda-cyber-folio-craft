@@ -9,6 +9,7 @@ const Index = () => {
   const [isHeaderScrolled, setIsHeaderScrolled] = useState(false);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [hoveredProject, setHoveredProject] = useState<string | null>(null);
 
   // Scroll effect na header
   useEffect(() => {
@@ -77,91 +78,104 @@ Best regards,`);
       description: "A complete shell implementation in C with advanced features like piping, redirections, and built-in commands.",
       tech: ["C", "Linux", "System Programming"],
       link: "#",
-      highlight: false
+      highlight: false,
+      image: null
     },
     {
       title: "Web Application Firewall",
       description: "Custom WAF implementation with real-time threat detection and blocking.",
       tech: ["C++", "Network Security", "Linux"],
       link: "#",
-      highlight: true
+      highlight: true,
+      image: null
     },
     {
       title: "Reverse Engineering Tool",
       description: "This script allows an attacker to gain an interactive shell on a target web server or on a target running PHP. It works by establishing a connection back to the attacker's machine. PHP Reverse Shell.",
       tech: ["Python", "Sherlock", "Reverse Shell"],
       link: "https://github.com/tiagomatias930/reverse_shell.git",
-      highlight: false
+      highlight: false,
+      image: "/reverse.png"
     },
     {
       title: "Heetch Easy",
       description: "A prototype of heetch's taxi service with a new mode of transportation.",
       tech: ["Canva", "Figma"],
       link: "https://www.behance.net/gallery/210297691/Heetch-Easy",
-      highlight: false
+      highlight: false,
+      image: "/heetch.png"
     },
     {
       title: "Toolkit for CTF",
       description: "Static and dynamic malware analysis platform with sandbox environment.",
       tech: ["learn", "toolkit", "Security"],
       link: "https://github.com/tiagomatias930/ctf-tools.git",
-      highlight: false
+      highlight: false,
+      image: null
     },
     {
       title: "ModExpress.apk",
       description: "A mobile application that simulates bank withdrawals without a card.",
       tech: ["React-Native", "TypeScript", "Css3"],
       link: "#",
-      highlight: true
+      highlight: true,
+      image: null
     },
     {
       title: "42skillar",
       description: "A web application that aims to solve technological problems and provide practical learning in prompt engineering, challenging users to solve real-world challenges.",
       tech: ["React-Native", "TypeScript", "Css3"],
       link: "https://42skillar.geniomatias.me",
-      highlight: true
+      highlight: true,
+      image: "/42skillar.png"
     },
     {
       title: "FéDigital",
       description: "A mobile app focused on simplifying the submission of tithes and offerings with treasury automation via WhatsApp.",
       tech: ["Figma", "Adobe UX", "Sketch", "Canva"],
       link: "https://www.behance.net/gallery/236411581/FDigital",
-      highlight: true
+      highlight: true,
+      image: "/fe.png"
     },
     {
       title: "Mixa App",
       description: "Banking/mobile-first app to manage balance, payments, transfers, cards, and access to an AI assistant.",
       tech: ["React-native", "Vite.js", "Twilio CSS", "Heroicons"],
       link: "https://github.com/tiagomatias930/mixa_base_aplication.git",
-      highlight: true
+      highlight: true,
+      image: null
     },
     {
       title: "Pembé Na Mwindo",
       description: "Official website for the Pembe na Mwindo theatre group to increase their digital presence and audience.",
       tech: ["Vite.js", "Twilio CSS", "Canva", "Figma", "Picsart"],
       link: "https://pembenamwindo.vercel.app/",
-      highlight: true
+      highlight: true,
+      image: "/pembe.png"
     },
     {
       title: "NUTRISCAN App",
       description: "An innovative mobile application designed to optimize your health and wellness journey with nutrition management.",
       tech: ["Vite.js", "Expo", "Canva"],
       link: "https://com-wnutriscan-19285553.br.uptodown.com/android",
-      highlight: true
+      highlight: true,
+      image: "/nutriscan.png"
     },
     {
       title: "Tchissola's Dream",
       description: "A story based on real events, written by Engineer Albina Assis, featured at the Angolan pavilion at Expo Japan 2025.",
       tech: ["ChatGpt/Sora", "Hailuoai", "Canva", "Capcut"],
       link: "https://drive.google.com/file/d/1ixnzPZSUT-ElCwkdAm5f_nU8EnbxJy4i/view?usp=sharing",
-      highlight: true
+      highlight: true,
+      image: "/tshicole.png"
     },
     {
       title: "Chronicles of the Unspoken",
       description: "An immersive tactical RPG experience utilizing Gemini 2.5 Live API to transform voice and movements into commands.",
       tech: ["Studio AI", "Gemini 2.5 Live API", "Canva", "ReactJs"],
       link: "https://chronicles-of-the-unspoken.vercel.app/",
-      highlight: true
+      highlight: true,
+      image: "/chron.png"
     }
   ];
 
@@ -169,8 +183,8 @@ Best regards,`);
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Navigation Header */}
-      <header className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-slate-800">
-        <div className="container mx-auto px-6 py-4 max-w-6xl">
+      <header className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-slate-800 ">
+        <div className="container mx-auto px-6 py-4 max-w-6xl ">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-8">
               <nav className="hidden md:flex space-x-8">
@@ -235,9 +249,9 @@ Best regards,`);
           {/* Right Image */}
           <div className="hidden lg:block">
             <div className="relative">
-              <div className="w-full aspect-square rounded-lg overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 p-1">
+              <div className="w-full aspect-square-[4/4] rounded-lg overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 p-1">
                 <img 
-                  src="/jame.jpg" 
+                  src="/ternoMatias(1).png" 
                   alt="Tiago Matias"
                   className="w-full h-full object-cover rounded-lg"
                 />
@@ -256,7 +270,7 @@ Best regards,`);
             <div className="hidden lg:block">
               <div className="w-full aspect-[3/4] rounded-lg overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700">
                 <img 
-                  src="/jame.jpg" 
+                  src="/ternoMatias(1).png" 
                   alt="Tiago Matias"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />
@@ -503,45 +517,63 @@ I am a passionate software engineer and student at 42Luanda, where I developed a
           <h2 className="text-5xl font-bold mb-16 text-white">PORTFOLIO</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, index) => (
-              <Card 
-                key={project.title} 
-                className={`bg-slate-900 border border-slate-700 hover:border-cyan-400/50 transition-all duration-300 overflow-hidden group`}
-              >
-                <CardHeader className="pb-3">
-                  <div className="flex justify-between items-start gap-2">
-                    <div className="flex-1">
-                      <CardTitle className="text-base text-white group-hover:text-cyan-400 transition-colors">
-                        {project.title}
-                      </CardTitle>
+              <div key={project.title} className="relative group">
+                {/* Imagem que aparece ao passar o mouse */}
+                {project.image && (
+                  <div className="absolute inset-0 rounded-lg overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                    <div className="absolute inset-0 bg-black/40"></div>
+                  </div>
+                )}
+                
+                {/* Card do projeto */}
+                <Card 
+                  className={`bg-slate-900 border border-slate-700 hover:border-cyan-400/50 transition-all duration-300 overflow-hidden relative h-full ${
+                    project.image ? 'group-hover:bg-transparent' : ''
+                  }`}
+                  onMouseEnter={() => setHoveredProject(project.title)}
+                  onMouseLeave={() => setHoveredProject(null)}
+                >
+                  <CardHeader className="pb-3">
+                    <div className="flex justify-between items-start gap-2">
+                      <div className="flex-1">
+                        <CardTitle className="text-base text-white group-hover:text-cyan-400 transition-colors">
+                          {project.title}
+                        </CardTitle>
+                      </div>
+                      {project.link && project.link !== "#" && (
+                        <Button 
+                          variant="ghost" 
+                          size="sm" 
+                          className="text-gray-500 hover:text-cyan-400 p-0 h-auto w-auto"
+                          onClick={() => window.open(project.link, '_blank')}
+                        >
+                          <ExternalLink className="h-4 w-4" />
+                        </Button>
+                      )}
                     </div>
-                    {project.link && project.link !== "#" && (
-                      <Button 
-                        variant="ghost" 
-                        size="sm" 
-                        className="text-gray-500 hover:text-cyan-400 p-0 h-auto w-auto"
-                        onClick={() => window.open(project.link, '_blank')}
-                      >
-                        <ExternalLink className="h-4 w-4" />
-                      </Button>
-                    )}
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-400 text-sm mb-4 line-clamp-3">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
-                      <Badge 
-                        key={tech} 
-                        className="bg-slate-800 text-cyan-400 border border-cyan-400/30 text-xs hover:bg-cyan-400/10"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardHeader>
+                  <CardContent className={project.image && hoveredProject === project.title ? 'opacity-0' : 'opacity-100'}>
+                    <p className="text-gray-400 text-sm mb-4 line-clamp-3">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((tech) => (
+                        <Badge 
+                          key={tech} 
+                          className="bg-slate-800 text-cyan-400 border border-cyan-400/30 text-xs hover:bg-cyan-400/10"
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             ))}
           </div>
         </div>
