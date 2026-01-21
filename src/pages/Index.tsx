@@ -315,9 +315,12 @@ I am a passionate software engineer and student at 42Luanda, where I developed a
                 {[
                   { name: "C/C++", level: 90 },
                   { name: "Python", level: 85 },
-                  { name: "React/TypeScript", level: 75 },
+                  { name: "React/TypeScript", level: 89 },
                   { name: "Linux/Bash", level: 90 },
-                  { name: "Web Design", level: 90 }
+                  { name: "Web Design", level: 90 },
+                  { name: "Docker", level: 92 },
+                  { name: "Networking Computer", level: 60 },
+                  { name: "Penetration Testing", level: 80 }
                 ].map((skill) => (
                   <div key={skill.name}>
                     <div className="flex justify-between mb-2">
