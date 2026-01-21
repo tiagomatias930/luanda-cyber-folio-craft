@@ -251,7 +251,7 @@ Best regards,`);
             <div className="relative">
               <div className="w-full aspect-square-[4/4] rounded-lg overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 p-1">
                 <img 
-                  src="/ternoMatias(1).png" 
+                  src="/jame.jpg" 
                   alt="Tiago Matias"
                   className="w-full h-full object-cover rounded-lg"
                 />
@@ -270,7 +270,7 @@ Best regards,`);
             <div className="hidden lg:block">
               <div className="w-full aspect-[3/4] rounded-lg overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700">
                 <img 
-                  src="/jame.jpg" 
+                  src="/ternoMatias(1).png" 
                   alt="Tiago Matias"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 />
