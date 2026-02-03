@@ -176,6 +176,14 @@ Best regards,`);
       link: "https://chronicles-of-the-unspoken.vercel.app/",
       highlight: true,
       image: "/chron.png"
+    },
+        {
+      title: "Angola Vibes",
+      description: "It is a progressive web application (PWA) that functions as an interactive guide to tourism, gastronomy, and lifestyle in Angola. Developed with a focus on real, cost-effective experiences, the application connects travelers and locals through authentic recommendations from cultural ambassador Jessi Madalena.",
+      tech: ["React", "Supabase", "Vite.js", "Tailwind CSS"],
+      link: "https://visite-angola.vercel.app/",
+      highlight: true,
+      image: "/Screenshot from 2026-02-03 15-36-05.png"
     }
   ];
 
@@ -319,7 +327,7 @@ I am a passionate software engineer and student at 42Luanda, where I developed a
                   { name: "Linux/Bash", level: 90 },
                   { name: "Web Design", level: 90 },
                   { name: "Docker", level: 92 },
-                  { name: "Networking Computer", level: 60 },
+                  { name: "Networking Computer", level: 70 },
                   { name: "Penetration Testing", level: 80 }
                 ].map((skill) => (
                   <div key={skill.name}>
@@ -341,7 +349,7 @@ I am a passionate software engineer and student at 42Luanda, where I developed a
               <div className="space-y-6">
                 {[
                   { name: "Portuguese", level: 100 },
-                  { name: "English", level: 55 }                
+                  { name: "English", level: 40 }                
                 ].map((lang) => (
                   <div key={lang.name}>
                     <div className="flex justify-between mb-2">
@@ -396,6 +404,11 @@ I am a passionate software engineer and student at 42Luanda, where I developed a
                     title: "NUTRÍSCAN APP",
                     subtitle: "Mobile App Developer",
                     description: "Nutrition management application"
+                  }, 
+                  {
+                    title: "ANGOLA VIBES",
+                    subtitle: "Web Application Developer",
+                    description: "Full-stack development of tourism guide platform"
                   }
                 ].map((exp, idx) => (
                   <div key={idx} className="flex gap-4">
@@ -465,7 +478,15 @@ I am a passionate software engineer and student at 42Luanda, where I developed a
                 </li>
                 <li className="flex gap-2">
                   <span className="text-cyan-400">◆</span>
-                  <span>Color & Typography Expertise</span>
+                  <span>Miro</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-cyan-400">◆</span>
+                  <span>Marvelapp</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-cyan-400">◆</span>
+                  <span>Material UI</span>
                 </li>
               </ul>
 
@@ -523,7 +544,7 @@ I am a passionate software engineer and student at 42Luanda, where I developed a
               <div key={project.title} className="relative group">
                 {/* Imagem que aparece ao passar o mouse */}
                 {project.image && (
-                  <div className="absolute inset-0 rounded-lg overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
+                  <div className="absolute inset-0 rounded-lg overflow-hidden opacity-0 group-hover:opacity-35 transition-opacity duration-300 z-20 pointer-events-none">
                     <img 
                       src={project.image} 
                       alt={project.title}
