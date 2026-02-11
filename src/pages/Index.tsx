@@ -124,7 +124,7 @@ Best regards,`);
       image: null
     },
     {
-      title: "SkillarCode",
+      title: "SkillarCode ",
       description: "A web application that aims to solve technological problems and provide practical learning in prompt engineering, challenging users to solve real-world challenges.",
       tech: ["React-Native", "TypeScript", "Css3"],
       link: "https://42skillar.geniomatias.me",
