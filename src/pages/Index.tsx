@@ -142,7 +142,7 @@ Best regards,`);
       description: "Banking/mobile-first app to manage balance, payments, transfers, cards, and access to an AI assistant.",
       tech: ["React-native", "Vite.js", "Twilio CSS", "Heroicons"],
       link: "https://github.com/tiagomatias930/mixa_base_aplication.git",
-      highlight: true,
+      highlight: false,
       image: null
     },
     {
@@ -184,6 +184,15 @@ Best regards,`);
       link: "https://visite-angola.vercel.app/",
       highlight: true,
       image: "/Screenshot from 2026-02-03 15-36-05.png"
+    },
+      
+    {
+      title: "Fenix Goals",
+      description: "Is a high-performance platform developed to transform abstract goals into tangible achievements. The system is based on Brian Tracy's 12-Step Phoenix Seminar, combining success psychology with generative artificial intelligence.",
+      tech: ["TypeScript", "HTML"],
+      link: "https://fenix-goals.vercel.app",
+      highlight: true,
+      image: "/Screenshot from 2026-02-11 02-17-16.png"
     }
   ];
 
