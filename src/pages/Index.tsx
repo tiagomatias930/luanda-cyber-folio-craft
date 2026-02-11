@@ -5,6 +5,7 @@ import { Code, Github, Linkedin, Mail, ExternalLink, Download, Terminal, Lock, S
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import TerminalSection from "@/components/TerminalSection";
+import VisitorCounter from "@/components/VisitorCounter";
 
 const Index = () => {
   const [isHeaderScrolled, setIsHeaderScrolled] = useState(false);
@@ -123,7 +124,7 @@ Best regards,`);
       image: null
     },
     {
-      title: "42skillar",
+      title: "SkillarCode",
       description: "A web application that aims to solve technological problems and provide practical learning in prompt engineering, challenging users to solve real-world challenges.",
       tech: ["React-Native", "TypeScript", "Css3"],
       link: "https://42skillar.geniomatias.me",
@@ -392,7 +393,7 @@ I am a passionate software engineer and student at 42Luanda, where I developed a
               <div className="space-y-8">
                 {[
                   {
-                    title: "42SKILLAR",
+                    title: "SKILLARCODE",
                     subtitle: "Web Application Developer",
                     description: "Full-stack development of learning platform"
                   },
@@ -671,7 +672,8 @@ Let's connect and build something secure together.
 
       {/* Footer */}
       <footer className="py-8 px-6 bg-slate-950 text-gray-500 text-center border-t border-slate-800">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-6xl space-y-3">
+          <VisitorCounter />
           <p className="text-sm">&copy; 2026 Tiago Matias. Developed with React, TypeScript, and ❤️</p>
         </div>
       </footer>
