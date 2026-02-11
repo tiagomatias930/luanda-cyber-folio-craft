@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Code, Github, Linkedin, Mail, ExternalLink, Download, Terminal, Lock, Server, Database, Figma, Moon, Sun, Briefcase, MapPin, BookOpen, Video } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import TerminalSection from "@/components/TerminalSection";
 
 const Index = () => {
   const [isHeaderScrolled, setIsHeaderScrolled] = useState(false);
@@ -209,6 +210,7 @@ Best regards,`);
                 <a href="#about" className="text-sm font-medium text-gray-400 hover:text-cyan-400 transition-colors">About</a>
                 <a href="#resume" className="text-sm font-medium text-gray-400 hover:text-cyan-400 transition-colors">Resume</a>
                 <a href="#projects" className="text-sm font-medium text-gray-400 hover:text-cyan-400 transition-colors">Portfolio</a>
+                <a href="#terminal" className="text-sm font-medium text-gray-400 hover:text-cyan-400 transition-colors">Terminal</a>
               </nav>
             </div>
           </div>
@@ -330,12 +332,14 @@ I am a passionate software engineer and student at 42Luanda, where I developed a
               <div className="space-y-6">
                 {[
                   { name: "C/C++", level: 90 },
-                  { name: "Python", level: 85 },
-                  { name: "React/TypeScript", level: 89 },
-                  { name: "Linux/Bash", level: 90 },
+                  { name: "Python", level: 70 },
+                  { name: "React/TypeScript", level: 90 },
+                  { name: "Linux/Bash", level: 80 },
                   { name: "Web Design", level: 90 },
                   { name: "Docker", level: 92 },
+                  { name: "Git/Github", level: 90 },
                   { name: "Networking Computer", level: 70 },
+                  { name: "React-native/Expo", level: 70 },
                   { name: "Penetration Testing", level: 80 }
                 ].map((skill) => (
                   <div key={skill.name}>
@@ -417,6 +421,11 @@ I am a passionate software engineer and student at 42Luanda, where I developed a
                     title: "ANGOLA VIBES",
                     subtitle: "Web Application Developer",
                     description: "Full-stack development of tourism guide platform"
+                  }, 
+                  {
+                    title: "Nova Angola",
+                    subtitle: "Appplication Developer",
+                    description: "In processing the development of a mobile application for the Nova Angola project, The solution integrates geolocation functionalities, AI image analysis, health screening, and secure authentication to foster data-driven community actions in real time."
                   }
                 ].map((exp, idx) => (
                   <div key={idx} className="flex gap-4">
@@ -479,6 +488,10 @@ I am a passionate software engineer and student at 42Luanda, where I developed a
                 <li className="flex gap-2">
                   <span className="text-cyan-400">◆</span>
                   <span>Adobe Suite - Design & Branding</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="text-cyan-400">◆</span>
+                  <span>Stitch - Prototyping & Wireframing</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-cyan-400">◆</span>
@@ -610,6 +623,9 @@ I am a passionate software engineer and student at 42Luanda, where I developed a
           </div>
         </div>
       </section>
+
+      {/* Terminal Section */}
+      <TerminalSection />
 
       {/* Contact Section */}
       <section id="contact" className="py-24 px-6 bg-black border-t border-slate-800">
