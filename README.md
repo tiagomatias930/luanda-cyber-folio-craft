@@ -1,73 +1,129 @@
-# Welcome to your Lovable project
+# 🌐 Tiago Matias — Portfolio
 
-## Project info
+Portfolio pessoal de **Tiago Matias**, engenheiro de software e estudante na [42Luanda](https://www.42luanda.com/), com foco em desenvolvimento de software, aplicações mobile/web, pentesting e segurança de redes.
 
-**URL**: https://lovable.dev/projects/07ec2729-fb3f-4738-8db7-607aa6040cf1
+🔗 **Live:** [geniomatias.me](https://geniomatias.me)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ✨ Sobre o Projecto
 
-**Use Lovable**
+Um portfólio moderno e responsivo com estética cyberpunk/dark, construído com React, TypeScript e Tailwind CSS. Inclui secções de apresentação, habilidades, experiência profissional, projectos e um terminal interactivo.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/07ec2729-fb3f-4738-8db7-607aa6040cf1) and start prompting.
+### Secções
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Hero** — Apresentação com foto, links sociais e download de CV
+- **About** — Descrição pessoal, localização e formação
+- **Resume** — Skills técnicas, idiomas, experiência e educação
+- **Portfolio** — Galeria de projectos com tech stack e links
+- **Terminal** — Secção interactiva estilo terminal
+- **Visitor Counter** — Contador de visitantes
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+| Camada       | Tecnologias                                                      |
+| ------------ | ---------------------------------------------------------------- |
+| **Frontend** | React 18, TypeScript, Vite                                       |
+| **Styling**  | Tailwind CSS, shadcn/ui (Radix UI), Lucide Icons                 |
+| **Routing**  | React Router DOM                                                 |
+| **State**    | TanStack React Query, React Hook Form, Zod                      |
+| **Tema**     | next-themes (dark/light)                                         |
+| **Outros**   | Recharts, Embla Carousel, Sonner (toasts), Vaul (drawer)        |
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🚀 Começar
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Pré-requisitos
 
-# Step 3: Install the necessary dependencies.
-npm i
+- **Node.js** ≥ 18
+- **npm** ou **bun**
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### Instalação
+
+```bash
+# Clonar o repositório
+git clone https://github.com/tiagomatias930/luanda-cyber-folio-craft.git
+cd luanda-cyber-folio-craft
+
+# Instalar dependências
+npm install
+# ou
+bun install
 ```
 
-**Edit a file directly in GitHub**
+### Desenvolvimento
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run dev
+# ou
+bun dev
+```
 
-**Use GitHub Codespaces**
+A aplicação estará disponível em `http://localhost:8080`.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Build de Produção
 
-## What technologies are used for this project?
+```bash
+npm run build
+npm run preview
+```
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📁 Estrutura do Projecto
 
-## How can I deploy this project?
+```
+├── public/              # Assets estáticos (imagens, CV, robots.txt)
+├── src/
+│   ├── components/      # Componentes reutilizáveis
+│   │   ├── ui/          # Componentes shadcn/ui
+│   │   ├── TerminalSection.tsx
+│   │   └── VisitorCounter.tsx
+│   ├── hooks/           # Custom hooks
+│   ├── lib/             # Utilitários
+│   ├── pages/           # Páginas da aplicação
+│   │   ├── Index.tsx    # Página principal do portfólio
+│   │   └── NotFound.tsx # Página 404
+│   ├── App.tsx          # Root component com providers e routing
+│   ├── main.tsx         # Entry point
+│   └── index.css        # Estilos globais
+├── index.html           # Template HTML
+├── vite.config.ts       # Configuração do Vite
+├── tailwind.config.ts   # Configuração do Tailwind
+├── tsconfig.json        # Configuração do TypeScript
+└── package.json
+```
 
-Simply open [Lovable](https://lovable.dev/projects/07ec2729-fb3f-4738-8db7-607aa6040cf1) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 📌 Projectos em Destaque
 
-Yes, you can!
+| Projecto                       | Descrição                                                        | Stack                              |
+| ------------------------------ | ---------------------------------------------------------------- | ---------------------------------- |
+| **SkillarCode**                | Plataforma de aprendizagem de prompt engineering                 | React Native, TypeScript           |
+| **Pembe Na Mwindo**            | Website oficial do grupo de teatro                               | Vite.js, Tailwind CSS, Figma       |
+| **NUTRISCAN App**              | App mobile de gestão nutricional                                 | Vite.js, Expo, Canva               |
+| **Angola Vibes**               | Guia interactivo de turismo em Angola (PWA)                      | React, Supabase, Vite.js           |
+| **Fenix Goals**                | Plataforma de metas baseada na metodologia de Brian Tracy        | TypeScript, HTML                   |
+| **Chronicles of the Unspoken** | RPG táctico imersivo com Gemini 2.5 Live API                     | Studio AI, ReactJs                 |
+| **FéDigital**                  | App de dízimos e ofertas com automação via WhatsApp              | Figma, Adobe UX                    |
+| **Reverse Engineering Tool**   | PHP Reverse Shell para pentesting                                | Python, Sherlock                   |
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📬 Contacto
+
+- **Email:** tiagomatias072@gmail.com
+- **GitHub:** [tiagomatias930](https://github.com/tiagomatias930)
+- **LinkedIn:** [Tiago Matias](https://www.linkedin.com/in/tiago-matias-062b88217)
+- **Behance:** [tiagomatias42](https://www.behance.net/tiagomatias42)
+- **Localização:** Luanda, Angola
+
+---
+
+## 📄 Licença
+
+Este projecto é de uso pessoal. Todos os direitos reservados © 2026 Tiago Matias.
