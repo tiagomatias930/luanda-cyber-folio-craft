@@ -220,8 +220,7 @@ Best regards,`);
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">MATIAS</span>
             </h1>
             <p className="text-xl text-gray-400 mb-8 font-light">SOFTWARE ENGINEER</p>
-            <p className="text-gray-500 text-sm mb-8 max-w-sm leading-relaxed">
-              Specialized in cybersecurity, systems programming, and secure development. Student at 42Luanda focusing on C/C++, penetration testing, and network security.            </p>
+            <p className="text-gray-500 text-sm mb-8 max-w-sm leading-relaxed">Student at 42Luanda focusing on software development, mobile application development and web development, penetration testing, and network security.            </p>
             <div className="flex gap-4 mb-12">
               <Button 
                 size="lg" 
