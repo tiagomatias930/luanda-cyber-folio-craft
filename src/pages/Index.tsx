@@ -66,8 +66,7 @@ Best regards,`);
     { name: "Linux", level: "Advanced", category: "Systems" },
     { name: "Windows", level: "Intermediate", category: "Systems" },
     { name: "Penetration Testing", level: "Intermediate", category: "Security" },
-    { name: "Network Security", level: "Intermediate", category: "Security" },
-    { name: "Red Team", level: "Intermediate", category: "Security" },
+    { name: "Network Security", level: "Basic", category: "Security" },
     { name: "Docker", level: "Intermediate", category: "DevOps" },
     { name: "Git", level: "Advanced", category: "Tools" },
     { name: "Github", level: "Advanced", category: "Tools" },
@@ -151,7 +150,7 @@ Best regards,`);
       title: "Pembé Na Mwindo",
       description: "Official website for the Pembe na Mwindo theatre group to increase their digital presence and audience.",
       tech: ["Vite.js", "Twilio CSS", "Canva", "Figma", "Picsart"],
-      link: "https://pembenamwindo.vercel.app/",
+      link: "https://pembe-mwindo-arte-angola.vercel.app/",
       highlight: true,
       image: "/pembe.png"
     },
@@ -195,6 +194,15 @@ Best regards,`);
       link: "https://fenix-goals.vercel.app",
       highlight: true,
       image: "/Screenshot from 2026-02-11 02-17-16.png"
+    },
+    
+    {
+      title: "Gemini Tutor",    
+      description: "Is a full-stack web application that acts as a patient AI tutor. It helps students understand problems step by step, without giving direct answers — encouraging them to discover solutions on their own. Features include: 1- Camera Vision — point your camera at your homework and get guidance; 2- Voice Chat — talk to the tutor using your microphone; 3- Text Chat — classic text conversation with image upload support; 4- Multilingual — responds in the same language the student uses.",
+      tech: ["TypeScript", "React", "Vite", "Tailwind CSS", "Express",  "Google Cloud"],
+      link: "https://gemini-tutor-ai.vercel.app",
+      highlight: true,
+      image: "/geminiTutor.png"
     }
   ];
 
@@ -427,6 +435,11 @@ I am a passionate software engineer and student at 42Luanda, where I developed a
                     title: "Nova Angola",
                     subtitle: "Appplication Developer",
                     description: "In processing the development of a mobile application for the Nova Angola project, The solution integrates geolocation functionalities, AI image analysis, health screening, and secure authentication to foster data-driven community actions in real time."
+                  }, 
+                   {
+                    title: "Gemini Tutor",
+                    subtitle: "AI-powered homework assistant",
+                    description: "Point your camera, use your voice, or type to learn interactively with an AI tutor built on Google Gemini."
                   }
                 ].map((exp, idx) => (
                   <div key={idx} className="flex gap-4">
@@ -464,7 +477,7 @@ I am a passionate software engineer and student at 42Luanda, where I developed a
                 </li>
                 <li className="flex gap-2">
                   <span className="text-cyan-400">→</span>
-                  <span>Branding & Catalog</span>
+                  <span>Video Editing</span>
                 </li>
                 <li className="flex gap-2">
                   <span className="text-cyan-400">→</span>
@@ -477,6 +490,10 @@ I am a passionate software engineer and student at 42Luanda, where I developed a
                 <li className="flex gap-2">
                   <span className="text-cyan-400">→</span>
                   <span>System Development</span>
+                </li>
+                  <li className="flex gap-2">
+                  <span className="text-cyan-400">→</span>
+                  <span>Software System Analysis</span>
                 </li>
               </ul>
 
@@ -517,8 +534,8 @@ I am a passionate software engineer and student at 42Luanda, where I developed a
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center mb-2">
                     <Code size={20} className="text-gray-400" />
-                  </div>
-                  <p className="text-gray-500 text-xs text-center">Programming</p>
+                    </div>
+                    <p className="text-gray-500 text-xs text-center">Software Development</p>
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="w-12 h-12 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center mb-2">
@@ -674,7 +691,7 @@ Let's connect and build something secure together.
       <footer className="py-8 px-6 bg-slate-950 text-gray-500 text-center border-t border-slate-800">
         <div className="container mx-auto max-w-6xl space-y-3">
           <VisitorCounter />
-          <p className="text-sm">&copy; 2026 Tiago Matias. Developed with React, TypeScript, and ❤️</p>
+          <p className="text-sm">&copy; 2026 Tiago Matias. Let's work together!</p>
         </div>
       </footer>
     </div>
