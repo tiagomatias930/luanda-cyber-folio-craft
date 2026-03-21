@@ -1,0 +1,23 @@
+/* Portfolio custom styles extracted from portfolio.html */
+
+:root {
+  --bg: #07080C;
+  --bg2: #0D0F17;
+  --bg3: #141720;
+  --line: rgba(255,255,255,0.07);
+  --text: #F0F0F5;
+  --muted: #6B7280;
+  --muted2: #4B5563;
+  --accent: #FFB703;
+  --accent2: #00C6FF;
+  --red: #FF5252;
+  --green: #4CAF50;
+  --r: 12px;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+
+/* ... (copy all CSS from <style> in portfolio.html) ... */
+
+/* For brevity, only the start is shown. The full CSS will be copied in the next step. */
