@@ -2,7 +2,7 @@
 
 Portfolio pessoal de **Tiago Matias**, engenheiro de software e estudante na [42Luanda](https://www.42luanda.com/), com foco em desenvolvimento de software, aplicações mobile/web, pentesting e segurança de redes.
 
-🔗 **Live:** [geniomatias.me](https://geniomatias.me)
+🔗 **Live:** [geniomatias.me](https://portfolio.geniomatias.me)
 
 ---
 
@@ -109,6 +109,7 @@ npm run preview
 | **Angola Vibes**               | Guia interactivo de turismo em Angola (PWA)                      | React, Supabase, Vite.js           |
 | **Fenix Goals**                | Plataforma de metas baseada na metodologia de Brian Tracy        | TypeScript, HTML                   |
 | **Chronicles of the Unspoken** | RPG táctico imersivo com Gemini 2.5 Live API                     | Studio AI, ReactJs                 |
+| **Gemini Tutor**               | Tutor inteligente com IA para apoio ao estudo                    | Gemini, AI, Web App                |
 | **FéDigital**                  | App de dízimos e ofertas com automação via WhatsApp              | Figma, Adobe UX                    |
 | **Reverse Engineering Tool**   | PHP Reverse Shell para pentesting                                | Python, Sherlock                   |
 
