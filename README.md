@@ -1,7 +1,5 @@
 # 🌐 Tiago Matias — Portfolio
 
-Portfolio pessoal de **Tiago Matias**, engenheiro de software e estudante na [42Luanda](https://www.42luanda.com/), com foco em desenvolvimento de software, aplicações mobile/web, pentesting e segurança de redes.
-
 🔗 **Live:** [geniomatias.me](https://portfolio.geniomatias.me)
 
 ---
