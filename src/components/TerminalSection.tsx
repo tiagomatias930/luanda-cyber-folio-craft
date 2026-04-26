@@ -227,7 +227,7 @@ const TerminalSection = () => {
       ]);
       // Trigger download
       const link = document.createElement("a");
-      link.href = "/asset/Moderno.pdf";
+      link.href = "/asset/Tiago_Matias_Resume.pdf";
       link.download = "Curriculum Vitae.pdf";
       document.body.appendChild(link);
       link.click();
