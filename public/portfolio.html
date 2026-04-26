@@ -222,6 +222,51 @@ footer a:hover{color:var(--accent)}
   .skills-bento{grid-template-columns:1fr}
   .stats-inner{grid-template-columns:repeat(2,1fr);gap:20px}
 }
+
+/* TICKER */
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 24px 0;
+  position: relative;
+}
+.ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker 40s linear infinite;
+}
+.ticker:hover {
+  animation-play-state: paused;
+}
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 40px;
+  text-decoration: none;
+  color: var(--muted);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+.ticker-item:hover {
+  color: var(--accent);
+}
+.ticker-item .dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent);
+}
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 </style>
 </head>
 <body>
@@ -271,6 +316,10 @@ footer a:hover{color:var(--accent)}
         <a href="https://www.behance.net/tiagomatias42" target="_blank">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029zm-7.726-3h3.427c-.103-1.479-1.218-2.096-1.99-2.096-.795 0-1.94.636-1.437 2.096zM10.9 7.046c0 1.549-1.246 2.345-1.246 2.345.849.285 2.346 1.105 2.346 3.291 0 2.764-2.246 3.318-4.237 3.318H.01V3.073h7.571c2.23 0 3.32 1.087 3.32 2.973zM4 8.577h2.629c.744 0 1.311-.336 1.311-1.133 0-.773-.559-1.148-1.418-1.148H4v2.281zm0 5.392h2.875c.756 0 1.596-.239 1.596-1.269 0-1.135-.829-1.35-1.865-1.35H4v2.619z"/></svg>
           Behance
+        </a>
+        <a href="https://me.developers.google.com/u/me#interests" target="_blank">
+          <span class="ms sm">account_circle</span>
+          Google Devs
         </a>
       </div>
     </div>
@@ -422,29 +471,56 @@ footer a:hover{color:var(--accent)}
 
       <div class="project-card reveal" data-cat="ai web">
         <div class="project-thumb">
-          <img src="/geminiTutor.png" alt="Gemini Tutor"/>
-          <span class="project-badge b-gold">DESTACADO</span>
-        </div>
-        <div class="project-body">
-          <div class="project-title">Gemini Tutor</div>
-          <div class="project-desc">Tutor inteligente com IA para apoio ao estudo e explicações personalizadas em tempo real. Este projecto foi criado para o Challenge da Google Agent Live 2026, onde participei como desenvolvedor.</div>
-          <div class="project-techs"><span class="project-tech">Gemini</span><span class="project-tech">AI</span><span class="project-tech">Web App</span></div>
-          <a class="project-link" href="https://gemini-tutor-ai.vercel.app/" target="_blank">Ver Projecto <span class="ms sm">open_in_new</span></a>
-        </div>
-      </div>
-
-      <div class="project-card reveal" data-cat="ai web">
-        <div class="project-thumb">
           <img src="/chron.png" alt="Chronicles of the Unspoken"/>
           <span class="project-badge b-ai">IA</span>
         </div>
         <div class="project-body">
           <div class="project-title">Chronicles of the Unspoken</div>
-          <div class="project-desc">RPG tactico imersivo com Gemini 2.5 Live API, com comandos por voz e gestos em tempo real. Este projecto foi criado para o hackathon da Google Gemini 2025, onde participei como desenvolvedor. E uma das maiores conquista nesse desafio foi e é ver a emoção que os nosso utilizadores demostram ao poder interagir com o jogo em tempo real</div>
+          <div class="project-desc">RPG tactico imersivo com Gemini 2.5 Live API, com comandos por voz e gestos em tempo real. Este projecto foi criado para o hackathon da Google Gemini 2025, onde participei como desenvolvedor.</div>
           <div class="project-techs"><span class="project-tech">ReactJs</span><span class="project-tech">Gemini 2.5 Live</span></div>
           <a class="project-link" href="https://chronicles-of-the-unspoken.vercel.app/" target="_blank">Ver Projecto <span class="ms sm">open_in_new</span></a>
         </div>
       </div>
+
+      <div class="project-card reveal" data-cat="mobile">
+        <div class="project-thumb">
+          <img src="/nexus_app_mockup.png" alt="Nexus App" />
+          <span class="project-badge b-ux">NETWORKING</span>
+        </div>
+        <div class="project-body">
+          <div class="project-title">Nexus App</div>
+          <div class="project-desc">Conectando ecossistemas tecnológicos através de uma plataforma mobile integrada.</div>
+          <div class="project-techs"><span class="project-tech">React Native</span><span class="project-tech">Firebase</span><span class="project-tech">Web3</span></div>
+          <a class="project-link" href="#" target="_blank">Ver Demo <span class="ms sm">open_in_new</span></a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="web ai">
+        <div class="project-thumb">
+          <img src="/agriconnect_mockup.png" alt="Agriconnect" />
+          <span class="project-badge b-ai">AGROTECH</span>
+        </div>
+        <div class="project-body">
+          <div class="project-title">Agriconnect</div>
+          <div class="project-desc">Prever, Transportar & Crescer. Inteligência e inovação para o agronegócio nacional.</div>
+          <div class="project-techs"><span class="project-tech">Next.js</span><span class="project-tech">AI Forecasting</span><span class="project-tech">GIS</span></div>
+          <a class="project-link" href="https://www.agriconnect-ao.app/" target="_blank">Explorar Solução <span class="ms sm">open_in_new</span></a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="ai web">
+        <div class="project-thumb">
+          <img src="/geminiTutor.png" alt="Gemini Tutor"/>
+          <span class="project-badge b-gold">HACKATHON</span>
+        </div>
+        <div class="project-body">
+          <div class="project-title">Gemini Tutor</div>
+          <div class="project-desc">Assistente educacional inteligente que utiliza a API do Gemini para personalizar o aprendizado de programação e sistemas. Este projecto foi criado para o Challenge da Google Agent Live 2026.</div>
+          <div class="project-techs"><span class="project-tech">Google AI</span><span class="project-tech">Python</span><span class="project-tech">Streamlit</span></div>
+          <a class="project-link" href="https://devpost.com/software/gemini-tutor-phdc0v/" target="_blank">Ver Projecto <span class="ms sm">open_in_new</span></a>
+        </div>
+      </div>
+
 
       <div class="project-card reveal" data-cat="web">
         <div class="project-thumb">
@@ -593,6 +669,71 @@ footer a:hover{color:var(--accent)}
     </div>
   </div>
 </section>
+
+  <!-- HACKATHONS FEED -->
+  <style>
+    .hack-feed {
+      width: 100%;
+      overflow: hidden;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--line);
+      padding: 15px 0;
+      display: flex;
+      white-space: nowrap;
+      position: relative;
+    }
+    .hack-track {
+      display: flex;
+      animation: scrollFeed 40s linear infinite;
+    }
+    .hack-track:hover {
+      animation-play-state: paused;
+    }
+    .hack-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 40px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.3s;
+      border-right: 1px solid var(--line);
+    }
+    .hack-item:hover {
+      color: var(--accent);
+    }
+    .hack-item span.tag {
+      background: rgba(255, 183, 3, 0.1);
+      color: var(--accent);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    @keyframes scrollFeed {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+  </style>
+  <div class="hack-feed">
+    <div class="hack-track">
+      <a href="https://devpost.com/software/gemini-tutor-phdc0v" target="_blank" class="hack-item"><span class="tag">GOOGLE AI</span> Gemini Tutor - Hackathon Finalist</a>
+      <a href="https://devpost.com/software/chronicles-of-the-unspoken" target="_blank" class="hack-item"><span class="tag">GOOGLE AI</span> Chronicles of the Unspoken</a>
+      <a href="https://42ctf.org/en/scoreboard/campus/Luanda" target="_blank" class="hack-item"><span class="tag">CTF</span> 42 Campus Luanda - Top Scoreboard</a>
+      <a href="#projects" class="hack-item"><span class="tag">HACKATHON</span> Unitel Money Hack - 2º Lugar</a>
+      <a href="#projects" class="hack-item"><span class="tag">EVENTO</span> Conferência de Cibersegurança AO</a>
+      <a href="#projects" class="hack-item"><span class="tag">EVENTO</span> Global Game Jam 2026</a>
+      <!-- Repeat -->
+      <a href="https://devpost.com/software/gemini-tutor-phdc0v" target="_blank" class="hack-item"><span class="tag">GOOGLE AI</span> Gemini Tutor - Hackathon Finalist</a>
+      <a href="https://devpost.com/software/chronicles-of-the-unspoken" target="_blank" class="hack-item"><span class="tag">GOOGLE AI</span> Chronicles of the Unspoken</a>
+      <a href="https://42ctf.org/en/scoreboard/campus/Luanda" target="_blank" class="hack-item"><span class="tag">CTF</span> 42 Campus Luanda - Top Scoreboard</a>
+      <a href="#projects" class="hack-item"><span class="tag">HACKATHON</span> Unitel Money Hack - 2º Lugar</a>
+      <a href="#projects" class="hack-item"><span class="tag">EVENTO</span> Conferência de Cibersegurança AO</a>
+      <a href="#projects" class="hack-item"><span class="tag">EVENTO</span> Global Game Jam 2026</a>
+    </div>
+  </div>
 
 <!-- EXPERIENCE -->
 <section id="experience">
