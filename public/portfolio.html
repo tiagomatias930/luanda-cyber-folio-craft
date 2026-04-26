@@ -32,6 +32,18 @@
       --red: #FF5252;
       --green: #4CAF50;
       --r: 12px;
+      --nav-bg: rgba(7, 8, 12, 0.88);
+    }
+
+    body.light-mode {
+      --bg: #F8FAFC;
+      --bg2: #FFFFFF;
+      --bg3: #F1F5F9;
+      --line: rgba(0, 0, 0, 0.08);
+      --text: #0F172A;
+      --muted: #64748B;
+      --muted2: #94A3B8;
+      --nav-bg: rgba(255, 255, 255, 0.88);
     }
 
     html {
@@ -44,7 +56,8 @@
       font-family: 'DM Sans', sans-serif;
       font-size: 16px;
       line-height: 1.6;
-      overflow-x: hidden
+      overflow-x: hidden;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     ::-webkit-scrollbar {
@@ -101,9 +114,33 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(7, 8, 12, 0.88);
+      background: var(--nav-bg);
       backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--line)
+      border-bottom: 1px solid var(--line);
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .theme-toggle {
+      background: var(--bg3);
+      border: 1px solid var(--line);
+      color: var(--text);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-left: 10px;
+      outline: none;
+    }
+
+    .theme-toggle:hover {
+      background: var(--accent);
+      color: #000;
+      transform: rotate(15deg);
+      border-color: var(--accent);
     }
 
     .nav-logo {
@@ -1492,9 +1529,14 @@
       <li><a href="#projects">Projetos</a></li>
       <li><a href="#experience">Experiência</a></li>
     </ul>
-    <a class="nav-cta" href="mailto:tiagomatias072@gmail.com">
-      <span class="ms sm">mail</span> Contacto
-    </a>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <button class="theme-toggle" id="themeToggle" title="Alternar Tema">
+        <span class="ms sm" id="themeIcon">light_mode</span>
+      </button>
+      <a class="nav-cta" href="mailto:tiagomatias072@gmail.com">
+        <span class="ms sm">mail</span> Contacto
+      </a>
+    </div>
   </nav>
 
   <!-- HERO -->
@@ -2109,7 +2151,7 @@
         42 Luanda - Top 10</a>
       <!-- <a href="#projects" class="hack-item"><span class="tag">HACKATHON</span> Unitel Money Hack - 2º Lugar</a>
       <a href="#projects" class="hack-item"><span class="tag">EVENTO</span> Conferência de Cibersegurança AO</a>-->
-      <a href="#projects" class="hack-item"><span class="tag">EVENTO</span> Global Game Jam 2026</a>
+      <a href="https://gkomba.itch.io/meow-loop-endless-rescue" class="hack-item"><span class="tag">EVENTO</span> Global Game Jam 2026</a>
 
       <!-- Repeat -->
       <a href="https://devpost.com/software/gemini-tutor-phdc0v" target="_blank" class="hack-item"><span
@@ -2120,7 +2162,7 @@
         42 Luanda - Top 10</a>
       <!-- <a href="#projects" class="hack-item"><span class="tag">HACKATHON</span> Unitel Money Hack - 2º Lugar</a>
       <a href="#projects" class="hack-item"><span class="tag">EVENTO</span> Conferência de Cibersegurança AO</a> -->
-      <a href="#projects" class="hack-item"><span class="tag">EVENTO</span> Global Game Jam 2026</a>
+      <a href="https://gkomba.itch.io/meow-loop-endless-rescue" class="hack-item"><span class="tag">EVENTO</span> Global Game Jam 2026</a>
     </div>
   </div>
 
@@ -2382,6 +2424,23 @@
           card.style.display = (f === 'all' || cats.includes(f)) ? 'flex' : 'none';
         });
       });
+    });
+
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'light') {
+      body.classList.add('light-mode');
+      themeIcon.textContent = 'dark_mode';
+    }
+
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      const isLight = body.classList.contains('light-mode');
+      themeIcon.textContent = isLight ? 'dark_mode' : 'light_mode';
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
     });
   </script>
 </body>
