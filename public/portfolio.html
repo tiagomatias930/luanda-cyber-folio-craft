@@ -1529,6 +1529,40 @@
         transform: translateX(-50%);
       }
     }
+
+    /* Google Translate Styles */
+    .skiptranslate iframe {
+      display: none !important;
+    }
+    body {
+      top: 0 !important;
+    }
+    #google_translate_element select {
+      background: var(--bg3);
+      color: var(--text);
+      border: 1px solid var(--line);
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    #google_translate_element select:hover {
+      border-color: var(--accent);
+    }
+    .goog-te-combo {
+      margin: 0 !important;
+    }
+    .goog-te-gadget {
+      font-family: 'DM Sans', sans-serif !important;
+      color: transparent !important;
+      font-size: 0 !important;
+    }
+    .goog-te-gadget span {
+      display: none;
+    }
   </style>
 </head>
 
@@ -1544,6 +1578,7 @@
       <li><a href="#experience">Experiência</a></li>
     </ul>
     <div style="display:flex; align-items:center; gap:10px;">
+      <div id="google_translate_element"></div>
       <button class="theme-toggle" id="themeToggle" title="Alternar Tema">
         <span class="ms sm" id="themeIcon">light_mode</span>
       </button>
@@ -1756,7 +1791,7 @@
               </div>
             </div>
             <div class="skill-bar-row">
-              <div class="skill-bar-label"><span>Flutter / Dart</span><span>Intermediário · 40%</span></div>
+              <div class="skill-bar-label"><span>Flutter / Dart</span><span>Básico · 40%</span></div>
               <div class="skill-bar-track">
                 <div class="skill-bar-fill" style="width:40%"></div>
               </div>
@@ -2505,6 +2540,17 @@
       localStorage.setItem('theme', isLight ? 'light' : 'dark');
     });
   </script>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'pt',
+        includedLanguages: 'pt,en,fr',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
