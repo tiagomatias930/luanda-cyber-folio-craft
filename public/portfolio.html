@@ -2646,6 +2646,16 @@
     const langMenu = document.getElementById('langMenu');
     const currentLangDisplay = document.getElementById('currentLangDisplay');
 
+    function syncLangUI() {
+      const match = document.cookie.match(/googtrans=\/pt\/([^;]+)/);
+      if (match && match[1]) {
+        const lang = match[1];
+        const langMap = { 'pt': 'PT', 'en': 'EN', 'fr': 'FR' };
+        if (currentLangDisplay) currentLangDisplay.textContent = langMap[lang] || lang.toUpperCase();
+      }
+    }
+    syncLangUI();
+
     langBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       langMenu.classList.toggle('show');
@@ -2656,19 +2666,15 @@
     });
 
     window.changeLanguage = function(langCode) {
-      const select = document.querySelector('#google_translate_element select') || document.querySelector('.goog-te-combo');
-      if (select) {
-        select.value = langCode;
-        select.dispatchEvent(new Event('change', { bubbles: true }));
-        
-        const langMap = { 'pt': 'PT', 'en': 'EN', 'fr': 'FR' };
-        currentLangDisplay.textContent = langMap[langCode] || langCode.toUpperCase();
-        
-        langMenu.classList.remove('show');
-      } else {
-        // Fallback if widget hasn't loaded yet
-        setTimeout(() => changeLanguage(langCode), 500);
-      }
+      const cookieVal = "/pt/" + langCode;
+      document.cookie = "googtrans=" + cookieVal + "; path=/";
+      document.cookie = "googtrans=" + cookieVal + "; domain=" + location.hostname + "; path=/";
+      
+      const langMap = { 'pt': 'PT', 'en': 'EN', 'fr': 'FR' };
+      if (currentLangDisplay) currentLangDisplay.textContent = langMap[langCode] || langCode.toUpperCase();
+      
+      langMenu.classList.remove('show');
+      location.reload();
     };
   </script>
 
