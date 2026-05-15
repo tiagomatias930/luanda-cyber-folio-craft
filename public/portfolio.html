@@ -2650,7 +2650,7 @@
       const match = document.cookie.match(/googtrans=\/pt\/([^;]+)/);
       if (match && match[1]) {
         const lang = match[1];
-        const langMap = { 'pt': 'PT', 'en': 'EN', 'fr': 'FR' };
+        const langMap = { 'pt': 'PT', 'en': 'EN'};
         if (currentLangDisplay) currentLangDisplay.textContent = langMap[lang] || lang.toUpperCase();
       }
     }
@@ -2670,7 +2670,7 @@
       document.cookie = "googtrans=" + cookieVal + "; path=/";
       document.cookie = "googtrans=" + cookieVal + "; domain=" + location.hostname + "; path=/";
       
-      const langMap = { 'pt': 'PT', 'en': 'EN', 'fr': 'FR' };
+      const langMap = { 'pt': 'PT', 'en': 'EN' };
       if (currentLangDisplay) currentLangDisplay.textContent = langMap[langCode] || langCode.toUpperCase();
       
       langMenu.classList.remove('show');
@@ -2682,7 +2682,7 @@
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'pt',
-        includedLanguages: 'pt,en,fr',
+        includedLanguages: 'pt,en',
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
       }, 'google_translate_element');
     }
