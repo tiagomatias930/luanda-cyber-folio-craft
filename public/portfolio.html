@@ -143,6 +143,96 @@
       border-color: var(--accent);
     }
 
+    /* Language Switcher */
+    .lang-switcher {
+      position: relative;
+    }
+
+    .lang-btn {
+      background: var(--bg3);
+      border: 1px solid var(--line);
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      outline: none;
+    }
+
+    .lang-btn:hover {
+      background: var(--accent);
+      color: #000;
+      border-color: var(--accent);
+    }
+
+    .lang-menu {
+      position: absolute;
+      top: calc(100% + 12px);
+      right: 0;
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 8px;
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 150px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    .lang-menu.show {
+      display: flex;
+      animation: menuFade 0.3s ease;
+    }
+
+    @keyframes menuFade {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .lang-menu button {
+      background: transparent;
+      border: none;
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 8px;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .lang-menu button:hover {
+      background: rgba(255, 183, 3, 0.15);
+      color: var(--accent);
+    }
+
+    #google_translate_element {
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      z-index: -1;
+    }
+    .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
+      display: none !important;
+    }
+    body {
+      top: 0px !important;
+    }
+
     .nav-logo {
       font-family: 'Fraunces', serif;
       font-weight: 900;
@@ -1579,6 +1669,17 @@
     </ul>
     <div style="display:flex; align-items:center; gap:10px;">
       <div id="google_translate_element"></div>
+      <div class="lang-switcher">
+        <button class="lang-btn" id="langBtn" title="Traduzir / Translate">
+          <span class="ms sm">language</span>
+          <span id="currentLangDisplay">PT</span>
+        </button>
+        <div class="lang-menu" id="langMenu">
+          <button onclick="changeLanguage('pt')">🇦🇴 Português</button>
+          <button onclick="changeLanguage('en')">🇺🇸 English</button>
+          <button onclick="changeLanguage('fr')">🇫🇷 Français</button>
+        </div>
+      </div>
       <button class="theme-toggle" id="themeToggle" title="Alternar Tema">
         <span class="ms sm" id="themeIcon">light_mode</span>
       </button>
@@ -1668,7 +1769,7 @@
         <div class="stat-label">Anos de Experiência</div>
       </div>
       <div class="stat reveal">
-        <div class="stat-num" data-target="5">0+</div>
+        <div class="stat-num" data-target="6">0+</div>
         <div class="stat-label">Linguagens de Programação</div>
       </div>
       <div class="stat reveal">
@@ -2539,6 +2640,36 @@
       themeIcon.textContent = isLight ? 'dark_mode' : 'light_mode';
       localStorage.setItem('theme', isLight ? 'light' : 'dark');
     });
+
+    // Language Switcher Logic
+    const langBtn = document.getElementById('langBtn');
+    const langMenu = document.getElementById('langMenu');
+    const currentLangDisplay = document.getElementById('currentLangDisplay');
+
+    langBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      langMenu.classList.toggle('show');
+    });
+
+    document.addEventListener('click', () => {
+      langMenu.classList.remove('show');
+    });
+
+    window.changeLanguage = function(langCode) {
+      const select = document.querySelector('#google_translate_element select') || document.querySelector('.goog-te-combo');
+      if (select) {
+        select.value = langCode;
+        select.dispatchEvent(new Event('change', { bubbles: true }));
+        
+        const langMap = { 'pt': 'PT', 'en': 'EN', 'fr': 'FR' };
+        currentLangDisplay.textContent = langMap[langCode] || langCode.toUpperCase();
+        
+        langMenu.classList.remove('show');
+      } else {
+        // Fallback if widget hasn't loaded yet
+        setTimeout(() => changeLanguage(langCode), 500);
+      }
+    };
   </script>
 
   <script type="text/javascript">
