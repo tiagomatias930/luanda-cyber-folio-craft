@@ -175,6 +175,16 @@ const COMMANDS: Record<string, () => string[]> = {
   ],
 };
 
+const RESUME_FILES = {
+  pt: "Tiago_Matias_Resume.pdf",
+  en: "Tiago_Matias_Resume_En.pdf",
+};
+
+const getCurrentLanguage = () => {
+  const match = document.cookie.match(/googtrans=\/pt\/([^;]+)/);
+  return match?.[1] === "en" ? "en" : "pt";
+};
+
 const TerminalSection = () => {
   const [lines, setLines] = useState<TerminalLine[]>([
     { type: "ascii", content: ASCII_BANNER },
@@ -226,9 +236,10 @@ const TerminalSection = () => {
         ...output.map((line) => ({ type: "output" as const, content: line })),
       ]);
       // Trigger download
+      const resumeFile = RESUME_FILES[getCurrentLanguage()];
       const link = document.createElement("a");
-      link.href = "/asset/Tiago_Matias_Resume.pdf";
-      link.download = "Curriculum Vitae.pdf";
+      link.href = `/asset/${resumeFile}`;
+      link.download = resumeFile;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

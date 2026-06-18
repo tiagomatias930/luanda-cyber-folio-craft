@@ -1725,7 +1725,8 @@
           criatividade e proficiência técnica para sua organização,
           impulsionando juntos o sucesso</p>
         <div class="hero-actions">
-          <a class="btn-primary" href="/asset/Tiago_Matias_Resume.pdf" download="Tiago_Matias_CV.pdf">
+          <a class="btn-primary" id="resumeDownloadLink" href="/asset/Tiago_Matias_Resume.pdf"
+            download="Tiago_Matias_Resume.pdf">
             <span class="ms sm">download</span> Baixar Currículo
           </a>
           <a class="btn-secondary" href="#projects">
@@ -1765,7 +1766,6 @@
         <img class="hero-photo" src="/jame.jpg" alt="Tiago Matias" />
         <div class="hero-card-name">Tiago Matias</div>
         <div class="hero-card-info">Luanda, Angola · 42Luanda</div>
-        <div class="hero-card-tag">OPEN TO WORK</div>
       </div>
     </div>
   </section>
@@ -2697,14 +2697,30 @@
     const langBtn = document.getElementById('langBtn');
     const langMenu = document.getElementById('langMenu');
     const currentLangDisplay = document.getElementById('currentLangDisplay');
+    const resumeDownloadLink = document.getElementById('resumeDownloadLink');
+    const resumeFiles = {
+      pt: 'Tiago_Matias_Resume.pdf',
+      en: 'Tiago_Matias_Resume_En.pdf'
+    };
+
+    function getCurrentLanguage() {
+      const match = document.cookie.match(/googtrans=\/pt\/([^;]+)/);
+      return match && match[1] ? match[1] : 'pt';
+    }
+
+    function updateResumeLink(lang) {
+      if (!resumeDownloadLink) return;
+
+      const resumeFile = resumeFiles[lang] || resumeFiles.pt;
+      resumeDownloadLink.href = `/asset/${resumeFile}`;
+      resumeDownloadLink.download = resumeFile;
+    }
 
     function syncLangUI() {
-      const match = document.cookie.match(/googtrans=\/pt\/([^;]+)/);
-      if (match && match[1]) {
-        const lang = match[1];
-        const langMap = { 'pt': 'PT', 'en': 'EN' };
-        if (currentLangDisplay) currentLangDisplay.textContent = langMap[lang] || lang.toUpperCase();
-      }
+      const lang = getCurrentLanguage();
+      const langMap = { 'pt': 'PT', 'en': 'EN' };
+      if (currentLangDisplay) currentLangDisplay.textContent = langMap[lang] || lang.toUpperCase();
+      updateResumeLink(lang);
     }
     syncLangUI();
 
@@ -2724,6 +2740,7 @@
 
       const langMap = { 'pt': 'PT', 'en': 'EN' };
       if (currentLangDisplay) currentLangDisplay.textContent = langMap[langCode] || langCode.toUpperCase();
+      updateResumeLink(langCode);
 
       langMenu.classList.remove('show');
       location.reload();
