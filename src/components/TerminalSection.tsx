@@ -306,42 +306,42 @@ const TerminalSection = () => {
   const getLineClass = (type: TerminalLine["type"]) => {
     switch (type) {
       case "input":
-        return "text-cyan-400";
+        return "text-white font-medium";
       case "output":
-        return "text-gray-300";
+        return "text-zinc-300";
       case "error":
-        return "text-red-400";
+        return "text-zinc-400 underline decoration-zinc-600";
       case "ascii":
-        return "text-cyan-500 font-bold";
+        return "text-white font-bold";
       case "system":
-        return "text-gray-500 italic";
+        return "text-zinc-500 italic";
       default:
-        return "text-gray-300";
+        return "text-zinc-300";
     }
   };
 
   return (
-    <section id="terminal" className="py-24 px-6 bg-black border-t border-slate-800">
+    <section id="terminal" className="py-20 px-6 bg-black border-t border-zinc-900">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-5xl font-bold mb-4 text-white">TERMINAL</h2>
-        <p className="text-gray-400 mb-12 text-base">
-          Explore my portfolio through an interactive terminal. Type <span className="text-cyan-400 font-mono">"help"</span> to get started.
+        <h2 className="text-4xl font-bold mb-3 text-white tracking-wider font-sans">TERMINAL</h2>
+        <p className="text-zinc-400 mb-10 text-sm">
+          Explore my portfolio through an interactive system terminal. Type <span className="text-white font-mono bg-zinc-900 px-1.5 py-0.5 rounded">"help"</span> to get started.
         </p>
 
         {/* Terminal Window */}
-        <div className="rounded-xl overflow-hidden border border-slate-700 shadow-2xl shadow-cyan-500/5">
+        <div className="overflow-hidden border border-zinc-800 shadow-2xl shadow-white/5 bg-black rounded-sm">
           {/* Title Bar */}
-          <div className="bg-slate-900 px-4 py-3 flex items-center justify-between border-b border-slate-700">
+          <div className="bg-zinc-950 px-4 py-2.5 flex items-center justify-between border-b border-zinc-900">
             <div className="flex items-center gap-2">
-              <div className="flex gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+              <div className="flex gap-1.5">
+                <div className="w-2.5 h-2.5 bg-zinc-800"></div>
+                <div className="w-2.5 h-2.5 bg-zinc-700"></div>
+                <div className="w-2.5 h-2.5 bg-zinc-600"></div>
               </div>
             </div>
-            <div className="flex items-center gap-2 text-gray-500 text-xs font-mono">
-              <TerminalIcon size={14} />
-              <span>tiago@portfolio:~</span>
+            <div className="flex items-center gap-2 text-zinc-500 text-xs font-mono">
+              <TerminalIcon size={12} />
+              <span>tiago@sys-term:~</span>
             </div>
             <div className="w-16"></div>
           </div>
@@ -349,17 +349,17 @@ const TerminalSection = () => {
           {/* Terminal Body */}
           <div
             ref={terminalRef}
-            className="bg-[#0a0e14] p-6 h-[480px] overflow-y-auto font-mono text-sm cursor-text scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-transparent"
+            className="bg-black p-6 h-[440px] overflow-y-auto font-mono text-sm cursor-text scrollbar-thin scrollbar-thumb-zinc-800 scrollbar-track-transparent"
             onClick={focusInput}
           >
             {lines.map((line, idx) => (
               <div key={idx} className={`whitespace-pre-wrap ${getLineClass(line.type)}`}>
                 {line.type === "input" ? (
                   <span>
-                    <span className="text-green-400">tiago@portfolio</span>
-                    <span className="text-gray-500">:</span>
-                    <span className="text-blue-400">~</span>
-                    <span className="text-gray-500">$ </span>
+                    <span className="text-zinc-400">tiago@sys-term</span>
+                    <span className="text-zinc-500">:</span>
+                    <span className="text-white">~</span>
+                    <span className="text-zinc-500">$ </span>
                     <span className="text-white">{line.content}</span>
                   </span>
                 ) : (
@@ -369,18 +369,18 @@ const TerminalSection = () => {
             ))}
 
             {/* Active Input Line */}
-            <div className="flex items-center">
-              <span className="text-green-400">tiago@portfolio</span>
-              <span className="text-gray-500">:</span>
-              <span className="text-blue-400">~</span>
-              <span className="text-gray-500">$ </span>
+            <div className="flex items-center mt-1">
+              <span className="text-zinc-400">tiago@sys-term</span>
+              <span className="text-zinc-500">:</span>
+              <span className="text-white">~</span>
+              <span className="text-zinc-500">$ </span>
               <input
                 ref={inputRef}
                 type="text"
                 value={currentInput}
                 onChange={(e) => setCurrentInput(e.target.value)}
                 onKeyDown={handleKeyDown}
-                className="flex-1 bg-transparent text-white outline-none border-none font-mono text-sm caret-cyan-400"
+                className="flex-1 bg-transparent text-white outline-none border-none font-mono text-sm caret-white ml-1"
                 autoFocus
                 spellCheck={false}
                 autoComplete="off"
@@ -390,7 +390,7 @@ const TerminalSection = () => {
           </div>
         </div>
 
-        <p className="text-gray-600 text-xs mt-4 text-center font-mono">
+        <p className="text-zinc-600 text-xs mt-4 text-center font-mono">
           Supports: Tab autocomplete · ↑↓ command history · clear
         </p>
       </div>
