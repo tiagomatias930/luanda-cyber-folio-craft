@@ -40,24 +40,7 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Floating System Trigger Badge */}
-      <button
-        onClick={() => setIsTerminalOpen(!isTerminalOpen)}
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 border border-white/20 bg-black text-white px-5 py-3 hover:bg-white hover:text-black hover:border-white transition-all duration-300 font-mono text-xs tracking-wider uppercase font-semibold shadow-2xl hover:scale-105"
-        style={{ borderRadius: "2px" }}
-      >
-        {isTerminalOpen ? (
-          <>
-            <X size={14} />
-            <span>Close Console</span>
-          </>
-        ) : (
-          <>
-            <Terminal size={14} className="animate-pulse" />
-            <span>System Console</span>
-          </>
-        )}
-      </button>
+     
     </main>
   );
 };

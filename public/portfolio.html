@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tiago Matias — Engenheiro de Software</title>
+  <title>Tiago Matias — Cofundador Agriconnect | Engenheiro de Software</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -1920,10 +1920,20 @@
       .stat-num {
         font-size: 2.1rem
       }
+
+      .timeline-item {
+        gap: 12px
+      }
+
+      .t-title,
+      .t-role {
+        white-space: normal
+      }
     }
 
     /* TICKER */
-    .ticker-wrap {
+    .ticker-wrap,
+    .hack-feed {
       width: 100%;
       overflow: hidden;
       background: var(--bg2);
@@ -1933,17 +1943,20 @@
       position: relative;
     }
 
-    .ticker {
+    .ticker,
+    .hack-track {
       display: flex;
       width: max-content;
       animation: ticker 40s linear infinite;
     }
 
-    .ticker:hover {
+    .ticker:hover,
+    .hack-track:hover {
       animation-play-state: paused;
     }
 
-    .ticker-item {
+    .ticker-item,
+    .hack-item {
       display: flex;
       align-items: center;
       gap: 12px;
@@ -1956,11 +1969,13 @@
       white-space: nowrap;
     }
 
-    .ticker-item:hover {
+    .ticker-item:hover,
+    .hack-item:hover {
       color: var(--accent);
     }
 
-    .ticker-item .dot {
+    .ticker-item .dot,
+    .hack-item .dot {
       width: 6px;
       height: 6px;
       background: var(--accent);
@@ -2424,7 +2439,8 @@
     .dot.r,
     .dot.y,
     .dot.g,
-    .ticker-item .dot {
+    .ticker-item .dot,
+    .hack-item .dot {
       background: var(--text);
       box-shadow: 0 0 12px rgba(255, 255, 255, .32);
     }
@@ -2552,19 +2568,13 @@
     <div class="hero-glow glow-b"></div>
     <div class="hero-inner">
       <div>
-        <div class="hero-eyebrow"><span class="ms sm fill" style="color:var(--green)">fiber_manual_record</span>
+        <div class="hero-eyebrow"><span class="ms sm fill" style="color:green">fiber_manual_record</span>
           Disponível para oportunidades</div>
         <h1 class="hero-name">Tiago<br /><em>Matias</em></h1>
         <div class="hero-role"><span class="role-text" id="roleText">Engenheiro de Software</span></div>
-        <p class="hero-desc">Apaixonado por tecnologia, com experiência em web design e desenvolvimento de
-          sistemas web e mobile, estou ansioso para contribuir com
-          minhas habilidades para sua equipe. Meu compromisso em
-          entregar soluções inovadoras e minha capacidade de
-          adaptação a projetos diversos me tornam um profissional
-          valioso. Prospero em ambientes colaborativos e estou
-          entusiasmado com a oportunidade de trazer minha
-          criatividade e proficiência técnica para sua organização,
-          impulsionando juntos o sucesso</p>
+        <p class="hero-desc">Sou cofundador da <strong style="color:var(--text)">Agriconnect</strong> e apaixonado por tecnologia,
+          com experiência em web design, desenvolvimento de sistemas web e mobile. Estou ansioso para contribuir com
+          minhas habilidades para sua equipe, entregando soluções inovadoras e me adaptando a projetos diversos.</p>
         <div class="hero-actions">
           <a class="btn-primary" id="resumeDownloadLink" href="/asset/Tiago_Matias_Resume.pdf"
             download="Tiago_Matias_Resume.pdf">
@@ -2904,9 +2914,8 @@
           </div>
           <div class="project-body">
             <div class="project-title">Agriconnect</div>
-            <div class="project-desc">Uma landing page para startup que eu faço parte como Developer, responsável por
-              desenvolver a plataforma, e também por auxiliar com ideias e soluções inovadoras.
-            </div>
+            <div class="project-desc">Cofundador da startup, responsável pelo desenvolvimento da plataforma e criação de
+              soluções inovadoras para o ecossistema agrícola.</div>
             <div class="project-techs"><span class="project-tech">Next.js</span>
               <span class="project-tech">TailwindCss</span>
             </div>
@@ -3293,76 +3302,50 @@
             <div class="timeline-item reveal">
               <div class="timeline-dot"><span class="ms sm">laptop_mac</span></div>
               <div>
-                <div class="t-title">SkillarCode</div>
-                <div class="t-role">Web Application Developer</div>
-                <div class="t-desc">Liderei a construção full-stack da plataforma, desenhando interface, fluxos de
-                  aprendizagem, autenticação e experiências interactivas para desafios reais de prompt engineering.
-                </div>
+                <div class="t-title">Pumangol</div>
+                <div class="t-role">Desenvolvedor / Inovação</div>
+                <div class="t-desc">Participação no desafio de inovação onde desenvolvi o Sistema Frota+, uma solução de
+                  gestão de frotas apresentada à Pumangol como resposta a um desafio corporativo.</div>
               </div>
             </div>
+
             <div class="timeline-item reveal">
-              <div class="timeline-dot"><span class="ms sm">laptop_mac</span></div>
+              <div class="timeline-dot"><span class="ms sm fill">local_gas_station</span></div>
               <div>
-                <div class="t-title">LBU.dev</div>
-                <div class="t-role">Agentes de IA para automação de processos</div>
-                <div class="t-desc">Desenvolvi agentes de IA para automação de processos, utilizando a Gemini API para
-                  processamento de linguagem natural e interação com sistemas externos como gmail, WhatsApp, google
-                  sheets
-                  e outros, criei também alguns agentes que gerenciam minhas redes sociais.</div>
+                <div class="t-title">Agriconnect</div>
+                <div class="t-role">Cofundador & Developer</div>
+                <div class="t-desc">Cofundador da startup, responsável pelo desenvolvimento da plataforma, definição de produto
+                  e criação de soluções inovadoras para o ecossistema agrícola.</div>
               </div>
             </div>
+
             <div class="timeline-item reveal">
-              <div class="timeline-dot"><span class="ms sm fill">smart_toy</span></div>
+              <div class="timeline-dot"><span class="ms sm">school</span></div>
               <div>
-                <div class="t-title">Ngola Tutor</div>
-                <div class="t-role">Full-Stack Application</div>
-                <div class="t-desc">Desenvolvi uma app educacional com multimodal, integrando câmera, voz, chat e
-                  respostas passo a passo com a Gemini API para criar uma experiência de tutoria mais humana.</div>
+                <div class="t-title">EPGF Educacional Consultoria</div>
+                <div class="t-role">Consultoria Educacional</div>
+                <div class="t-desc">Atuação em consultoria educacional, apoiando iniciativas de formação e estruturação de
+                  propostas pedagógicas.</div>
               </div>
             </div>
+
             <div class="timeline-item reveal">
-              <div class="timeline-dot"><span class="ms sm">public</span></div>
+              <div class="timeline-dot"><span class="ms sm">security</span></div>
               <div>
-                <div class="t-title">Angola Vibes</div>
-                <div class="t-role">Full-Stack Developer</div>
-                <div class="t-desc">Implementei a PWA do zero, com frontend responsivo, base de dados em Supabase, essa aplicação serve para transformar recomendações locais em produto digital utilizável.</div>
+                <div class="t-title">Kapembe.com</div>
+                <div class="t-role">Pentester Freelancer</div>
+                <div class="t-desc">Primeiro contrato freelance profissional como pentester, onde realizei um trabalho de
+                  testes de penetração bem sucedido.</div>
               </div>
             </div>
+
             <div class="timeline-item reveal">
-              <div class="timeline-dot"><span class="ms sm">theater_comedy</span></div>
+              <div class="timeline-dot"><span class="ms sm">code</span></div>
               <div>
-                <div class="t-title">Pembé Na Mwindo</div>
-                <div class="t-role">Website Developer</div>
-                <div class="t-desc">Criei o website oficial do grupo, estruturando presença digital, narrativa visual e
-                  apresentação de actividades para fortalecer a comunicação cultural da marca.</div>
-              </div>
-            </div>
-            <div class="timeline-item reveal">
-              <div class="timeline-dot"><span class="ms sm">local_taxi</span></div>
-              <div>
-                <div class="t-title">Heetch Easy</div>
-                <div class="t-role">UI/UX Designer</div>
-                <div class="t-desc">Concebi a solução de produto desde a pesquisa até aos fluxos UX, prototipando uma
-                  nova modalidade de transporte com foco em usabilidade, jornada e clareza visual.</div>
-              </div>
-            </div>
-            <div class="timeline-item reveal">
-              <div class="timeline-dot"><span class="ms sm">smartphone</span></div>
-              <div>
-                <div class="t-title">NutriScan App</div>
-                <div class="t-role">Mobile App Developer</div>
-                <div class="t-desc">Foi a minha primeira experiência de desenvolvimento mobile, onde organizei funcionalidades
-                  ligadas à nutrição e experiência do utilizador até à publicação pública da app. Hoje a aplicação conta 
-                com mais de 79 utilizadores em 7 países.</div>
-              </div>
-            </div>
-            <div class="timeline-item reveal">
-              <div class="timeline-dot"><span class="ms sm">movie</span></div>
-              <div>
-                <div class="t-title">Tchissola's Dream · Expo Japão 2025</div>
-                <div class="t-role">AI Video Producer</div>
-                <div class="t-desc">Produzi o curta com ferramentas de IA generativa, coordenando conceito, direcção
-                  visual, montagem e entrega final para exibição no Pavilhão Angolano da Expo Japão 2025.</div>
+                <div class="t-title">Formação Contínua — PHP Laravel</div>
+                <div class="t-role">Estudante</div>
+                <div class="t-desc">Atualmente em processo de aprendizagem de PHP Laravel, fortalecendo minha base em
+                  back-end e desenvolvimento de APIs.</div>
               </div>
             </div>
           </div>
@@ -3578,9 +3561,25 @@
       en: 'Tiago_Matias_Resume_En.pdf'
     };
 
+    function getCookie(name) {
+      const value = '; ' + document.cookie;
+      const parts = value.split('; ' + name + '=');
+      if (parts.length === 2) return parts.pop().split(';').shift();
+      return null;
+    }
+
     function getCurrentLanguage() {
-      const match = document.cookie.match(/googtrans=\/pt\/([^;]+)/);
-      return match && match[1] ? match[1] : 'pt';
+      const raw = getCookie('googtrans');
+      if (!raw) return 'pt';
+      if (raw.includes('/')) {
+        const parts = raw.split('/');
+        return parts[parts.length - 1] || 'pt';
+      }
+      if (raw.includes('|')) {
+        const parts = raw.split('|');
+        return parts[parts.length - 1] || 'pt';
+      }
+      return 'pt';
     }
 
     function updateResumeLink(lang) {
@@ -3609,16 +3608,30 @@
     });
 
     window.changeLanguage = function (langCode) {
-      const cookieVal = "/pt/" + langCode;
-      document.cookie = "googtrans=" + cookieVal + "; path=/";
-      document.cookie = "googtrans=" + cookieVal + "; domain=" + location.hostname + "; path=/";
+      const current = getCurrentLanguage();
+      if (current === langCode) return;
+      if (!/^(pt|en)$/.test(langCode)) return;
+
+      if (typeof doGTranslate === 'function') {
+        try {
+          doGTranslate(current + '|' + langCode);
+        } catch (err) {
+          console.error('Falha ao traduzir via Google Translate:', err);
+        }
+      }
+
+      const cookieVal = '/pt/' + langCode;
+      document.cookie = 'googtrans=' + cookieVal + '; path=/';
+      document.cookie = 'googtrans=' + cookieVal + '; domain=' + location.hostname + '; path=/';
 
       const langMap = { 'pt': 'PT', 'en': 'EN' };
       if (currentLangDisplay) currentLangDisplay.textContent = langMap[langCode] || langCode.toUpperCase();
       updateResumeLink(langCode);
 
       langMenu.classList.remove('show');
-      location.reload();
+      if (typeof doGTranslate !== 'function') {
+        location.reload();
+      }
     };
   </script>
 
