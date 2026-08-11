@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tiago Matias — Cofundador Agriconnect | Engenheiro de Software</title>
+  <title>Tiago Matias — Desenvolvedor Front-end | Engenheiro de Software (Web &amp; Mobile)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -2531,7 +2531,7 @@
   </style>
 </head>
 
-<body>
+<body class="light-mode">
 
   <!-- NAV -->
   <nav>
@@ -2554,9 +2554,7 @@
           <button onclick="changeLanguage('en')">🇺🇸 English</button>
         </div>
       </div>
-      <button class="theme-toggle" id="themeToggle" title="Alternar Tema">
-        <span class="ms sm" id="themeIcon">light_mode</span>
-      </button>
+
       <a class="nav-cta" href="mailto:tiagomatias072@gmail.com">
         <span class="ms sm">mail</span> <span>Contacto</span>
       </a>
@@ -2655,10 +2653,12 @@
           </div>
           <div class="project-body">
             <div class="project-title">Agriconnect</div>
-            <div class="project-desc">Cofundador da startup, responsável pelo desenvolvimento da plataforma e criação de
-              soluções inovadoras para o ecossistema agrícola.</div>
-            <div class="project-techs"><span class="project-tech">Next.js</span>
-              <span class="project-tech">TailwindCss</span>
+            <div class="project-desc" data-i18n="desc.agriconnect">Desenvolvi aplicações mobile multiplataforma com React Native e Flutter para startup do setor agrícola. Implementei interfaces front-end reutilizáveis em React.js e TypeScript, consumindo APIs REST.</div>
+            <div class="project-techs"><span class="project-tech">React Native</span>
+              <span class="project-tech">Flutter</span>
+              <span class="project-tech">React.js</span>
+              <span class="project-tech">TypeScript</span>
+              <span class="project-tech">Python</span>
             </div>
             <a class="project-link" href="https://www.agriconnect-ao.app/" target="_blank">Explorar Solução <span
                 class="ms sm">open_in_new</span></a>
@@ -2768,9 +2768,12 @@
           </div>
           <div class="project-body">
             <div class="project-title">NutriScan App</div>
-            <div class="project-desc">Minha aplicação mobile com mais de 79 utilizadores em 7 país a nível do mundo</div>
-            <div class="project-techs"><span class="project-tech">Expo</span><span
-                class="project-tech">React Native</span></div>
+            <div class="project-desc" data-i18n="desc.nutriscan">Desenvolvi aplicação mobile de rastreamento nutricional com Inteligência Artificial, alcançando mais de 80 utilizadores em mais de 7 países, com arquitetura de componentes reutilizáveis e consumo de APIs REST.</div>
+            <div class="project-techs"><span class="project-tech">React Native</span>
+              <span class="project-tech">Expo</span>
+              <span class="project-tech">REST API</span>
+              <span class="project-tech">AI</span>
+            </div>
             <a class="project-link" href="https://com-wnutriscan-19285553.br.uptodown.com/android" target="_blank">Ver
               Projecto <span class="ms sm">open_in_new</span></a>
           </div>
@@ -3100,22 +3103,8 @@
       });
     });
 
-    // Theme Toggle
-    const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-    const body = document.body;
-
-    if (localStorage.getItem('theme') === 'light') {
-      body.classList.add('light-mode');
-      themeIcon.textContent = 'dark_mode';
-    }
-
-    themeToggle.addEventListener('click', () => {
-      body.classList.toggle('light-mode');
-      const isLight = body.classList.contains('light-mode');
-      themeIcon.textContent = isLight ? 'dark_mode' : 'light_mode';
-      localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    });
+    // Theme Forced Light Mode
+    document.body.classList.add('light-mode');
 
     // Language Switcher Logic
     const langBtn = document.getElementById('langBtn');

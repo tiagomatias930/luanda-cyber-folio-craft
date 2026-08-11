@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tiago Matias — Cofundador Agriconnect | Engenheiro de Software</title>
+  <title>Tiago Matias — Desenvolvedor Front-end | Engenheiro de Software (Web &amp; Mobile)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -2531,19 +2531,18 @@
   </style>
 </head>
 
-<body>
+<body class="light-mode">
 
   <!-- NAV -->
   <nav>
     <a class="nav-logo" href="#hero">Tiago<span>.</span></a>
     <ul class="nav-links">
-      <li><a href="#about">Sobre</a></li>
-      <li><a href="#skills">Competências</a></li>
-      <li><a href="#projects">Projetos</a></li>
-      <li><a href="#experience">Experiência</a></li>
+      <li><a href="#about" data-i18n="nav.about">Sobre</a></li>
+      <li><a href="#skills" data-i18n="nav.skills">Competências</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">Projetos</a></li>
+      <li><a href="#experience" data-i18n="nav.experience">Experiência</a></li>
     </ul>
     <div class="nav-actions">
-      <div id="google_translate_element"></div>
       <div class="lang-switcher">
         <button class="lang-btn" id="langBtn" title="Traduzir / Translate">
           <span class="ms sm">language</span>
@@ -2554,10 +2553,8 @@
           <button onclick="changeLanguage('en')">🇺🇸 English</button>
         </div>
       </div>
-      <button class="theme-toggle" id="themeToggle" title="Alternar Tema">
-        <span class="ms sm" id="themeIcon">light_mode</span>
-      </button>
-      <a class="nav-cta" href="mailto:tiagomatias072@gmail.com">
+
+      <a class="nav-cta" href="mailto:tiagomatias072@gmail.com" data-i18n="nav.cta">
         <span class="ms sm">mail</span> <span>Contacto</span>
       </a>
     </div>
@@ -2570,19 +2567,17 @@
     <div class="hero-glow glow-b"></div>
     <div class="hero-inner">
       <div>
-        <div class="hero-eyebrow"><span class="ms sm fill" style="color:green">fiber_manual_record</span>
+        <div class="hero-eyebrow" data-i18n="hero.eyebrow"><span class="ms sm fill" style="color:green">fiber_manual_record</span>
           Disponível para oportunidades</div>
         <h1 class="hero-name">Tiago<br /><em>Matias</em></h1>
-        <div class="hero-role"><span class="role-text" id="roleText">Engenheiro de Software</span></div>
-        <p class="hero-desc">Sou cofundador da <strong style="color:var(--text)">Agriconnect</strong> e apaixonado por tecnologia,
-          com experiência em web design, desenvolvimento de sistemas web e mobile. Estou ansioso para contribuir com
-          minhas habilidades para sua equipe, entregando soluções inovadoras e me adaptando a projetos diversos em tempo record.</p>
+        <div class="hero-role"><span class="role-text" id="roleText">Desenvolvedor Front-end | Engenheiro de Software (Web &amp; Mobile)</span></div>
+        <p class="hero-desc" data-i18n="hero.desc">Desenvolvedor React com mais de 2 anos de experiência prática em aplicações web e mobile, especializado em React, React Native, TypeScript e Next.js. Atuação em ciclos completos de desenvolvimento — da construção de componentes reutilizáveis ao consumo de APIs REST — em ambientes ágeis, remotos e multiculturais.</p>
         <div class="hero-actions">
           <a class="btn-primary" id="resumeDownloadLink" href="/asset/Tiago_Matias_CV.pdf"
-            download="Tiago_Matias_CV.pdf">
+            download="Tiago_Matias_CV.pdf" data-i18n="hero.download_cv">
             <span class="ms sm">download</span> Baixar Currículo
           </a>
-          <a class="btn-secondary" href="#projects">
+          <a class="btn-secondary" href="#projects" data-i18n="hero.view_projects">
             Ver Projetos <span class="ms sm">arrow_forward</span>
           </a>
         </div>
@@ -2634,29 +2629,17 @@
               alt="42logo"></div>
         </div>
         <div class="reveal">
-          <div class="section-label">Sobre mim</div>
-          <h2 class="section-title">Engenheiro com<br /><em style="font-style:italic;color:var(--accent)">visão de
-              produto</em></h2>
-          <p>Sou um engenheiro de software formado pela <strong style="color:var(--text)">42 Luanda</strong>, onde
-            desenvolvi uma base sólida em programação de sistemas, algoritmos, codificação
-            colaborativa, web design, redes e automação isso na primeira fase da minha formação, o <strong
-              style="color:var(--text)"> “Common Core ”</strong>.</p>
-          <p>Atualmente estou a fazer a segunda fase da minha formação, a <strong
-              style="color:var(--text)">Especialização em Mobile e Cybersecurity </strong> na mesma
-            instituição.</p>
-          <p>A minha curiosidade levou-me a explorar Criação de Agentes de IA,
-            Desenvolvimento de Aplicações web e mobile e automação de processos com ferramentas como n8n isso nas minhas horas vagas.</p>
-          <p>Além do código, domino UI/UX no Figma — o que me permite pensar tanto em <em
-              style="color:var(--accent2)">sistemas como em experiências de utilizador</em>.</p>
+          <div class="section-label" data-i18n="about.title">Sobre mim</div>
+          <h2 class="section-title" data-i18n="about.subtitle">Desenvolvedor Front-end &amp;<br /><em style="font-style:italic;color:var(--accent)">Engenheiro de Software</em></h2>
+          <p data-i18n="about.p1">Desenvolvedor React com mais de 2 anos de experiência prática em aplicações web e mobile, especializado em React, React Native, TypeScript e Next.js. Atuação em ciclos completos de desenvolvimento — da construção de componentes reutilizáveis ao consumo de APIs REST — em ambientes ágeis, remotos e multiculturais.</p>
+          <p data-i18n="about.p2">Possuo experiência em voluntariado técnico com a <strong>United Nations Volunteers (UNV)</strong>, colaboração com equipas internacionais no <strong>Expo Japão 2025 (Osaka)</strong> e num programa de transformação digital no setor de Petróleo e Gás (<strong>Pumangol</strong>).</p>
+          <p data-i18n="about.p3">Familiaridade com validação de formulários (React Hook Form, Zod), CSS-in-JS (styled-components) e controlo de versões com Git/GitLab. Em desenvolvimento contínuo de competências em testes automatizados (Jest, React Testing Library).</p>
+          <p data-i18n="about.p4">Formação em Engenharia de Software pela <strong>42Luanda</strong> (Common Core concluído e Especialização Advanced em andamento). Comunicação em português nativo e inglês técnico/intermediário, com experiência prática com equipas internacionais.</p>
           <div class="about-meta">
-            <div class="about-meta-row"><strong><span class="ms sm">location_on</span> Localização</strong><span>Luanda,
-                Angola</span></div>
-            <div class="about-meta-row"><strong><span class="ms sm">school</span> Formação</strong><span>42 Luanda —
-                Engenharia de Software</span></div>
-            <div class="about-meta-row"><strong><span class="ms sm">mail</span> Email</strong><span><a
-                  href="mailto:tiagomatias072@gmail.com">tiagomatias072@gmail.com</a></span></div>
-            <div class="about-meta-row"><strong><span class="ms sm">language</span> Idiomas</strong><span>Português
-                (nativo) · Inglês (A2)</span></div>
+            <div class="about-meta-row" data-i18n="about.meta.loc"><strong><span class="ms sm">location_on</span> Localização</strong><span>Luanda, Angola</span></div>
+            <div class="about-meta-row" data-i18n="about.meta.edu"><strong><span class="ms sm">school</span> Formação</strong><span>42 Luanda — Engenharia de Software</span></div>
+            <div class="about-meta-row" data-i18n="about.meta.email"><strong><span class="ms sm">mail</span> Email</strong><span><a href="mailto:tiagomatias072@gmail.com">tiagomatias072@gmail.com</a></span></div>
+            <div class="about-meta-row" data-i18n="about.meta.lang"><strong><span class="ms sm">language</span> Idiomas</strong><span>Português (Nativo) · Inglês (Técnico/Intermediário)</span></div>
           </div>
         </div>
       </div>
@@ -2667,12 +2650,12 @@
   <section id="skills">
     <div class="section-inner">
       <div class="reveal">
-        <div class="section-label">Competências</div>
-        <h2 class="section-title">O que sei <em style="font-style:italic;color:var(--accent)">construir</em></h2>
+        <div class="section-label" data-i18n="skills.title">Competências</div>
+        <h2 class="section-title" data-i18n="skills.subtitle">O que sei <em style="font-style:italic;color:var(--accent)">construir</em></h2>
       </div>
       <div class="skills-bento">
         <div class="skill-card wide reveal">
-          <div class="skill-card-title">Programação de Sistemas</div>
+          <div class="skill-card-title" data-i18n="skills.prog_sys">Programação de Sistemas</div>
           <div class="skill-bars">
             <div class="skill-bar-row">
               <div class="skill-bar-label"><span>C / C++</span><span>Avançado · 90%</span></div>
@@ -2707,7 +2690,7 @@
           </div>
         </div>
         <div class="skill-card reveal">
-          <div class="skill-card-title">Cibersegurança</div>
+          <div class="skill-card-title" data-i18n="skills.cyber">Cibersegurança</div>
           <div class="skill-tags">
             <span class="skill-tag hl">Pentest</span><span class="skill-tag hl">CTF</span>
             <span class="skill-tag">Labs</span><span class="skill-tag">CyberTalent</span>
@@ -2718,7 +2701,7 @@
           </div>
         </div>
         <div class="skill-card reveal">
-          <div class="skill-card-title">Front-end &amp; Mobile</div>
+          <div class="skill-card-title" data-i18n="skills.frontend">Front-end &amp; Mobile</div>
           <div class="skill-bars">
             <div class="skill-bar-row">
               <div class="skill-bar-label"><span>ReactJs / NextJS</span><span>100%</span></div>
@@ -2745,29 +2728,45 @@
               </div>
             </div>
           </div>
-        </div>
-
-    <div class="skill-card reveal">
-          <div class="skill-card-title">Back-end</div>
-          <div class="skill-bars">
-            <div class="skill-bar-row">
-              <div class="skill-bar-label"><span>PHP Laravel</span><span>40%</span></div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill" style="width:40%"></div>
-              </div>
-            </div>
-            <div class="skill-bar-row">
-              <div class="skill-bar-label"><span>APIs RESTful</span><span>80%</span></div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill" style="width:80%"></div>
-              </div>
-            </div>
-            
+          <div class="skill-tags" style="margin-top:12px">
+            <span class="skill-tag">React Hook Form</span><span class="skill-tag">Zod</span>
+            <span class="skill-tag">styled-components</span><span class="skill-tag">HTML5 / CSS3</span>
+            <span class="skill-tag hl">Jest / RTL (Testes)</span>
           </div>
         </div>
 
         <div class="skill-card reveal">
-          <div class="skill-card-title">Web Design</div>
+          <div class="skill-card-title" data-i18n="skills.backend">Back-end &amp; APIs</div>
+          <div class="skill-bars">
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span>Node.js</span><span>70%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" style="width:70%"></div>
+              </div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span>Consumo &amp; Integração APIs REST</span><span>90%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" style="width:90%"></div>
+              </div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span>Python</span><span>80%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" style="width:80%"></div>
+              </div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span>PHP (Laravel)</span><span>45%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" style="width:45%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-title" data-i18n="skills.web_design">Web Design</div>
           <div class="skill-tags">
             <span class="skill-tag hl">Figma</span><span class="skill-tag hl">Adobe UX</span>
             <span class="skill-tag">Canva</span><span class="skill-tag">Wireframing</span>
@@ -2776,52 +2775,39 @@
           </div>
         </div>
         <div class="skill-card reveal">
-          <div class="skill-card-title">DevOps &amp; Ferramentas</div>
+          <div class="skill-card-title" data-i18n="skills.devops">Ferramentas &amp; DevOps</div>
           <div class="skill-bars">
             <div class="skill-bar-row">
-              <div class="skill-bar-label"><span>Docker</span><span>70%</span></div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill" style="width:70%"></div>
-              </div>
-            </div>
-            <div class="skill-bar-row">
-              <div class="skill-bar-label"><span>Git / GitHub</span><span>90%</span></div>
+              <div class="skill-bar-label"><span>Git / GitLab</span><span>90%</span></div>
               <div class="skill-bar-track">
                 <div class="skill-bar-fill" style="width:90%"></div>
               </div>
             </div>
             <div class="skill-bar-row">
-              <div class="skill-bar-label"><span>N8n</span><span>70%</span></div>
+              <div class="skill-bar-label"><span>Docker</span><span>75%</span></div>
               <div class="skill-bar-track">
-                <div class="skill-bar-fill" style="width:70%"></div>
+                <div class="skill-bar-fill" style="width:75%"></div>
               </div>
             </div>
             <div class="skill-bar-row">
-              <div class="skill-bar-label"><span>OPenClaw</span><span>50%</span></div>
+              <div class="skill-bar-label"><span>n8n</span><span>80%</span></div>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill" style="width:80%"></div>
+              </div>
+            </div>
+            <div class="skill-bar-row">
+              <div class="skill-bar-label"><span>Google Cloud Platform (GCP)</span><span>50%</span></div>
               <div class="skill-bar-track">
                 <div class="skill-bar-fill" style="width:50%"></div>
               </div>
             </div>
-            <div class="skill-bar-row">
-              <div class="skill-bar-label"><span>Google Cloud</span><span>40%</span></div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill" style="width:40%"></div>
-              </div>
-            </div>
-            <div class="skill-bar-row">
-              <div class="skill-bar-label"><span>Hermes &amp; OpenCode</span><span>70%</span></div>
-              <div class="skill-bar-track">
-                <div class="skill-bar-fill" style="width:70%"></div>
-              </div>
-            </div>
           </div>
           <div class="skill-tags" style="margin-top:10px">
-            <span class="skill-tag">Vercel</span><span class="skill-tag">Supabase</span><span
-              class="skill-tag">CI/CD</span>
+            <span class="skill-tag">Vercel</span><span class="skill-tag">GitHub</span><span class="skill-tag">CI/CD</span><span class="skill-tag">Scrum / Agile</span>
           </div>
         </div>
         <div class="skill-card reveal">
-          <div class="skill-card-title">IA &amp; Multimédia</div>
+          <div class="skill-card-title" data-i18n="skills.ai">IA &amp; Multimédia</div>
           <div class="skill-tags">
             <span class="skill-tag hl">Gemini API</span><span class="skill-tag hl">AI Studio</span>
             <span class="skill-tag">Sora / HailuoAI</span><span class="skill-tag">Video Editing</span>
@@ -2837,8 +2823,8 @@
     <div class="section-inner">
       <div class="projects-header">
         <div class="reveal">
-          <div class="section-label">Portfólio</div>
-          <h2 class="section-title">Projetos <em style="font-style:italic;color:var(--accent)">selecionados</em></h2>
+          <div class="section-label" data-i18n="projects.title">Portfólio</div>
+          <h2 class="section-title" data-i18n="projects.subtitle">Projetos <em style="font-style:italic;color:var(--accent)">selecionados</em></h2>
         </div>
       </div>
       <div class="projects-grid" id="projectsGrid">
@@ -2847,11 +2833,11 @@
         <div class="project-card reveal" data-cat="ai web">
           <div class="project-thumb">
             <img src="geminiTutor.png" alt="Gemini Tutor" />
-            <span class="project-badge b-gold">HACKATHON</span>
+            <span class="project-badge b-gold" data-i18n="project.badge.hackathon">HACKATHON</span>
           </div>
           <div class="project-body">
             <div class="project-title">Ngola Tutor</div>
-            <div class="project-desc">Ngola Tutor é um aplicativo web full-stack que atua como um tutor de IA paciente.
+            <div class="project-desc" data-i18n="proj.tutor.desc">Ngola Tutor é um aplicativo web full-stack que atua como um tutor de IA paciente.
               Isso ajuda os alunos a entender os problemas passo a passo, sem dar respostas diretas – incentivando-os a
               descobrir soluções por conta própria.</div>
             <div class="project-techs"><span class="project-tech">ReactJs</span><span
@@ -2859,10 +2845,10 @@
                 class="project-tech">Google Cloud</span></div>
             <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: auto;">
               <a class="project-link" href="https://gemini-tutor-ai.vercel.app/" target="_blank"
-                style="margin-top: 0;">Ver Projecto <span class="ms sm">open_in_new</span></a>
+                style="margin-top: 0;" data-i18n="project.btn.view">Ver Projecto <span class="ms sm">open_in_new</span></a>
               <a class="project-link"
                 href="https://drive.google.com/file/d/1uQk4ZR_LJCkcFCrBY308aXzKZGW80Nfb/view?usp=drive_link"
-                target="_blank" style="margin-top: 0;">Ver Vídeo <span class="ms sm">play_circle</span></a>
+                target="_blank" style="margin-top: 0;" data-i18n="project.btn.video">Ver Vídeo <span class="ms sm">play_circle</span></a>
             </div>
           </div>
         </div>
@@ -2876,11 +2862,11 @@
           </div>
           <div class="project-body">
             <div class="project-title">Fenix Goals</div>
-            <div class="project-desc">Plataforma de alta performance para transformar metas abstractas em conquistas.
+            <div class="project-desc" data-i18n="proj.fenix.desc">Plataforma de alta performance para transformar metas abstractas em conquistas.
               Baseada no método de Brian Tracy.</div>
             <div class="project-techs"><span class="project-tech">TypeScript</span><span
                 class="project-tech">HTML</span></div>
-            <a class="project-link" href="https://fenix-goals.vercel.app" target="_blank">Ver Projecto <span
+            <a class="project-link" href="https://fenix-goals.vercel.app" target="_blank" data-i18n="project.btn.view">Ver Projecto <span
                 class="ms sm">open_in_new</span></a>
           </div>
         </div>
@@ -2889,18 +2875,18 @@
         <div class="project-card reveal" data-cat="design">
           <div class="project-thumb">
             <img src="imagemAI.png" alt="Lbu.dev" />
-            <span class="project-badge b-ux">n8n</span>
+            <span class="project-badge b-ux" data-i18n="filter.social">n8n</span>
           </div>
           <div class="project-body">
             <div class="project-title">Lbu.dev</div>
-            <div class="project-desc">Landing Page de apresentação dos serviços de desenvolvimento de Agentes de IA que
+            <div class="project-desc" data-i18n="proj.lbu.desc">Landing Page de apresentação dos serviços de desenvolvimento de Agentes de IA que
               ajudam empresas a automatizar tarefas. Está landing page é sustentada pelos agentes de Ai que eu
               desenvolvi para responderem e otimizar o serviço todo</div>
             <div class="project-techs"><span class="project-tech">N8N</span><span class="project-tech">Google
                 Drive</span><span class="project-tech">Google
                 Sheets</span><span class="project-tech">Gmail</span>
             </div>
-            <a class="project-link" href="https://lbu-dev-gente.vercel.app/" target="_blank">Ver o serviço <span
+            <a class="project-link" href="https://lbu-dev-gente.vercel.app/" target="_blank" data-i18n="project.btn.service">Ver o serviço <span
                 class="ms sm">open_in_new</span></a>
           </div>
         </div>
@@ -2909,7 +2895,7 @@
 
       <!-- Ver mais projetos button -->
       <div style="display: flex; justify-content: center; margin-top: 50px;" class="reveal">
-        <a href="projects.html" class="btn-primary" style="padding: 14px 36px; font-size: 1rem; border-radius: 30px; letter-spacing: 0.5px; box-shadow: 0 4px 15px rgba(255, 183, 3, 0.15);">
+        <a href="projects.html" class="btn-primary" style="padding: 14px 36px; font-size: 1rem; border-radius: 30px; letter-spacing: 0.5px; box-shadow: 0 4px 15px rgba(255, 183, 3, 0.15);" data-i18n="projects.more">
           Ver mais projetos <span class="ms sm" style="font-weight: bold; margin-left: 4px;">arrow_forward</span>
         </a>
       </div>
@@ -2977,30 +2963,48 @@
   </style>
   <div class="hack-feed">
     <div class="hack-track">
-      <a href="https://devpost.com/software/gemini-tutor-phdc0v" target="_blank" class="hack-item"><span
-          class="tag">HACKATHON GOOGLE AI</span> Gemini Tutor - Gemini Live Agent Challenge</a>
-      <a href="https://committers.top/angola" class="hack-item"><span class="tag">GITHUB DESTAQUE</span> Tiago Matias um
-        dos usuários mais ativos do GitHub em Angola.</a>
-      <a href="https://devpost.com/software/chronicles-of-the-unspoken" target="_blank" class="hack-item"><span
-          class="tag">HACKATHON GOOGLE AI</span> Chronicles of the Unspoken - Google DeepMind Hackathon 2026</a>
-      <a href="https://42ctf.org/en/scoreboard/network/" target="_blank" class="hack-item"><span class="tag">COMPETIÇÃO DE CYBER SEGURANÇA 42NETWORK</span>
-        Tiago Matias e Liedson Habacuc tiveram grande destaque no ctf da 42Network deixando a 42Luanda na posição 10 em um ranking com mais de 100 equipas</a>
-      <!-- <a href="#projects" class="hack-item"><span class="tag">HACKATHON</span> Unitel Money Hack - 2º Lugar</a>
-      <a href="#projects" class="hack-item"><span class="tag">EVENTO</span> Conferência de Cibersegurança AO</a>-->
-      <a href="#projects" class="hack-item"><span class="tag">EVENTO</span> Global Game Jam 2026</a>
-
+      <a href="https://devpost.com/software/gemini-tutor-phdc0v" target="_blank" class="hack-item">
+        <span class="tag" data-i18n="project.badge.hackathon">HACKATHON GOOGLE AI</span>
+        <span data-i18n="highlight.active">Gemini Tutor - Gemini Live Agent Challenge</span>
+      </a>
+      <a href="https://committers.top/angola" class="hack-item">
+        <span class="tag" data-i18n="project.badge.featured">GITHUB DESTAQUE</span>
+        <span data-i18n="highlight.github">Tiago Matias um dos usuários mais ativos do GitHub em Angola.</span>
+      </a>
+      <a href="https://devpost.com/software/chronicles-of-the-unspoken" target="_blank" class="hack-item">
+        <span class="tag" data-i18n="project.badge.hackathon">HACKATHON GOOGLE AI</span>
+        <span data-i18n="highlight.unspoken">Chronicles of the Unspoken - Google DeepMind Hackathon 2026</span>
+      </a>
+      <a href="https://42ctf.org/en/scoreboard/network/" target="_blank" class="hack-item">
+        <span class="tag" data-i18n="project.badge.ctf">COMPETIÇÃO DE CYBER SEGURANÇA 42NETWORK</span>
+        <span data-i18n="highlight.ctf_full">Tiago Matias e Liedson Habacuc tiveram grande destaque no ctf da 42Network deixando a 42Luanda na posição 10 em um ranking com mais de 100 equipas</span>
+      </a>
+      <a href="#projects" class="hack-item">
+        <span class="tag" data-i18n="project.badge.event">EVENTO</span>
+        <span data-i18n="highlight.gamejam">Global Game Jam 2026</span>
+      </a>
 
       <!-- Repeat -->
-      <a href="https://devpost.com/software/gemini-tutor-phdc0v" target="_blank" class="hack-item"><span
-          class="tag">HACKATHON GOOGLE AI</span> Gemini Tutor - Gemini Live Agent Challenge</a>
-      <a href="https://devpost.com/software/chronicles-of-the-unspoken" target="_blank" class="hack-item"><span
-          class="tag">HACKATHON GOOGLE AI</span> Chronicles of the Unspoken - Jogo de Investigação criminal</a>
-    <a href="https://42ctf.org/en/scoreboard/network/" target="_blank" class="hack-item"><span class="tag">COMPETIÇÃO DE CYBER SEGURANÇA 42NETWORK</span>
-        Tiago Matias e Liedson Habacuc tiveram grande destaque no ctf da 42Network deixando a 42Luanda na posição 10 em um ranking com mais de 100 equipas</a>
-      <a href="https://committers.top/angola" class="hack-item"><span class="tag">GITHUB DESTAQUE</span> Tiago Matias um
-        dos usuários mais ativos do GitHub em Angola.</a>
-      <!--<a href="#projects" class="hack-item"><span class="tag">EVENTO</span> Conferência de Cibersegurança AO</a> -->
-      <a href="#projects" class="hack-item"><span class="tag">EVENTO</span> Global Game Jam 2026</a>
+      <a href="https://devpost.com/software/gemini-tutor-phdc0v" target="_blank" class="hack-item">
+        <span class="tag" data-i18n="project.badge.hackathon">HACKATHON GOOGLE AI</span>
+        <span data-i18n="highlight.active">Gemini Tutor - Gemini Live Agent Challenge</span>
+      </a>
+      <a href="https://devpost.com/software/chronicles-of-the-unspoken" target="_blank" class="hack-item">
+        <span class="tag" data-i18n="project.badge.hackathon">HACKATHON GOOGLE AI</span>
+        <span data-i18n="highlight.unspoken_game">Chronicles of the Unspoken - Jogo de Investigação criminal</span>
+      </a>
+      <a href="https://42ctf.org/en/scoreboard/network/" target="_blank" class="hack-item">
+        <span class="tag" data-i18n="project.badge.ctf">COMPETIÇÃO DE CYBER SEGURANÇA 42NETWORK</span>
+        <span data-i18n="highlight.ctf_full">Tiago Matias e Liedson Habacuc tiveram grande destaque no ctf da 42Network deixando a 42Luanda na posição 10 em um ranking com mais de 100 equipas</span>
+      </a>
+      <a href="https://committers.top/angola" class="hack-item">
+        <span class="tag" data-i18n="project.badge.featured">GITHUB DESTAQUE</span>
+        <span data-i18n="highlight.github">Tiago Matias um dos usuários mais ativos do GitHub em Angola.</span>
+      </a>
+      <a href="#projects" class="hack-item">
+        <span class="tag" data-i18n="project.badge.event">EVENTO</span>
+        <span data-i18n="highlight.gamejam">Global Game Jam 2026</span>
+      </a>
     </div>
   </div>
 
@@ -3017,104 +3021,131 @@
           <div class="exp-col-title">Experiência Profissional</div>
           <div class="timeline">
             <div class="timeline-item reveal">
-              <div class="timeline-dot"><span class="ms sm">laptop_mac</span></div>
+              <div class="timeline-dot"><span class="ms sm">groups</span></div>
               <div>
-                <div class="t-title">Pumangol</div>
-                <div class="t-role">Desenvolvedor / Inovação / Design UI-UX</div>
-                <div class="t-desc">Participação no programa Boa Energia Digital, um programa de inovação onde desenvolvi o UI/UX do Sistema Frota+, uma solução de
-                  gestão de frotas apresentada à Pumangol como resposta a um desafio corporativo. Chegamos até a final do programa com a melhor apresentação.</div>
+                <div class="t-title">United Nations Volunteers (UNV)</div>
+                <div class="t-role" data-i18n="exp.unv.role">Desenvolvedor de Software Técnico Júnior — Inovação e Desenvolvimento</div>
+                <div class="t-date" style="font-size:0.85rem;color:var(--accent2);margin-bottom:6px">Julho 2026 – Presente | Voluntariado Online, Alemanha</div>
+                <div class="t-desc" data-i18n="exp.unv.desc">
+                  • Voluntário Online (UNV), prestando apoio em pesquisa e desenvolvimento digital para projetos de impacto social nas áreas de Inteligência Artificial, agricultura climática inteligente e presença digital de organizações.<br />
+                  • Contribuí em análise de plataformas, elaboração de recomendações técnicas e documentação de conhecimento para equipas internacionais.
+                </div>
               </div>
             </div>
 
             <div class="timeline-item reveal">
               <div class="timeline-dot"><span class="ms sm fill">local_gas_station</span></div>
               <div>
-                <div class="t-title">Agriconnect</div>
-                <div class="t-role">Cofundador & Developer</div>
-                <div class="t-desc">Cofundador da startup, responsável pelo desenvolvimento da plataforma, definição de produto
-                  e criação de soluções inovadoras para o ecossistema agrícola.</div>
+                <div class="t-title">Pumangol</div>
+                <div class="t-role" data-i18n="exp.pumangol.role">Desenvolvedor Web Design (UI/UX)</div>
+                <div class="t-date" style="font-size:0.85rem;color:var(--accent2);margin-bottom:6px">Julho 2025 – Maio 2026 | Luanda, Angola</div>
+                <div class="t-desc" data-i18n="exp.pumangol.desc">
+                  • Concebi interfaces de UI/UX para o programa de transformação digital do setor de Petróleo e Gás, produzindo protótipos de alta fidelidade para múltiplas plataformas.<br />
+                  • Colaborei com equipas multidisciplinares (produto, engenharia e negócio) em ambiente ágil (Scrum), entregando protótipos interativos alinhados aos requisitos do cliente e a padrões corporativos de consistência visual.
+                </div>
               </div>
             </div>
 
             <div class="timeline-item reveal">
-              <div class="timeline-dot"><span class="ms sm">school</span></div>
+              <div class="timeline-dot"><span class="ms sm">support_agent</span></div>
               <div>
-                <div class="t-title">EPGF Educacional Consultoria</div>
-                <div class="t-role">Consultoria Educacional</div>
-                <div class="t-desc">Atuação em consultoria educacional, apoiando iniciativas de formação e estruturação de
-                  propostas pedagógicas.</div>
+                <div class="t-title">PFG Consultoria Educacional LTDA</div>
+                <div class="t-role" data-i18n="exp.pfg.role">Freelancer de Tecnologia</div>
+                <div class="t-date" style="font-size:0.85rem;color:var(--accent2);margin-bottom:6px">Setembro 2025 – Presente | Remoto, Brasil</div>
+                <div class="t-desc" data-i18n="exp.pfg.desc">
+                  • Prestei orientação técnica remota em programação a clientes brasileiros, cobrindo JavaScript, TypeScript, Python e Cisco Packet Tracer.<br />
+                  • Desenvolvi e corrigi projetos académicos e profissionais, incluindo relatórios técnicos e componentes de software, com foco em qualidade de código e cumprimento de prazos.
+                </div>
               </div>
             </div>
 
             <div class="timeline-item reveal">
-              <div class="timeline-dot"><span class="ms sm">security</span></div>
+              <div class="timeline-dot"><span class="ms sm">psychology</span></div>
               <div>
-                <div class="t-title">Kapembe.com</div>
-                <div class="t-role">Pentester Freelancer</div>
-                <div class="t-desc">Primeiro contrato freelance profissional como pentester, onde realizei um trabalho de
-                  testes de penetração bem sucedido.</div>
+                <div class="t-title">Expo Japão 2025 Osaka</div>
+                <div class="t-role" data-i18n="exp.expo.role">Engenheiro de Prompt — Projeto Internacional</div>
+                <div class="t-date" style="font-size:0.85rem;color:var(--accent2);margin-bottom:6px">Julho 2025 – Novembro 2025 | Remoto</div>
+                <div class="t-desc" data-i18n="exp.expo.desc">
+                  • Produzi vídeo animado 2D com recurso a Inteligência Artificial para o Pavilhão de Angola na Expo Japão 2025.<br />
+                  • Colaborei em projeto de cooperação internacional Angola-Japão, comunicando em inglês com equipas e parceiros globais, cumprindo prazos e padrões de qualidade exigidos internacionalmente.
+                </div>
               </div>
             </div>
 
             <div class="timeline-item reveal">
-              <div class="timeline-dot"><span class="ms sm">code</span></div>
+              <div class="timeline-dot"><span class="ms sm">eco</span></div>
               <div>
-                <div class="t-title">Formação Contínua — PHP Laravel</div>
-                <div class="t-role">Estudante</div>
-                <div class="t-desc">Atualmente em processo de aprendizagem de PHP Laravel, fortalecendo minha base em
-                  back-end e desenvolvimento de APIs.</div>
+                <div class="t-title">Agriconnect (Startup)</div>
+                <div class="t-role" data-i18n="exp.agriconnect.role">Engenheiro de Software Mobile &amp; Web</div>
+                <div class="t-date" style="font-size:0.85rem;color:var(--accent2);margin-bottom:6px">Fevereiro 2025 – Presente | Luanda, Angola</div>
+                <div class="t-desc" data-i18n="exp.agriconnect.desc">
+                  • Desenvolvi aplicações mobile multiplataforma com React Native e Flutter para startup do setor agrícola.<br />
+                  • Implementei interfaces front-end reutilizáveis em React.js e TypeScript (tipagem rigorosa), consumindo APIs REST com backend em Python.<br />
+                  • Participei do ciclo completo de desenvolvimento — do design de componentes ao deployment — utilizando Git para controlo de versões em equipa.
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"><span class="ms sm">smart_toy</span></div>
+              <div>
+                <div class="t-title">NutriScan App — Projeto Pessoal</div>
+                <div class="t-role" data-i18n="exp.nutriscan.role">Desenvolvedor React Native</div>
+                <div class="t-date" style="font-size:0.85rem;color:var(--accent2);margin-bottom:6px">Projeto Independente | Angola</div>
+                <div class="t-desc" data-i18n="exp.nutriscan.desc">
+                  • Desenvolvi aplicação mobile de rastreamento nutricional com Inteligência Artificial, alcançando mais de 80 utilizadores em mais de 7 países, com arquitetura de componentes reutilizáveis e consumo de APIs REST.
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div>
-          <div class="exp-col-title">Formação Académica</div>
+          <div class="exp-col-title" data-i18n="exp.edu_title">Formação Académica</div>
           <div class="edu-card reveal">
             <div class="edu-school">42 Luanda</div>
-            <div class="edu-degree">Ciência da Computação — Engenharia de Software</div>
+            <div class="edu-degree" data-i18n="exp.edu.degree">Ciência da Computação — Engenharia de Software</div>
 
             <div class="edu-phases">
               <div class="edu-phase">
                 <div class="phase-icon completed"><span class="ms sm">check</span></div>
                 <div class="phase-info">
-                  <div class="phase-name">Piscina</div>
-                  <div class="phase-status">Concluído</div>
+                  <div class="phase-name" data-i18n="exp.edu.piscina">Piscina</div>
+                  <div class="phase-status" data-i18n="exp.edu.phase_completed">Concluído</div>
                 </div>
               </div>
               <div class="edu-phase">
                 <div class="phase-icon completed"><span class="ms sm">check</span></div>
                 <div class="phase-info">
-                  <div class="phase-name">Common Core</div>
-                  <div class="phase-status">Concluído</div>
+                  <div class="phase-name" data-i18n="exp.edu.common_core">Common Core</div>
+                  <div class="phase-status" data-i18n="exp.edu.phase_completed">Concluído</div>
                 </div>
               </div>
               <div class="edu-phase">
                 <div class="phase-icon current"><span class="ms sm">sync</span></div>
                 <div class="phase-info">
-                  <div class="phase-name">Especialização</div>
-                  <div class="phase-status">Em curso</div>
+                  <div class="phase-name" data-i18n="exp.edu.specialization">Especialização</div>
+                  <div class="phase-status" data-i18n="exp.edu.phase_current">Em curso</div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="exp-col-title" style="margin-top:36px">O Que Consigo Fazer</div>
+          <div class="exp-col-title" style="margin-top:36px" data-i18n="exp.can_do_title">O Que Consigo Fazer</div>
           <div class="can-do">
-            <div class="can-do-item reveal"><span class="ms sm">web</span><span>Desenvolvimento Web &amp; Mobile</span>
-            </div>
-            <div class="can-do-item reveal"><span class="ms sm">palette</span><span>Design UI/UX &amp;
-                Prototipagem</span></div>
-            <div class="can-do-item reveal"><span class="ms sm">security</span><span>Pentesting &amp; Segurança de
-                Redes</span></div>
-            <div class="can-do-item reveal"><span class="ms sm">settings</span><span>Desenvolvimento de Sistemas
-                (C/C++/Python)</span></div>
-            <div class="can-do-item reveal"><span class="ms sm fill">smart_toy</span><span>Integração de IA &amp;
-                Automação</span></div>
-            <div class="can-do-item reveal"><span class="ms sm">movie</span><span>Edição de Vídeo &amp; Produção com
-                IA</span></div>
-            <div class="can-do-item reveal"><span class="ms sm">sell</span><span>Social Media &amp; Criação de
-                Conteúdo de forma automatizada com IA</span></div>
-            <div class="can-do-item reveal"><span class="ms sm">smart_toy</span><span>Testes de aplicações mobile e
-                web</span></div>
+            <div class="can-do-item reveal"><span class="ms sm">web</span><span data-i18n="cando.web_mobile">Desenvolvimento Web &amp; Mobile</span></div>
+            <div class="can-do-item reveal"><span class="ms sm">palette</span><span data-i18n="cando.uiux">Design UI/UX &amp; Prototipagem</span></div>
+            <div class="can-do-item reveal"><span class="ms sm">security</span><span data-i18n="cando.pentesting">Pentesting &amp; Segurança de Redes</span></div>
+            <div class="can-do-item reveal"><span class="ms sm">settings</span><span data-i18n="cando.systems">Desenvolvimento de Sistemas (C/C++/Python)</span></div>
+            <div class="can-do-item reveal"><span class="ms sm fill">smart_toy</span><span data-i18n="cando.ai">Integração de IA &amp; Automação</span></div>
+            <div class="can-do-item reveal"><span class="ms sm">movie</span><span data-i18n="cando.video">Edição de Vídeo &amp; Produção com IA</span></div>
+            <div class="can-do-item reveal"><span class="ms sm">sell</span><span data-i18n="cando.social">Social Media &amp; Criação de Conteúdo de forma automatizada com IA</span></div>
+            <div class="can-do-item reveal"><span class="ms sm">smart_toy</span><span data-i18n="cando.tests">Testes de aplicações mobile e web</span></div>
+          </div>
+          
+          <div class="exp-col-title" style="margin-top:36px" data-i18n="exp.cert_title">Certificações &amp; Conquistas</div>
+          <div class="can-do">
+            <div class="can-do-item reveal"><span class="ms sm">emoji_events</span><span data-i18n="exp.cert.expo">Expo Japão 2025: produção do vídeo "A História de Tchissola", exibido no Pavilhão de Angola, Osaka.</span></div>
+            <div class="can-do-item reveal"><span class="ms sm">security</span><span data-i18n="exp.cert.ctf">Participação ativa em competições de cibersegurança (CTF) através da plataforma 42ctf.org.</span></div>
+            <div class="can-do-item reveal"><span class="ms sm">publish</span><span data-i18n="exp.cert.nutriscan">Aplicação NutriScan publicada na plataforma Uptodown.</span></div>
           </div>
         </div>
       </div>
@@ -3166,14 +3197,12 @@
             <span class="t-comment">// Pronto para o próximo desafio</span><br /><br />
             <span class="t-key">{</span><br />
             &nbsp;&nbsp;<span class="t-key">"name"</span>: <span class="t-str">"Tiago Matias"</span>,<br />
-            &nbsp;&nbsp;<span class="t-key">"role"</span>: <span class="t-str">"Software Engineer"</span>,<br />
+            &nbsp;&nbsp;<span class="t-key">"role"</span>: <span class="t-str">"Desenvolvedor Front-end | Engenheiro de Software (Web &amp; Mobile)"</span>,<br />
             &nbsp;&nbsp;<span class="t-key">"location"</span>: <span class="t-str">"Luanda, Angola"</span>,<br />
             &nbsp;&nbsp;<span class="t-key">"status"</span>: <span class="t-val">"open_to_work"</span>,<br />
             &nbsp;&nbsp;<span class="t-key">"skills"</span>: [<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"Systems"</span>, <span class="t-str">"Web"</span>, <span
-              class="t-str">"Security"</span>,<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"AI"</span>, <span class="t-str">"UI/UX"</span>, <span
-              class="t-str">"Mobile"</span><br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"React"</span>, <span class="t-str">"React Native"</span>, <span class="t-str">"Next.js"</span>,<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"TypeScript"</span>, <span class="t-str">"UI/UX"</span>, <span class="t-str">"Jest/RTL"</span><br />
             &nbsp;&nbsp;],<br />
             &nbsp;&nbsp;<span class="t-key">"email"</span>: <span class="t-str">"tiagomatias072@gmail.com"</span><br />
             <span class="t-key">}</span><br /><br />
@@ -3226,7 +3255,7 @@
     if (statsEl) cObs.observe(statsEl);
 
     // Typewriter
-    const roles = ['Engenheiro de Software', 'Desenvolvedor Web & Mobile', 'Especialista em Segurança', 'Designer de Produto', 'Integrador de IA'];
+    const roles = ['Desenvolvedor Front-end', 'Engenheiro de Software', 'Desenvolvedor Web & Mobile', 'Designer UI/UX', 'Desenvolvedor React / Next.js'];
     let ri = 0, ci = 0, del = false;
     const roleEl = document.getElementById('roleText');
     function type() {
@@ -3251,22 +3280,8 @@
       });
     });
 
-    // Theme Toggle
-    const themeToggle = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-    const body = document.body;
-
-    if (localStorage.getItem('theme') === 'light') {
-      body.classList.add('light-mode');
-      themeIcon.textContent = 'dark_mode';
-    }
-
-    themeToggle.addEventListener('click', () => {
-      body.classList.toggle('light-mode');
-      const isLight = body.classList.contains('light-mode');
-      themeIcon.textContent = isLight ? 'dark_mode' : 'light_mode';
-      localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    });
+    // Theme Forced Light Mode
+    document.body.classList.add('light-mode');
 
     // Language Switcher Logic
     const langBtn = document.getElementById('langBtn');

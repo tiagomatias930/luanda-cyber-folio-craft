@@ -119,6 +119,7 @@ npm run preview
 - **GitHub:** [tiagomatias930](https://github.com/tiagomatias930)
 - **LinkedIn:** [Tiago Matias](https://www.linkedin.com/in/tiago-matias-062b88217)
 - **Behance:** [tiagomatias42](https://www.behance.net/tiagomatias42)
+- **Google Devs:** [tiagomatias](https://g.dev/tiagomatias)
 - **Localização:** Luanda, Angola
 
 ---
