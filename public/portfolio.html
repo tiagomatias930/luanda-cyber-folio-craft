@@ -1397,11 +1397,11 @@
     }
 
     .contact-inner {
-      max-width: 1200px;
+      max-width: 720px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      grid-template-columns: 1fr;
+      gap: 40px;
       align-items: center
     }
 
@@ -2528,6 +2528,115 @@
         transition-duration: .01ms !important;
       }
     }
+
+    /* --- MODERN FRONTEND PREMIUM EFFECTS --- */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Premium Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #000000;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 183, 3, 0.15);
+      border-radius: 5px;
+      border: 2.5px solid #000000;
+      background-clip: padding-box;
+      transition: background 0.3s;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 183, 3, 0.45);
+      border-radius: 5px;
+      border: 2.5px solid #000000;
+      background-clip: padding-box;
+    }
+
+    /* Soft Transitions */
+    a, button, .c-link, .project-card, .skill-card, .lang-btn, .theme-toggle {
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    /* Custom Cursor on Desktop */
+    @media (hover: hover) {
+      body, html {
+        cursor: none !important;
+      }
+      a, button, .c-link, .project-card, .skill-card, .lang-btn, .theme-toggle, input, textarea {
+        cursor: none !important;
+      }
+      .custom-cursor-dot {
+        width: 8px;
+        height: 8px;
+        background-color: var(--accent);
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 99999;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.25s ease, height 0.25s ease, background-color 0.25s ease;
+      }
+      .custom-cursor-outline {
+        width: 36px;
+        height: 36px;
+        border: 1px solid rgba(var(--accent-rgb), 0.35);
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 99998;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background-color 0.3s ease;
+      }
+      /* Hover state styles */
+      .custom-cursor-hover-dot {
+        width: 6px;
+        height: 6px;
+        background-color: var(--accent2);
+      }
+      .custom-cursor-hover-outline {
+        width: 50px;
+        height: 50px;
+        border-color: rgba(var(--accent2-rgb), 0.7);
+        background-color: rgba(var(--accent-rgb), 0.05);
+      }
+    }
+
+    /* Card Radial Spotlight Hover */
+    .project-card, .skill-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .project-card::after, .skill-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(
+        300px circle at var(--card-mouse-x, 0px) var(--card-mouse-y, 0px),
+        rgba(var(--accent-rgb), 0.06),
+        transparent 70%
+      );
+      opacity: 0;
+      z-index: 1;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+    /* Ensure content is above the spotlight */
+    .project-card > *, .skill-card > * {
+      position: relative;
+      z-index: 2;
+    }
+    .project-card:hover::after, .skill-card:hover::after {
+      opacity: 1;
+    }
   </style>
 </head>
 
@@ -2891,7 +3000,84 @@
           </div>
         </div>
 
+        <!-- 4. SkillarCode -->
+        <div class="project-card reveal" data-cat="web mobile">
+          <div class="project-thumb">
+            <img src="Screenshot From 2026-04-02 00-06-08.png" alt="SkillarCode" />
+            <span class="project-badge b-gold" data-i18n="project.badge.featured_projects">DESTACADO</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">SkillarCode</div>
+            <div class="project-desc" data-i18n="desc.skillarcode">Plataforma de competição para prompt engineering. Durante o desenvolvimento,
+              fiquei responsável por tratar de toda a parte do design e front-end incluindo a integração de AI's e
+              de LLMs.
+            </div>
+            <div class="project-techs"><span class="project-tech">React Native</span><span
+                class="project-tech">TypeScript</span><span class="project-tech">AI Learning</span></div>
+            <a class="project-link" href="https://42skillar.geniomatias.me/" target="_blank" data-i18n="project.btn.view">Ver Projecto <span
+                class="ms sm">open_in_new</span></a>
+          </div>
+        </div>
+
+        <!-- 5. Chronicles of the Unspoken -->
+        <div class="project-card reveal" data-cat="ai web">
+          <div class="project-thumb">
+            <img src="chron.png" alt="Chronicles of the Unspoken" />
+            <span class="project-badge b-ai" data-i18n="project.badge.hackathon">IA</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Chronicles of the Unspoken</div>
+            <div class="project-desc" data-i18n="desc.chronicles">Um jogo RPG tactico imersivo baseado em Investigação criminal onde o jogador tem
+              que resolver um crime investigando, coletando pistas e entrevistando testemunhas.
+            </div>
+            <div class="project-techs"><span class="project-tech">ReactJs</span><span class="project-tech">Gemini 2.5
+                Live</span> <span class="project-tech">Google Cloud</span></div>
+            <a class="project-link" href="https://chronicles-of-the-unspoken.vercel.app/" target="_blank" data-i18n="project.btn.view">Ver Projecto
+              <span class="ms sm">open_in_new</span></a>
+          </div>
+        </div>
+
+        <!-- 6. Agriconnect -->
+        <div class="project-card reveal" data-cat="web ai">
+          <div class="project-thumb">
+            <img src="agriconnect_mockup.png" alt="Agriconnect" />
+            <span class="project-badge b-ai" data-i18n="project.badge.agrotech">AGROTECH</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Agriconnect</div>
+            <div class="project-desc" data-i18n="desc.agriconnect">Desenvolvi aplicações mobile multiplataforma com React Native e Flutter para startup do setor agrícola. Implementei interfaces front-end reutilizáveis em React.js e TypeScript, consumindo APIs REST.</div>
+            <div class="project-techs"><span class="project-tech">React Native</span>
+              <span class="project-tech">Flutter</span>
+              <span class="project-tech">React.js</span>
+              <span class="project-tech">TypeScript</span>
+              <span class="project-tech">Python</span>
+            </div>
+            <a class="project-link" href="https://www.agriconnect-ao.app/" target="_blank" data-i18n="project.btn.explore">Explorar Solução <span
+                class="ms sm">open_in_new</span></a>
+          </div>
+        </div>
+
       </div>
+      <script>
+        (function() {
+          const grid = document.getElementById('projectsGrid');
+          if (grid) {
+            const cards = Array.from(grid.children).filter(el => el.classList.contains('project-card'));
+            // Fisher-Yates shuffle
+            for (let i = cards.length - 1; i > 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1));
+              grid.appendChild(cards[j]);
+            }
+            // Keep only the first 3
+            const updatedCards = Array.from(grid.children).filter(el => el.classList.contains('project-card'));
+            updatedCards.forEach((card, index) => {
+              if (index >= 3) {
+                card.remove();
+              }
+            });
+          }
+        })();
+      </script>
 
       <!-- Ver mais projetos button -->
       <div style="display: flex; justify-content: center; margin-top: 50px;" class="reveal">
@@ -3143,9 +3329,11 @@
           
           <div class="exp-col-title" style="margin-top:36px" data-i18n="exp.cert_title">Certificações &amp; Conquistas</div>
           <div class="can-do">
-            <div class="can-do-item reveal"><span class="ms sm">emoji_events</span><span data-i18n="exp.cert.expo">Expo Japão 2025: produção do vídeo "A História de Tchissola", exibido no Pavilhão de Angola, Osaka.</span></div>
-            <div class="can-do-item reveal"><span class="ms sm">security</span><span data-i18n="exp.cert.ctf">Participação ativa em competições de cibersegurança (CTF) através da plataforma 42ctf.org.</span></div>
-            <div class="can-do-item reveal"><span class="ms sm">publish</span><span data-i18n="exp.cert.nutriscan">Aplicação NutriScan publicada na plataforma Uptodown.</span></div>
+            <a href="https://biblioteca-42.up.railway.app/" target="_blank" class="can-do-item reveal" style="text-decoration: none;">
+              <span class="ms sm">emoji_events</span>
+              <span data-i18n="exp.cert.library">Aceder à minha Biblioteca de Certificações &amp; Conquistas</span>
+              <span class="ms sm" style="margin-left: auto; color: var(--accent);">open_in_new</span>
+            </a>
           </div>
         </div>
       </div>
@@ -3185,31 +3373,7 @@
           </a>
         </div>
       </div>
-      <div class="reveal">
-        <div class="terminal-box">
-          <div class="t-bar">
-            <div class="dot r"></div>
-            <div class="dot y"></div>
-            <div class="dot g"></div>
-            <span class="t-filename">tiago@portfolio ~ </span>
-          </div>
-          <div class="t-body">
-            <span class="t-comment">// Pronto para o próximo desafio</span><br /><br />
-            <span class="t-key">{</span><br />
-            &nbsp;&nbsp;<span class="t-key">"name"</span>: <span class="t-str">"Tiago Matias"</span>,<br />
-            &nbsp;&nbsp;<span class="t-key">"role"</span>: <span class="t-str">"Desenvolvedor Front-end | Engenheiro de Software (Web &amp; Mobile)"</span>,<br />
-            &nbsp;&nbsp;<span class="t-key">"location"</span>: <span class="t-str">"Luanda, Angola"</span>,<br />
-            &nbsp;&nbsp;<span class="t-key">"status"</span>: <span class="t-val">"open_to_work"</span>,<br />
-            &nbsp;&nbsp;<span class="t-key">"skills"</span>: [<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"React"</span>, <span class="t-str">"React Native"</span>, <span class="t-str">"Next.js"</span>,<br />
-            &nbsp;&nbsp;&nbsp;&nbsp;<span class="t-str">"TypeScript"</span>, <span class="t-str">"UI/UX"</span>, <span class="t-str">"Jest/RTL"</span><br />
-            &nbsp;&nbsp;],<br />
-            &nbsp;&nbsp;<span class="t-key">"email"</span>: <span class="t-str">"tiagomatias072@gmail.com"</span><br />
-            <span class="t-key">}</span><br /><br />
-            <span class="t-comment">$ </span><span class="t-val">./hire_tiago.sh</span><span class="t-cursor"></span>
-          </div>
-        </div>
-      </div>
+
     </div>
   </section>
 
@@ -3377,6 +3541,90 @@
         location.reload();
       }
     };
+
+    // --- CUSTOM PREMIUM CURSOR & INTERACTIVE EFFECTS ---
+    (function() {
+      // 1. Create Cursor Elements dynamically on Desktop
+      if (window.matchMedia('(hover: hover)').matches) {
+        const cursorDot = document.createElement('div');
+        const cursorOutline = document.createElement('div');
+        cursorDot.className = 'custom-cursor-dot';
+        cursorOutline.className = 'custom-cursor-outline';
+        document.body.appendChild(cursorDot);
+        document.body.appendChild(cursorOutline);
+
+        let mouseX = 0, mouseY = 0;
+        let cursorX = 0, cursorY = 0;
+
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+        });
+
+        // Smooth translation tick (Lerp)
+        const tick = () => {
+          cursorX += (mouseX - cursorX) * 0.15;
+          cursorY += (mouseY - cursorY) * 0.15;
+          
+          cursorDot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+          cursorOutline.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+          
+          requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+
+        // Hover morph state
+        const interactables = 'a, button, .c-link, .project-card, .skill-card, .lang-btn, .theme-toggle';
+        document.addEventListener('mouseover', (e) => {
+          if (e.target.closest(interactables)) {
+            cursorDot.classList.add('custom-cursor-hover-dot');
+            cursorOutline.classList.add('custom-cursor-hover-outline');
+          }
+        });
+        document.addEventListener('mouseout', (e) => {
+          if (e.target.closest(interactables)) {
+            cursorDot.classList.remove('custom-cursor-hover-dot');
+            cursorOutline.classList.remove('custom-cursor-hover-outline');
+          }
+        });
+      }
+
+      // 2. Card Spotlight hover tracking
+      const updateSpotlight = (e, card) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--card-mouse-x', `${x}px`);
+        card.style.setProperty('--card-mouse-y', `${y}px`);
+      };
+
+      document.addEventListener('mousemove', (e) => {
+        const card = e.target.closest('.project-card, .skill-card');
+        if (card) {
+          updateSpotlight(e, card);
+        }
+      });
+
+      // 3. Magnetic Buttons snap drift
+      const snapDrift = (e, btn) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        
+        btn.style.transform = `translate3d(${x * 0.28}px, ${y * 0.28}px, 0)`;
+        btn.style.transition = 'none';
+      };
+
+      const resetDrift = (btn) => {
+        btn.style.transform = 'translate3d(0, 0, 0)';
+        btn.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+      };
+
+      document.querySelectorAll('.btn-primary, .btn-secondary, .lang-btn, .theme-toggle').forEach(btn => {
+        btn.addEventListener('mousemove', (e) => snapDrift(e, btn));
+        btn.addEventListener('mouseleave', () => resetDrift(btn));
+      });
+    })();
   </script>
 
   <script type="text/javascript">

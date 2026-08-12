@@ -85,9 +85,7 @@
     "exp.nutriscan.role": "Independent Project | React Native",
     "exp.nutriscan.desc": "• Developed a mobile nutrition tracking application with Artificial Intelligence, reaching over 80 users in more than 7 countries, with a reusable component architecture and REST API consumption.",
     "exp.cert_title": "Certifications &amp; Achievements",
-    "exp.cert.expo": "Expo Japan 2025: production of the video 'A História de Tchissola', exhibited at the Angola Pavilion, Osaka.",
-    "exp.cert.ctf": "Active participation in cybersecurity competitions (CTF) via 42ctf.org.",
-    "exp.cert.nutriscan": "NutriScan App published on Uptodown.",
+    "exp.cert.library": "Access my Library of Certifications &amp; Achievements",
     
     "exp.edu.degree": "Computer Science — Software Engineering",
     "exp.edu.piscina": "Piscina",

@@ -2528,6 +2528,115 @@
         transition-duration: .01ms !important;
       }
     }
+
+    /* --- MODERN FRONTEND PREMIUM EFFECTS --- */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Premium Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #000000;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 183, 3, 0.15);
+      border-radius: 5px;
+      border: 2.5px solid #000000;
+      background-clip: padding-box;
+      transition: background 0.3s;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 183, 3, 0.45);
+      border-radius: 5px;
+      border: 2.5px solid #000000;
+      background-clip: padding-box;
+    }
+
+    /* Soft Transitions */
+    a, button, .c-link, .project-card, .skill-card, .lang-btn, .theme-toggle {
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    /* Custom Cursor on Desktop */
+    @media (hover: hover) {
+      body, html {
+        cursor: none !important;
+      }
+      a, button, .c-link, .project-card, .skill-card, .lang-btn, .theme-toggle, input, textarea {
+        cursor: none !important;
+      }
+      .custom-cursor-dot {
+        width: 8px;
+        height: 8px;
+        background-color: var(--accent);
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 99999;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.25s ease, height 0.25s ease, background-color 0.25s ease;
+      }
+      .custom-cursor-outline {
+        width: 36px;
+        height: 36px;
+        border: 1px solid rgba(var(--accent-rgb), 0.35);
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 99998;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background-color 0.3s ease;
+      }
+      /* Hover state styles */
+      .custom-cursor-hover-dot {
+        width: 6px;
+        height: 6px;
+        background-color: var(--accent2);
+      }
+      .custom-cursor-hover-outline {
+        width: 50px;
+        height: 50px;
+        border-color: rgba(var(--accent2-rgb), 0.7);
+        background-color: rgba(var(--accent-rgb), 0.05);
+      }
+    }
+
+    /* Card Radial Spotlight Hover */
+    .project-card, .skill-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .project-card::after, .skill-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(
+        300px circle at var(--card-mouse-x, 0px) var(--card-mouse-y, 0px),
+        rgba(var(--accent-rgb), 0.06),
+        transparent 70%
+      );
+      opacity: 0;
+      z-index: 1;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+    /* Ensure content is above the spotlight */
+    .project-card > *, .skill-card > * {
+      position: relative;
+      z-index: 2;
+    }
+    .project-card:hover::after, .skill-card:hover::after {
+      opacity: 1;
+    }
   </style>
 </head>
 
@@ -3200,6 +3309,90 @@
         location.reload();
       }
     };
+
+    // --- CUSTOM PREMIUM CURSOR & INTERACTIVE EFFECTS ---
+    (function() {
+      // 1. Create Cursor Elements dynamically on Desktop
+      if (window.matchMedia('(hover: hover)').matches) {
+        const cursorDot = document.createElement('div');
+        const cursorOutline = document.createElement('div');
+        cursorDot.className = 'custom-cursor-dot';
+        cursorOutline.className = 'custom-cursor-outline';
+        document.body.appendChild(cursorDot);
+        document.body.appendChild(cursorOutline);
+
+        let mouseX = 0, mouseY = 0;
+        let cursorX = 0, cursorY = 0;
+
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+        });
+
+        // Smooth translation tick (Lerp)
+        const tick = () => {
+          cursorX += (mouseX - cursorX) * 0.15;
+          cursorY += (mouseY - cursorY) * 0.15;
+          
+          cursorDot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+          cursorOutline.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+          
+          requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+
+        // Hover morph state
+        const interactables = 'a, button, .c-link, .project-card, .skill-card, .lang-btn, .theme-toggle';
+        document.addEventListener('mouseover', (e) => {
+          if (e.target.closest(interactables)) {
+            cursorDot.classList.add('custom-cursor-hover-dot');
+            cursorOutline.classList.add('custom-cursor-hover-outline');
+          }
+        });
+        document.addEventListener('mouseout', (e) => {
+          if (e.target.closest(interactables)) {
+            cursorDot.classList.remove('custom-cursor-hover-dot');
+            cursorOutline.classList.remove('custom-cursor-hover-outline');
+          }
+        });
+      }
+
+      // 2. Card Spotlight hover tracking
+      const updateSpotlight = (e, card) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty('--card-mouse-x', `${x}px`);
+        card.style.setProperty('--card-mouse-y', `${y}px`);
+      };
+
+      document.addEventListener('mousemove', (e) => {
+        const card = e.target.closest('.project-card, .skill-card');
+        if (card) {
+          updateSpotlight(e, card);
+        }
+      });
+
+      // 3. Magnetic Buttons snap drift
+      const snapDrift = (e, btn) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        
+        btn.style.transform = `translate3d(${x * 0.28}px, ${y * 0.28}px, 0)`;
+        btn.style.transition = 'none';
+      };
+
+      const resetDrift = (btn) => {
+        btn.style.transform = 'translate3d(0, 0, 0)';
+        btn.style.transition = 'transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+      };
+
+      document.querySelectorAll('.btn-primary, .btn-secondary, .lang-btn, .theme-toggle').forEach(btn => {
+        btn.addEventListener('mousemove', (e) => snapDrift(e, btn));
+        btn.addEventListener('mouseleave', () => resetDrift(btn));
+      });
+    })();
   </script>
 
   <script type="text/javascript">
