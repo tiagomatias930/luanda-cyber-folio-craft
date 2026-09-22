@@ -2659,6 +2659,7 @@
         </button>
         <div class="lang-menu" id="langMenu">
           <button onclick="changeLanguage('pt')">🇦🇴 Português</button>
+          <button onclick="changeLanguage('en')">🇺🇸 English</button>
         </div>
       </div>
 
@@ -2678,7 +2679,7 @@
         <!--<div class="hero-eyebrow" data-i18n="hero.eyebrow"><span class="ms sm fill" style="color:green">fiber_manual_record</span>
           Disponível para Consultoria de TI</div> -->
         <h1 class="hero-name">Tiago<br /><em>Matias</em></h1>
-        <div class="hero-role"><span class="role-text" id="roleText">Desenvolvedor de Software | Engenheiro de Software)</span></div>
+        <div class="hero-role"><span class="role-text" id="roleText">Desenvolvedor de Software | Engenheiro de Software</span></div>
         <p class="hero-desc" data-i18n="hero.desc">Desenvolvedor Software com mais de 3 anos de experiência prática em Aplicações Web, Mobile e Automação de Sistemas</p>
         <div class="hero-actions">
           <a class="btn-primary" id="resumeDownloadLink" href="/asset/Tiago_Matias_CV.pdf"
@@ -2791,11 +2792,11 @@
         <div class="skill-card reveal">
           <div class="skill-card-title" data-i18n="skills.cyber">Cibersegurança</div>
           <div class="skill-tags">
-            <span class="skill-tag hl">IBSEC</span><span class="skill-tag hl">Analista Soc na era da IA</span>
+            <span class="skill-tag hl">IBSEC</span><span class="skill-tag hl">Analista SOC na era da IA</span>
             <span class="skill-tag">CyberTalent</span><span class="skill-tag">Labs</span>
-            <span class="skill-tag">MBX Brasil- Treinamento de segurança de Informação</span>Imersão<span class="skill-tag"></span>
-            <span class="skill-tag">Hacker The Box</span><span class="skill-tag">Red Team</span>
-            <span class="skill-tag">Cisco</span><span class="skill-tag">Skills to all Academy</span>
+            <span class="skill-tag">MBX Brasil - Treinamento de Segurança da Informação</span><span class="skill-tag">Imersão</span>
+            <span class="skill-tag">Hack The Box</span><span class="skill-tag">Red Team</span>
+            <span class="skill-tag">Cisco</span><span class="skill-tag">Skills for All Academy</span>
             <span class="skill-tag">Google</span><span class="skill-tag">Google Skills</span>
           </div>
         </div>
@@ -2926,7 +2927,40 @@
       </div>
       <div class="projects-grid" id="projectsGrid">
 
-        <!-- 1. Ngola Tutor -->
+        <!-- 1. Heetch Easy -->
+        <div class="project-card reveal" data-cat="design">
+          <div class="project-thumb">
+            <img src="heetch.png" alt="Heetch Easy" />
+            <span class="project-badge b-ux">UI/UX</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">Heetch Easy</div>
+            <div class="project-desc" data-i18n="desc.heetch">Prototipação de aplicação de transporte Heetch com UX completo, focando na acessibilidade e otimização do fluxo de experiência do utilizador.</div>
+            <div class="project-techs"><span class="project-tech">Figma</span><span
+                class="project-tech">Canva</span><span class="project-tech">UI/UX</span></div>
+            <a class="project-link" href="https://www.behance.net/gallery/210297691/Heetch-Easy" target="_blank" data-i18n="project.btn.view">Ver no Behance <span
+                class="ms sm">open_in_new</span></a>
+          </div>
+        </div>
+
+        <!-- 2. NutriScan App -->
+        <div class="project-card reveal" data-cat="mobile ai">
+          <div class="project-thumb">
+            <img src="nutriscan.png" alt="NutriScan App" />
+            <span class="project-badge b-gold" data-i18n="project.badge.mobile">MOBILE</span>
+          </div>
+          <div class="project-body">
+            <div class="project-title">NutriScan App</div>
+            <div class="project-desc" data-i18n="desc.nutriscan">Desenvolvi aplicação mobile de rastreamento nutricional com Inteligência Artificial, alcançando mais de 80 utilizadores em mais de 7 países, com arquitetura de componentes reutilizáveis e consumo de APIs REST.</div>
+            <div class="project-techs"><span class="project-tech">React Native</span><span
+                class="project-tech">Expo</span><span class="project-tech">REST API</span><span
+                class="project-tech">AI</span></div>
+            <a class="project-link" href="https://com-wnutriscan-19285553.br.uptodown.com/android" target="_blank" data-i18n="project.btn.view">Ver Projecto <span
+                class="ms sm">open_in_new</span></a>
+          </div>
+        </div>
+
+        <!-- 3. Ngola Tutor -->
         <div class="project-card reveal" data-cat="ai web">
           <div class="project-thumb">
             <img src="geminiTutor.png" alt="Gemini Tutor" />
@@ -2936,7 +2970,7 @@
             <div class="project-title">Ngola Tutor</div>
             <div class="project-desc" data-i18n="proj.tutor.desc">Ngola Tutor é um aplicativo web full-stack que atua como um tutor de IA paciente.
               Isso ajuda os alunos a entender os problemas passo a passo, sem dar respostas diretas – incentivando-os a
-              descobrir soluções por conta própria de forma pedagogica. Atualmente é uma das formas que a comunidade Educate of Power usa para auxliar no ensino no Kenia.</div>
+              descobrir soluções por conta própria de forma pedagógica.</div>
             <div class="project-techs"><span class="project-tech">ReactJs</span><span
                 class="project-tech">Express</span><span class="project-tech">Supabase</span><span
                 class="project-tech">Google Cloud</span></div>
@@ -2950,83 +2984,8 @@
           </div>
         </div>
 
-        <!-- 2. Fenix Goals -->
-        <div class="project-card reveal" data-cat="web">
-          <div class="project-thumb">
-            <img
-            src="/Screenshot from 2026-02-11 02-17-16.png"
-              alt="Fenix Goals" />
-          </div>
-          <div class="project-body">
-            <div class="project-title">Fenix Goals</div>
-            <div class="project-desc" data-i18n="proj.fenix.desc">Plataforma de alta performance para transformar metas abstractas em conquistas.
-              Baseada no método de Brian Tracy.</div>
-            <div class="project-techs"><span class="project-tech">TypeScript</span><span
-                class="project-tech">HTML</span></div>
-            <a class="project-link" href="https://fenix-goals.vercel.app" target="_blank" data-i18n="project.btn.view">Ver Projecto <span
-                class="ms sm">open_in_new</span></a>
-          </div>
-        </div>
-
-        <!-- 3. Lbu.dev -->
-        <div class="project-card reveal" data-cat="design">
-          <div class="project-thumb">
-            <img src="imagemAI.png" alt="Lbu.dev" />
-            <span class="project-badge b-ux" data-i18n="filter.social">n8n</span>
-          </div>
-          <div class="project-body">
-            <div class="project-title">Lbu.dev</div>
-            <div class="project-desc" data-i18n="proj.lbu.desc">Landing Page de apresentação dos serviços de desenvolvimento de Agentes de IA que
-              ajudam empresas a automatizar tarefas. Está landing page é sustentada pelos agentes de Ai que eu
-              desenvolvi para responderem e otimizar o serviço todo</div>
-            <div class="project-techs"><span class="project-tech">N8N</span><span class="project-tech">Google
-                Drive</span><span class="project-tech">Google
-                Sheets</span><span class="project-tech">Gmail</span>
-            </div>
-            <a class="project-link" href="https://lbu-dev-gente.vercel.app/" target="_blank" data-i18n="project.btn.service">Ver o serviço <span
-                class="ms sm">open_in_new</span></a>
-          </div>
-        </div>
-
-        <!-- 4. SkillarCode -->
+        <!-- 4. Agriconnect -->
         <div class="project-card reveal" data-cat="web mobile">
-          <div class="project-thumb">
-            <img src="Screenshot From 2026-04-02 00-06-08.png" alt="SkillarCode" />
-            <span class="project-badge b-gold" data-i18n="project.badge.featured_projects">DESTACADO</span>
-          </div>
-          <div class="project-body">
-            <div class="project-title">SkillarCode</div>
-            <div class="project-desc" data-i18n="desc.skillarcode">Plataforma de competição para prompt engineering. Durante o desenvolvimento,
-              fiquei responsável por tratar de toda a parte do design e front-end incluindo a integração de AI's e
-              de LLMs.
-            </div>
-            <div class="project-techs"><span class="project-tech">React Native</span><span
-                class="project-tech">TypeScript</span><span class="project-tech">AI Learning</span></div>
-            <a class="project-link" href="https://42skillar.geniomatias.me/" target="_blank" data-i18n="project.btn.view">Ver Projecto <span
-                class="ms sm">open_in_new</span></a>
-          </div>
-        </div>
-
-        <!-- 5. Chronicles of the Unspoken -->
-        <div class="project-card reveal" data-cat="ai web">
-          <div class="project-thumb">
-            <img src="chron.png" alt="Chronicles of the Unspoken" />
-            <span class="project-badge b-ai" data-i18n="project.badge.hackathon">IA</span>
-          </div>
-          <div class="project-body">
-            <div class="project-title">Chronicles of the Unspoken</div>
-            <div class="project-desc" data-i18n="desc.chronicles">Um jogo RPG tactico imersivo baseado em Investigação criminal onde o jogador tem
-              que resolver um crime investigando, coletando pistas e entrevistando testemunhas.
-            </div>
-            <div class="project-techs"><span class="project-tech">ReactJs</span><span class="project-tech">Gemini 2.5
-                Live</span> <span class="project-tech">Google Cloud</span></div>
-            <a class="project-link" href="https://chronicles-of-the-unspoken.vercel.app/" target="_blank" data-i18n="project.btn.view">Ver Projecto
-              <span class="ms sm">open_in_new</span></a>
-          </div>
-        </div>
-
-        <!-- 6. Agriconnect -->
-        <div class="project-card reveal" data-cat="web ai">
           <div class="project-thumb">
             <img src="agriconnect_mockup.png" alt="Agriconnect" />
             <span class="project-badge b-ai" data-i18n="project.badge.agrotech">AGROTECH</span>
@@ -3045,34 +3004,30 @@
           </div>
         </div>
 
-      </div>
-      <script>
-        (function() {
-          const grid = document.getElementById('projectsGrid');
-          if (grid) {
-            const cards = Array.from(grid.children).filter(el => el.classList.contains('project-card'));
-            // Fisher-Yates shuffle
-            for (let i = cards.length - 1; i > 0; i--) {
-              const j = Math.floor(Math.random() * (i + 1));
-              grid.appendChild(cards[j]);
-            }
-            // Keep only the first 3
-            const updatedCards = Array.from(grid.children).filter(el => el.classList.contains('project-card'));
-            updatedCards.forEach((card, index) => {
-              if (index >= 3) {
-                card.remove();
-              }
-            });
-          }
-        })();
-      </script>
+        <!-- 5. Fenix Goals -->
+        <div class="project-card reveal" data-cat="web">
+          <div class="project-thumb">
+            <img src="Screenshot from 2026-02-11 02-17-16.png" alt="Fenix Goals" />
+          </div>
+          <div class="project-body">
+            <div class="project-title">Fenix Goals</div>
+            <div class="project-desc" data-i18n="proj.fenix.desc">Plataforma de alta performance para transformar metas abstractas em conquistas.
+              Baseada no método de Brian Tracy.</div>
+            <div class="project-techs"><span class="project-tech">TypeScript</span><span
+                class="project-tech">HTML</span></div>
+            <a class="project-link" href="https://fenix-goals.vercel.app" target="_blank" data-i18n="project.btn.view">Ver Projecto <span
+                class="ms sm">open_in_new</span></a>
+          </div>
+        </div>
 
-      <!-- Ver mais projetos button -->
+      </div>
+
+      <!-- Ver mais projetos button 
       <div style="display: flex; justify-content: center; margin-top: 50px;" class="reveal">
         <a href="projects.html" class="btn-primary" style="padding: 14px 36px; font-size: 1rem; border-radius: 30px; letter-spacing: 0.5px; box-shadow: 0 4px 15px rgba(255, 183, 3, 0.15);" data-i18n="projects.more">
           Ver mais projetos <span class="ms sm" style="font-weight: bold; margin-left: 4px;">arrow_forward</span>
         </a>
-      </div>
+      </div>-->
     </div>
   </section>
 
@@ -3149,9 +3104,9 @@
         <span class="tag" data-i18n="project.badge.hackathon">HACKATHON GOOGLE AI</span>
         <span data-i18n="highlight.unspoken">Chronicles of the Unspoken - Google DeepMind Hackathon 2026</span>
       </a>
-      <a href="https://42ctf.org/en/scoreboard/network/" target="_blank" class="hack-item">
-        <span class="tag" data-i18n="project.badge.ctf">COMPETIÇÃO DE CYBER SEGURANÇA 42NETWORK</span>
-        <span data-i18n="highlight.ctf_full">Tiago Matias e Liedson Habacuc tiveram grande destaque no ctf da 42Network deixando a 42Luanda na posição 10 em um ranking com mais de 100 equipas</span>
+      <a href="https://profile.hackthebox.com/profile/019ed2b1-e672-71e5-b344-abb36448f724" target="_blank" class="hack-item">
+        <span class="tag" data-i18n="project.badge.ctf">COMPETIÇÃO DE CYBER SEGURANÇA HACKTHEBOX</span>
+        <span data-i18n="highlight.ctf_full">Foi um grande destaque nas duas ultimas competições de Cibersegurança</span>
       </a>
       <a href="#projects" class="hack-item">
         <span class="tag" data-i18n="project.badge.event">EVENTO</span>
@@ -3167,9 +3122,9 @@
         <span class="tag" data-i18n="project.badge.hackathon">HACKATHON GOOGLE AI</span>
         <span data-i18n="highlight.unspoken_game">Chronicles of the Unspoken - Jogo de Investigação criminal</span>
       </a>
-      <a href="https://42ctf.org/en/scoreboard/network/" target="_blank" class="hack-item">
-        <span class="tag" data-i18n="project.badge.ctf">COMPETIÇÃO DE CYBER SEGURANÇA 42NETWORK</span>
-        <span data-i18n="highlight.ctf_full">Tiago Matias e Liedson Habacuc tiveram grande destaque no ctf da 42Network deixando a 42Luanda na posição 10 em um ranking com mais de 100 equipas</span>
+      <a href="https://profile.hackthebox.com/profile/019ed2b1-e672-71e5-b344-abb36448f724" target="_blank" class="hack-item">
+        <span class="tag" data-i18n="project.badge.ctf">COMPETIÇÃO DE CYBER SEGURANÇA Hack The Box</span>
+        <span data-i18n="highlight.ctf_full">Foi um grande destaque nas duas ultimas competições de Cibersegurança</span>
       </a>
       <a href="https://committers.top/angola" class="hack-item">
         <span class="tag" data-i18n="project.badge.featured">GITHUB DESTAQUE</span>
@@ -3306,12 +3261,12 @@
           <div class="exp-col-title" style="margin-top:36px" data-i18n="exp.can_do_title">O Que Consigo Fazer</div>
           <div class="can-do">
             <div class="can-do-item reveal"><span class="ms sm">web</span><span data-i18n="cando.web_mobile">Desenvolvimento Web &amp; Mobile</span></div>
-            <div class="can-do-item reveal"><span class="ms sm">palette</span><span data-i18n="cando.uiux">Design UI/UX &amp; Prototipagem</span></div>
+            <div class="can-do-item reveal"><span class="ms sm">web</span><span data-i18n="cando.web_mobile">Automação de Sistemas</span></div>
+            <div class="can-do-item reveal"><span class="ms sm">web</span><span data-i18n="cando.web_mobile">Desenvolvimento Web &amp; Mobile</span></div>
+            <div class="can-do-item reveal"><span class="ms sm">palette</span><span data-i18n="cando.uiux">Web Design &amp; Prototipagem</span></div>
             <div class="can-do-item reveal"><span class="ms sm">security</span><span data-i18n="cando.pentesting">Pentesting &amp; Segurança de Redes</span></div>
-            <div class="can-do-item reveal"><span class="ms sm">settings</span><span data-i18n="cando.systems">Desenvolvimento de Sistemas (C/C++/Python)</span></div>
-            <div class="can-do-item reveal"><span class="ms sm fill">smart_toy</span><span data-i18n="cando.ai">Integração de IA &amp; Automação</span></div>
-            <div class="can-do-item reveal"><span class="ms sm">movie</span><span data-i18n="cando.video">Edição de Vídeo &amp; Produção com IA</span></div>
-            <div class="can-do-item reveal"><span class="ms sm">sell</span><span data-i18n="cando.social">Social Media &amp; Criação de Conteúdo de forma automatizada com IA</span></div>
+            <div class="can-do-item reveal"><span class="ms sm">settings</span><span data-i18n="cando.systems">Desenvolvimento de Sistemas</span></div>
+            <div class="can-do-item reveal"><span class="ms sm fill">smart_toy</span><span data-i18n="cando.ai">Integração de IA &amp;</span></div>
             <div class="can-do-item reveal"><span class="ms sm">smart_toy</span><span data-i18n="cando.tests">Testes de aplicações mobile e web</span></div>
           </div>
           
@@ -3334,7 +3289,7 @@
       <div class="reveal">
         <div class="section-label">Contacto</div>
         <h2 class="contact-big">Vamos<br /><em>trabalhar</em><br />juntos.</h2>
-        <p class="contact-sub">Disponível para posições full-time, part-time ou projectos de colaboração. Se tens um
+        <p class="contact-sub">Disponível para posições freelancer. Se tens um
           problema real para resolver — eu quero saber.</p>
         <a class="contact-email" href="mailto:tiagomatias072@gmail.com">tiagomatias072@gmail.com <span
             class="ms sm">arrow_forward</span></a>
@@ -3350,11 +3305,6 @@
               <rect x="2" y="9" width="4" height="12" />
               <circle cx="4" cy="4" r="2" />
             </svg> LinkedIn</a>
-          <a class="c-link" href="https://www.behance.net/tiagomatias42" target="_blank"><svg viewBox="0 0 24 24"
-              fill="currentColor">
-              <path
-                d="M22 7h-7V5h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14H15.97c.13 3.211 3.483 3.312 4.588 2.029zm-7.726-3h3.427c-.103-1.479-1.218-2.096-1.99-2.096-.795 0-1.94.636-1.437 2.096zM10.9 7.046c0 1.549-1.246 2.345-1.246 2.345.849.285 2.346 1.105 2.346 3.291 0 2.764-2.246 3.318-4.237 3.318H.01V3.073h7.571c2.23 0 3.32 1.087 3.32 2.973zM4 8.577h2.629c.744 0 1.311-.336 1.311-1.133 0-.773-.559-1.148-1.418-1.148H4v2.281zm0 5.392h2.875c.756 0 1.596-.239 1.596-1.269 0-1.135-.829-1.35-1.865-1.35H4v2.619z" />
-            </svg> Behance</a>
           <a class="c-link" href="https://g.dev/tiagomatias" target="_blank">
             <span class="ms sm">account_circle</span>
             Google Devs
@@ -3371,7 +3321,6 @@
     <span>
       <a href="https://github.com/tiagomatias930" target="_blank">GitHub</a> ·
       <a href="https://www.linkedin.com/in/tiago-matias-062b88217" target="_blank">LinkedIn</a> ·
-      <a href="https://www.behance.net/tiagomatias42" target="_blank">Behance</a>
       <a href="https://g.dev/tiagomatias" target="_blank">Google Devs</a>
     </span>
   </footer>
