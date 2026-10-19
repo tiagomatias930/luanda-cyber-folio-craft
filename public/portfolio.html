@@ -3204,25 +3204,30 @@
                 </div>
               </div>
             </div>
-<div class="timeline-item reveal">
+
+            <div class="timeline-item reveal">
+              <div class="timeline-dot"><span class="ms sm">psychology</span></div>
+              <div>
+                <div class="t-title">JV Soluction</div>
+                <div class="t-role" data-i18n="exp.jv.role">Desenvolvedor de Software Júnior</div>
+                <div class="t-date" style="font-size:0.85rem;color:var(--accent2);margin-bottom:6px">Setembro 2026 – Presencial | Luanda - Centralidade do Kilamba, Angola</div>
+                <div class="t-desc" data-i18n="exp.jv.desc">
+                  • Responsável por desenvolver e garantir uma boa experiência do usuários<br />
+                  • Desenvolvedor Front-end<br />
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item reveal">
               <div class="timeline-dot"><span class="ms sm">eco</span></div>
               <div>
                 <div class="t-title">Odoma Tech</div>
-                <div class="t-role" data-i18n="exp.agriconnect.role">Desenvolvedor de Software</div>
+                <div class="t-role" data-i18n="exp.odoma.role">Desenvolvedor de Software</div>
                 <div class="t-date" style="font-size:0.85rem;color:var(--accent2);margin-bottom:6px">Julho 2026 – Remoto | Luanda- Morro Bento, Angola</div>
-                <div class="t-desc" data-i18n="exp.agriconnect.desc">
+                <div class="t-desc" data-i18n="exp.odoma.desc">
                   • Desenvolvi a aplicações interna da empresa, tais como, o painel de sandbox da empresa, configuração dos painel de gestão de equipa.<br />
                   • Responsável por orientar os novos membros da empresa.<br />
                   • Gestor Projecto.<br />
-                </div>
-              </div>
-              <div>
-                <div class="t-title">JV Soluction</div>
-                <div class="t-role" data-i18n="exp.agriconnect.role">Desenvolvedor de Software Júnior</div>
-                <div class="t-date" style="font-size:0.85rem;color:var(--accent2);margin-bottom:6px">Setembro 2026 – Presencial | Luanda - Centralidade do Kilamba, Angola</div>
-                <div class="t-desc" data-i18n="exp.agriconnect.desc">
-                  • Responsável por Desenvolvedor e garantir uma boa experiência do usuários<br />
-                  • Desenvolvedor Front-end<br />
                 </div>
               </div>
             </div>
@@ -3261,12 +3266,12 @@
           <div class="exp-col-title" style="margin-top:36px" data-i18n="exp.can_do_title">O Que Consigo Fazer</div>
           <div class="can-do">
             <div class="can-do-item reveal"><span class="ms sm">web</span><span data-i18n="cando.web_mobile">Desenvolvimento Web &amp; Mobile</span></div>
-            <div class="can-do-item reveal"><span class="ms sm">web</span><span data-i18n="cando.web_mobile">Automação de Sistemas</span></div>
+            <div class="can-do-item reveal"><span class="ms sm">web</span><span data-i18n="cando.automation">Automação de Sistemas</span></div>
             <div class="can-do-item reveal"><span class="ms sm">palette</span><span data-i18n="cando.uiux">Web Design &amp; Prototipagem</span></div>
             <div class="can-do-item reveal"><span class="ms sm">security</span><span data-i18n="cando.pentesting">Pentesting &amp; Segurança de Redes</span></div>
             <div class="can-do-item reveal"><span class="ms sm">settings</span><span data-i18n="cando.systems">Desenvolvimento de Sistemas SaaS</span></div>
-            <div class="can-do-item reveal"><span class="ms sm fill">smart_toy</span><span data-i18n="cando.ai">Integração de IA &amp;</span></div>
-            <div class="can-do-item reveal"><span class="ms sm fill">smart_toy</span><span data-i18n="cando.ai">Integração de API de pagamentos &amp;</span></div>
+            <div class="can-do-item reveal"><span class="ms sm fill">smart_toy</span><span data-i18n="cando.ai">Integração de IA</span></div>
+            <div class="can-do-item reveal"><span class="ms sm fill">smart_toy</span><span data-i18n="cando.payments">Integração de API de pagamentos</span></div>
             <div class="can-do-item reveal"><span class="ms sm">smart_toy</span><span data-i18n="cando.tests">Testes de aplicações mobile e web</span></div>
           </div>
           
@@ -3289,7 +3294,7 @@
       <div class="reveal">
         <div class="section-label">Contacto</div>
         <h2 class="contact-big">Vamos<br /><em>trabalhar</em><br />juntos.</h2>
-        <p class="contact-sub">Disponível para posições freelancer. Se tens um
+        <p class="contact-sub">Se tens um
           problema real para resolver — eu quero saber.</p>
         <a class="contact-email" href="mailto:tiagomatias072@gmail.com">tiagomatias072@gmail.com <span
             class="ms sm">arrow_forward</span></a>
@@ -3356,8 +3361,13 @@
     if (statsEl) cObs.observe(statsEl);
 
     console.log(cObs)
-    // Typewriter
-    const roles = ['Desenvolvedor Front-end', 'Engenheiro de Software', 'Desenvolvedor Web & Mobile', 'Designer UI/UX'];
+    // Typewriter with i18n support
+    const rolesMap = {
+      pt: ['Desenvolvedor Front-end', 'Engenheiro de Software', 'Desenvolvedor Web & Mobile', 'Designer UI/UX'],
+      en: ['Front-end Developer', 'Software Engineer', 'Web & Mobile Developer', 'UI/UX Designer']
+    };
+    let currentRolesLang = (localStorage.getItem('lang') === 'en' || document.cookie.includes('googtrans=/pt/en')) ? 'en' : 'pt';
+    let roles = rolesMap[currentRolesLang] || rolesMap.pt;
     let ri = 0, ci = 0, del = false;
     const roleEl = document.getElementById('roleText');
     function type() {
@@ -3368,6 +3378,15 @@
       setTimeout(type, del ? 40 : 70);
     }
     setTimeout(type, 1000);
+
+    window.updateTypewriterRoles = function(lang) {
+      if (rolesMap[lang]) {
+        roles = rolesMap[lang];
+        ri = 0;
+        ci = 0;
+        del = false;
+      }
+    };
 
     // Filter
     document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -3576,6 +3595,7 @@
   </script>
   <script type="text/javascript"
     src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="/i18n.js"></script>
 </body>
 
 </html>
