@@ -2646,10 +2646,10 @@
   <nav>
     <a class="nav-logo" href="/portfolio.html#hero">Tiago<span>.</span></a>
     <ul class="nav-links">
-      <li><a href="/portfolio.html#about">Sobre</a></li>
-      <li><a href="/portfolio.html#skills">Competências</a></li>
-      <li><a href="#projects">Projetos</a></li>
-      <li><a href="/portfolio.html#experience">Experiência</a></li>
+      <li><a href="/portfolio.html#about" data-i18n="nav.about">Sobre</a></li>
+      <li><a href="/portfolio.html#skills" data-i18n="nav.skills">Competências</a></li>
+      <li><a href="#projects" data-i18n="nav.projects">Projetos</a></li>
+      <li><a href="/portfolio.html#experience" data-i18n="nav.experience">Experiência</a></li>
     </ul>
     <div class="nav-actions">
       <div id="google_translate_element"></div>
@@ -2664,7 +2664,7 @@
         </div>
       </div>
 
-      <a class="nav-cta" href="mailto:tiagomatias072@gmail.com">
+      <a class="nav-cta" href="mailto:tiagomatias072@gmail.com" data-i18n="nav.cta">
         <span class="ms sm">mail</span> <span>Contacto</span>
       </a>
     </div>
@@ -2681,22 +2681,22 @@
     <div class="section-inner">
       <div class="projects-header">
         <div class="reveal">
-          <div class="section-label">Portfólio</div>
-          <h2 class="section-title">Todos os <em style="font-style:italic;color:var(--accent)">projetos</em></h2>
+          <div class="section-label" data-i18n="projects.title">Portfólio</div>
+          <h2 class="section-title" data-i18n="title_projects">Todos os <em style="font-style:italic;color:var(--accent)">projetos</em></h2>
           <div style="margin-top: 15px;">
             <a href="portfolio.html" class="btn-secondary" style="padding: 8px 18px; font-size: 0.85rem; border-radius: 20px; display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line);">
-              <span class="ms sm">arrow_back</span> Voltar ao Início
+              <span data-i18n="back_to_home"><span class="ms sm">arrow_back</span> Voltar ao Início</span>
             </a>
           </div>
         </div>
         <div class="filter-bar">
-          <button class="filter-btn active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="web">Web</button>
-          <button class="filter-btn" data-filter="mobile">Mobile</button>
-          <button class="filter-btn" data-filter="security">Segurança</button>
-          <button class="filter-btn" data-filter="design">Design</button>
-          <button class="filter-btn" data-filter="ai">IA</button>
-          <button class="filter-btn" data-filter="mediasocial">Media Social</button>
+          <button class="filter-btn active" data-filter="all" data-i18n="filter.all">Todos</button>
+          <button class="filter-btn" data-filter="web" data-i18n="filter.web">Web</button>
+          <button class="filter-btn" data-filter="mobile" data-i18n="filter.mobile">Mobile</button>
+          <button class="filter-btn" data-filter="security" data-i18n="filter.security">Segurança</button>
+          <button class="filter-btn" data-filter="design" data-i18n="filter.design">Design</button>
+          <button class="filter-btn" data-filter="ai" data-i18n="filter.ai">IA</button>
+          <button class="filter-btn" data-filter="mediasocial" data-i18n="filter.social">Media Social</button>
         </div>
       </div>
       <div class="projects-grid" id="projectsGrid">
@@ -2708,7 +2708,7 @@
           </div>
           <div class="project-body">
             <div class="project-title">SkillarCode</div>
-            <div class="project-desc">Plataforma de competição para prompt engineering. Durante o desenvolvimento,
+            <div class="project-desc" data-i18n="desc.skillarcode">Plataforma de competição para prompt engineering. Durante o desenvolvimento,
               fiquei responsável por tratar de toda a parte do design e front-end incluindo a integração de AI's e
               de LLMs.
             </div>
@@ -2726,7 +2726,7 @@
           </div>
           <div class="project-body">
             <div class="project-title">Chronicles of the Unspoken</div>
-            <div class="project-desc">Um jogo RPG tactico imersivo baseado em Investigação criminal onde o jogador tem
+            <div class="project-desc" data-i18n="desc.chronicles">Um jogo RPG tactico imersivo baseado em Investigação criminal onde o jogador tem
               que resolver um crime investigando, coletando pistas e entrevistando testemunhas.
             </div>
             <div class="project-techs"><span class="project-tech">ReactJs</span><span class="project-tech">Gemini 2.5
@@ -2743,7 +2743,7 @@
           </div>
           <div class="project-body">
             <div class="project-title">Nexus App</div>
-            <div class="project-desc">Uma aplicação que conecta influenciadores digitais com marcas. Foi o primeiro
+            <div class="project-desc" data-i18n="desc.nexus">Uma aplicação que conecta influenciadores digitais com marcas. Foi o primeiro
               projecto mobile que desenvolvi em equipa, e foi uma experiencia muito gratificante, onde aprendi muito
               sobre desenvolvimento colaborativo.
             </div>
@@ -2781,7 +2781,7 @@
           </div>
           <div class="project-body">
             <div class="project-title">Ngola Tutor</div>
-            <div class="project-desc">Ngola Tutor é um aplicativo web full-stack que atua como um tutor de IA paciente.
+            <div class="project-desc" data-i18n="desc.ngolatutor">Ngola Tutor é um aplicativo web full-stack que atua como um tutor de IA paciente.
               Isso ajuda os alunos a entender os problemas passo a passo, sem dar respostas diretas – incentivando-os a
               descobrir soluções por conta própria.</div>
             <div class="project-techs"><span class="project-tech">ReactJs</span><span
@@ -2804,7 +2804,7 @@
           </div>
           <div class="project-body">
             <div class="project-title">StrongStream</div>
-            <div class="project-desc">Aplicação SaaS completa para multi-streaming, permitindo transmitir
+            <div class="project-desc" data-i18n="desc.strongstream">Aplicação SaaS completa para multi-streaming, permitindo transmitir
               simultaneamente para YouTube, Twitch, Facebook, TikTok, Instagram e LinkedIn atraves da integração com o
               Restream.</div>
             <div class="project-techs"><span class="project-tech">Next.js</span>
@@ -2822,7 +2822,7 @@
           </div>
           <div class="project-body">
             <div class="project-title">Meow Loop: Endless Rescue</div>
-            <div class="project-desc">Jogo de ação na terceira pessoa com puzzles em estilo Sci-Fi, inspirado no
+            <div class="project-desc" data-i18n="desc.meowloop">Jogo de ação na terceira pessoa com puzzles em estilo Sci-Fi, inspirado no
               classico Gato de Schrodinger e semi-finalista intercontinental no GameJampes.</div>
             <div class="project-techs"><span class="project-tech">Godot Engine</span><span
                 class="project-tech">GDScript</span><span class="project-tech">Action Puzzle</span><span
@@ -2841,7 +2841,7 @@
           </div>
           <div class="project-body">
             <div class="project-title">Web Application Firewall</div>
-            <div class="project-desc">WAF customizado em C++ com deteção e bloqueio de ameaças em tempo real para Linux.
+            <div class="project-desc" data-i18n="desc.waf">WAF customizado em C++ com deteção e bloqueio de ameaças em tempo real para Linux.
             </div>
             <div class="project-techs"><span class="project-tech">C++</span><span class="project-tech">Network
                 Security</span><span class="project-tech">Linux</span></div>
@@ -2858,7 +2858,7 @@
           </div>
           <div class="project-body">
             <div class="project-title">Angola Vibes</div>
-            <div class="project-desc">PWA interactiva de turismo, gastronomia e lifestyle em Angola com recomendações
+            <div class="project-desc" data-i18n="desc.angolavibes">PWA interactiva de turismo, gastronomia e lifestyle em Angola com recomendações
               autênticas. Este é um MVP de uma aplicação que foca nos influenciadores que promovem locais turisticos e
               na gastronomia de angola</div>
             <div class="project-techs"><span class="project-tech">NextJs</span><span
@@ -2897,7 +2897,7 @@
           </div>
           <div class="project-body">
             <div class="project-title">FéDigital</div>
-            <div class="project-desc">Prototipação de aplicação de gestão de dízimos e ofertas com automação de
+            <div class="project-desc" data-i18n="desc.fedigital">Prototipação de aplicação de gestão de dízimos e ofertas com automação de
               tesouraria via WhatsApp.
             </div>
             <div class="project-techs"><span class="project-tech">Figma</span><span class="project-tech">Adobe
@@ -2916,7 +2916,7 @@
           </div>
           <div class="project-body">
             <div class="project-title">Pembé Na Mwindo</div>
-            <div class="project-desc">Site oficial para o grupo de teatro angolano Pembe na Mwindo — presença digital
+            <div class="project-desc" data-i18n="desc.pembe">Site oficial para o grupo de teatro angolano Pembe na Mwindo — presença digital
               completa.</div>
             <div class="project-techs"><span class="project-tech">Vite.js</span><span
                 class="project-tech">Tailwind</span><span class="project-tech">React 19</span></div>
@@ -2934,7 +2934,7 @@
           </div>
           <div class="project-body">
             <div class="project-title">Tchissola's Dream</div>
-            <div class="project-desc">Vídeo animado feito com IA generativa apresentado no Pavilhão Angolano da Expo
+            <div class="project-desc" data-i18n="desc.tchissola">Vídeo animado feito com IA generativa apresentado no Pavilhão Angolano da Expo
               Japão 2025.</div>
             <div class="project-techs"><span class="project-tech">Sora</span><span
                 class="project-tech">HailuoAI</span><span class="project-tech">CapCut</span></div>
@@ -2952,7 +2952,7 @@
           </div>
           <div class="project-body">
             <div class="project-title">Reverse Engineering Tool</div>
-            <div class="project-desc">Script PHP para obter shell interactiva em servidores alvo. Ferramenta para testes
+            <div class="project-desc" data-i18n="desc.reverse">Script PHP para obter shell interactiva em servidores alvo. Ferramenta para testes
               de penetração.</div>
             <div class="project-techs"><span class="project-tech">Python</span><span
                 class="project-tech">PHP</span><span class="project-tech">Pentest</span></div>
@@ -2970,7 +2970,7 @@
           </div>
           <div class="project-body">
             <div class="project-title">Fenix Goals</div>
-            <div class="project-desc">Plataforma de alta performance para transformar metas abstractas em conquistas.
+            <div class="project-desc" data-i18n="desc.fenix">Plataforma de alta performance para transformar metas abstractas em conquistas.
               Baseada no método de Brian Tracy.</div>
             <div class="project-techs"><span class="project-tech">TypeScript</span><span
                 class="project-tech">HTML</span></div>
@@ -2988,7 +2988,7 @@
           </div>
           <div class="project-body">
             <div class="project-title">Nobody See</div>
-            <div class="project-desc">Um site para esconder e descobrir metadados. Com Nobody See é possivel esconder uma mensagem dentro de uma imagem, video, ou documentos.</div>
+            <div class="project-desc" data-i18n="desc.nobodysee">Um site para esconder e descobrir metadados. Com Nobody See é possivel esconder uma mensagem dentro de uma imagem, video, ou documentos.</div>
             <div class="project-techs"><span class="project-tech">Python</span><span
                 class="project-tech">NextJs</span><span class="project-tech">Estegonograma</span> <span class="project-tech">Segurança</span></div>
             <a class="project-link" href="#" target="_blank">Em desenvolvimento
@@ -3005,7 +3005,7 @@
           </div>
           <div class="project-body">
             <div class="project-title">Heetch Easy</div>
-            <div class="project-desc">Prototipação de aplicação de transporte Heetch com UX completo.</div>
+            <div class="project-desc" data-i18n="desc.heetch">Prototipação de aplicação de transporte Heetch com UX completo.</div>
             <div class="project-techs"><span class="project-tech">Figma</span><span class="project-tech">Canva</span>
             </div>
             <a class="project-link" href="https://www.behance.net/gallery/210297691/Heetch-Easy" target="_blank">Ver no
@@ -3020,7 +3020,7 @@
           </div>
           <div class="project-body">
             <div class="project-title">Lbu.dev</div>
-            <div class="project-desc">Landing Page de apresentação dos serviços de desenvolvimento de Agentes de IA que
+            <div class="project-desc" data-i18n="desc.lbudev">Landing Page de apresentação dos serviços de desenvolvimento de Agentes de IA que
               ajudam empresas a automatizar tarefas. Está landing page é sustentada pelos agentes de Ai que eu
               desenvolvi para responderem e otimizar o serviço todo</div>
             <div class="project-techs"><span class="project-tech">N8N</span><span class="project-tech">Google
@@ -3039,7 +3039,7 @@
           </div>
           <div class="project-body">
             <div class="project-title">Sistema Frota+</div>
-            <div class="project-desc">Vídeo de demonstração do sistema de gestão de frotas Frota+, apresentado como
+            <div class="project-desc" data-i18n="desc.frota">Vídeo de demonstração do sistema de gestão de frotas Frota+, apresentado como
               solução para um desafio de inovação, Iniciado pela Pumangol.</div>
             <div class="project-techs">
               <span class="project-tech">Product Demo</span>
@@ -3406,6 +3406,7 @@
   </script>
   <script type="text/javascript"
     src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="/i18n.js"></script>
 </body>
 
 </html>

@@ -3141,13 +3141,13 @@
   <section id="experience">
     <div class="section-inner">
       <div class="reveal">
-        <div class="section-label">Percurso</div>
-        <h2 class="section-title">Experiência &amp;<br /><em style="font-style:italic;color:var(--accent)">Formação</em>
+        <div class="section-label" data-i18n="exp.title">Percurso</div>
+        <h2 class="section-title" data-i18n="exp.subtitle">Experiência &amp;<br /><em style="font-style:italic;color:var(--accent)">Formação</em>
         </h2>
       </div>
       <div class="exp-grid">
         <div>
-          <div class="exp-col-title">Experiência Profissional</div>
+          <div class="exp-col-title" data-i18n="exp.work_title">Experiência Profissional</div>
           <div class="timeline">
             <div class="timeline-item reveal">
               <div class="timeline-dot"><span class="ms sm">groups</span></div>
@@ -3219,12 +3219,12 @@
               <div class="timeline-dot"><span class="ms sm">eco</span></div>
               <div>
                 <div class="t-title">Odoma Tech</div>
-                <div class="t-role" data-i18n="exp.agriconnect.role">Desenvolvedor de Software Júnior</div>
+                <div class="t-role" data-i18n="exp.odoma.role">Desenvolvedor de Software Júnior</div>
                 <div class="t-date" style="font-size:0.85rem;color:var(--accent2);margin-bottom:6px">Julho 2026 – Remoto | Luanda- Morro Bento, Angola</div>
-                <div class="t-desc" data-i18n="exp.agriconnect.desc">
-                  • Desenvolvi a aplicações interna da empresa, tais como, o painel de sandbox da empresa, configuração dos painel de gestão de equipa.<br />
-                  • Responsável por orientar os novos membros da empresa.<br />
-                  • Gestor Projecto.<br />
+                <div class="t-desc" data-i18n="exp.odoma.desc">
+                  • Desenvolvi aplicações internas da empresa, tais como o painel de sandbox da empresa e configuração do painel de gestão de equipa.<br />
+                  • Responsável por orientar novos membros da equipa técnica.<br />
+                  • Gestão de projetos e acompanhamento de entregas.<br />
                 </div>
               </div>
             </div>
@@ -3264,13 +3264,12 @@
           <div class="exp-col-title" style="margin-top:36px" data-i18n="exp.can_do_title">O Que Consigo Fazer</div>
           <div class="can-do">
             <div class="can-do-item reveal"><span class="ms sm">web</span><span data-i18n="cando.web_mobile">Desenvolvimento Web &amp; Mobile</span></div>
-            <div class="can-do-item reveal"><span class="ms sm">web</span><span data-i18n="cando.web_mobile">Automação de Sistemas</span></div>
-            <div class="can-do-item reveal"><span class="ms sm">web</span><span data-i18n="cando.web_mobile">Desenvolvimento Web &amp; Mobile</span></div>
+            <div class="can-do-item reveal"><span class="ms sm">memory</span><span data-i18n="cando.automation">Automação de Sistemas &amp; n8n</span></div>
             <div class="can-do-item reveal"><span class="ms sm">palette</span><span data-i18n="cando.uiux">Web Design &amp; Prototipagem</span></div>
             <div class="can-do-item reveal"><span class="ms sm">security</span><span data-i18n="cando.pentesting">Pentesting &amp; Segurança de Redes</span></div>
-            <div class="can-do-item reveal"><span class="ms sm">settings</span><span data-i18n="cando.systems">Desenvolvimento de Sistemas</span></div>
-            <div class="can-do-item reveal"><span class="ms sm fill">smart_toy</span><span data-i18n="cando.ai">Integração de IA &amp;</span></div>
-            <div class="can-do-item reveal"><span class="ms sm">smart_toy</span><span data-i18n="cando.tests">Testes de aplicações mobile e web</span></div>
+            <div class="can-do-item reveal"><span class="ms sm">settings</span><span data-i18n="cando.systems">Desenvolvimento de Sistemas (C/C++/Python)</span></div>
+            <div class="can-do-item reveal"><span class="ms sm fill">smart_toy</span><span data-i18n="cando.ai">Integração de IA &amp; Soluções Inteligentes</span></div>
+            <div class="can-do-item reveal"><span class="ms sm">check_circle</span><span data-i18n="cando.tests">Testes de Aplicações Mobile e Web</span></div>
           </div>
           
           <div class="exp-col-title" style="margin-top:36px" data-i18n="exp.cert_title">Certificações &amp; Conquistas</div>
@@ -3290,9 +3289,9 @@
   <section id="contact">
     <div class="contact-inner">
       <div class="reveal">
-        <div class="section-label">Contacto</div>
-        <h2 class="contact-big">Vamos<br /><em>trabalhar</em><br />juntos.</h2>
-        <p class="contact-sub">Disponível para posições freelancer. Se tens um
+        <div class="section-label" data-i18n="contact.title">Contacto</div>
+        <h2 class="contact-big" data-i18n="contact.subtitle">Vamos<br /><em>trabalhar</em><br />juntos.</h2>
+        <p class="contact-sub" data-i18n="contact.desc">Disponível para posições freelancer. Se tens um
           problema real para resolver — eu quero saber.</p>
         <a class="contact-email" href="mailto:tiagomatias072@gmail.com">tiagomatias072@gmail.com <span
             class="ms sm">arrow_forward</span></a>
@@ -3320,7 +3319,7 @@
 
   <!-- FOOTER -->
   <footer>
-    <span>© 2026 Tiago Matias · Luanda, Angola</span>
+    <span data-i18n="footer.copy">© 2026 Tiago Matias · Luanda, Angola</span>
     <span>
       <a href="https://github.com/tiagomatias930" target="_blank">GitHub</a> ·
       <a href="https://www.linkedin.com/in/tiago-matias-062b88217" target="_blank">LinkedIn</a> ·
@@ -3359,8 +3358,13 @@
     if (statsEl) cObs.observe(statsEl);
 
     console.log(cObs)
-    // Typewriter
-    const roles = ['Desenvolvedor Front-end', 'Engenheiro de Software', 'Desenvolvedor Web & Mobile', 'Designer UI/UX', 'Desenvolvedor React / Next.js'];
+    // Typewriter with i18n support
+    const rolesMap = {
+      pt: ['Desenvolvedor Front-end', 'Engenheiro de Software', 'Desenvolvedor Web & Mobile', 'Designer UI/UX', 'Desenvolvedor React / Next.js'],
+      en: ['Front-end Developer', 'Software Engineer', 'Web & Mobile Developer', 'UI/UX Designer', 'React / Next.js Developer']
+    };
+    let currentRolesLang = localStorage.getItem('lang') === 'en' ? 'en' : 'pt';
+    let roles = rolesMap[currentRolesLang] || rolesMap.pt;
     let ri = 0, ci = 0, del = false;
     const roleEl = document.getElementById('roleText');
     function type() {
@@ -3371,6 +3375,15 @@
       setTimeout(type, del ? 40 : 70);
     }
     setTimeout(type, 1000);
+
+    window.updateTypewriterRoles = function(lang) {
+      if (rolesMap[lang]) {
+        roles = rolesMap[lang];
+        ri = 0;
+        ci = 0;
+        del = false;
+      }
+    };
 
     // Filter
     document.querySelectorAll('.filter-btn').forEach(btn => {
@@ -3579,6 +3592,7 @@
   </script>
   <script type="text/javascript"
     src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="/i18n.js"></script>
 </body>
 
 </html>
